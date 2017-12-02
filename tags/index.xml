@@ -6,9 +6,37 @@
     <description>Recent content in Tags on PPT Developers&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
+    <lastBuildDate>Sun, 03 Dec 2017 03:13:06 +0900</lastBuildDate>
     
 	<atom:link href="https://persol-pt.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cloudfront</title>
+      <link>https://persol-pt.github.io/tags/cloudfront/</link>
+      <pubDate>Sun, 03 Dec 2017 03:13:06 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/tags/cloudfront/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Firebase</title>
+      <link>https://persol-pt.github.io/tags/firebase/</link>
+      <pubDate>Sun, 03 Dec 2017 03:13:06 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/tags/firebase/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>S3</title>
+      <link>https://persol-pt.github.io/tags/s3/</link>
+      <pubDate>Sun, 03 Dec 2017 03:13:06 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/tags/s3/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>会社紹介</title>
