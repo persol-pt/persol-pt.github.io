@@ -6,10 +6,37 @@
     <description>Recent content in Tags on PPT Developers&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 03 Dec 2017 03:13:06 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 06 Dec 2017 01:32:59 +0900</lastBuildDate>
     
 	<atom:link href="https://persol-pt.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Akamai</title>
+      <link>https://persol-pt.github.io/tags/akamai/</link>
+      <pubDate>Wed, 06 Dec 2017 01:32:59 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/tags/akamai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws</title>
+      <link>https://persol-pt.github.io/tags/aws/</link>
+      <pubDate>Wed, 06 Dec 2017 01:32:59 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cloudflare</title>
+      <link>https://persol-pt.github.io/tags/cloudflare/</link>
+      <pubDate>Wed, 06 Dec 2017 01:32:59 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/tags/cloudflare/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Cloudfront</title>
@@ -30,11 +57,56 @@
     </item>
     
     <item>
+      <title>Incapsula</title>
+      <link>https://persol-pt.github.io/tags/incapsula/</link>
+      <pubDate>Wed, 06 Dec 2017 01:32:59 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/tags/incapsula/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>S3</title>
       <link>https://persol-pt.github.io/tags/s3/</link>
       <pubDate>Sun, 03 Dec 2017 03:13:06 +0900</pubDate>
       
       <guid>https://persol-pt.github.io/tags/s3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scutum</title>
+      <link>https://persol-pt.github.io/tags/scutum/</link>
+      <pubDate>Wed, 06 Dec 2017 01:32:59 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/tags/scutum/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Silverline</title>
+      <link>https://persol-pt.github.io/tags/silverline/</link>
+      <pubDate>Wed, 06 Dec 2017 01:32:59 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/tags/silverline/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sucuri</title>
+      <link>https://persol-pt.github.io/tags/sucuri/</link>
+      <pubDate>Wed, 06 Dec 2017 01:32:59 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/tags/sucuri/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Waf</title>
+      <link>https://persol-pt.github.io/tags/waf/</link>
+      <pubDate>Wed, 06 Dec 2017 01:32:59 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/tags/waf/</guid>
       <description></description>
     </item>
     

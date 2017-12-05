@@ -19,7 +19,8 @@
       <guid>https://persol-pt.github.io/posts/firebase-hosting/</guid>
       <description>Firebase Advent Calendar 2017 3 日目の記事です。
 
-Firebase Hostingはストレージ、Web ホスティング、CDN 、マネージド SSL を組み込んだサービスです。 AWS ではストレージと Web ホスティングは S3 だけでできますが、CDN は CloudFront、マネージド SSL は Certificate Manager と、複数のサービスを組み合わせ、設定しないといけません。 CDN 性能も、Firebase Hosting で使用されている Google Cloud CDN は CloudFront よりパフォーマンスがいいようです。 比較表     Firebase Hosting AWS     構築 1 コマンド S3 を作成。HTTPS や CDN を使うなら CloudFront を作成して S3 と結合   デプロイ 1 コマンド 1 コマンド   SSL 証明書 自動で作成＆更新＆適用 ACM で作成して CloudFront に適用。自動更新   キャッシュ ブラウザキャッシュ設定のみ CDN キャッシュ設定含め柔軟に設定可   アクセス制限 無し WAF を作成して CloudFront に適用   料金（ストア） $0.</description>
+Firebase Hostingはストレージ、Web ホスティング、CDN 、マネージド SSL を組み込んだサービスです。 AWS ではストレージと Web ホスティングは S3 だけでできますが、CDN は CloudFront、マネージド SSL は Certificate Manager と、複数のサービスを組み合わせ、設定しないといけません。 CDN 性能も、Firebase Hosting で使用されている Google Cloud CDN は CloudFront よりパフォーマンスがいいようです。 比較表 
+    Firebase Hosting AWS     構築 1 コマンド S3 を作成。HTTPS や CDN を使うなら CloudFront を作成して S3 と結合   デプロイ 1 コマンド 1 コマンド   SSL 証明書 自動で作成＆更新＆適用 ACM で作成して CloudFront に適用。自動更新   キャッシュ ブラウザキャッシュ設定のみ CDN キャッシュ設定含め柔軟に設定可   アクセス制限 無し WAF を作成して CloudFront に適用   料金（ストア） $0.</description>
     </item>
     
   </channel>

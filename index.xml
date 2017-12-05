@@ -6,10 +6,29 @@
     <description>Recent content on PPT Developers&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 03 Dec 2017 03:13:06 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 06 Dec 2017 01:32:59 +0900</lastBuildDate>
     
 	<atom:link href="https://persol-pt.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cloud-based WAF(Web Application Firewall) 比較</title>
+      <link>https://persol-pt.github.io/posts/waf-comparison/</link>
+      <pubDate>Wed, 06 Dec 2017 01:32:59 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/posts/waf-comparison/</guid>
+      <description>Security Advent Calendar 2017 6 日目の記事です。
+
+WAF とは XSS や SQL インジェクションなどの HTTP 攻撃を防ぐための Firewall で、
+Cloud-based WAF では、リクエストが WAF を通るよう WAF サービスに DNS を向け、安全なリクエストのみオリジンへ通す、という方式をとります。
+私は WAF には疎くて、AWS WAF くらいしか知らなかったので、WAF ってのは自分で設定するものなんだろうなぁと思っていたんですが、調べてみたら WAF サービスって基本マネージドなんですね。
+
+サービス比較するにあたり、海外の WAF 紹介記事調べたり、ガートナーの WAF 市場の図を参考にしました。
+
+ Gartner Magic Quadrant for Web Application Firewalls 2016   
+ Gartner Magic Quadrant for Web Application Firewalls 2017   
+ということで、市場リーダーの Imperva のIncapsulaと Akamai のクラウド・セキュリティ・ソリューションと F5 Networks のSilverline、そして海外の WAF 紹介記事でよく見かけるCloudflareとSucuri、国産のScutum、AWS を比較してみました。</description>
+    </item>
     
     <item>
       <title>静的ファイルWebホスティングならS3よりFirebase Hosting</title>
@@ -19,7 +38,8 @@
       <guid>https://persol-pt.github.io/posts/firebase-hosting/</guid>
       <description>Firebase Advent Calendar 2017 3 日目の記事です。
 
-Firebase Hostingはストレージ、Web ホスティング、CDN 、マネージド SSL を組み込んだサービスです。 AWS ではストレージと Web ホスティングは S3 だけでできますが、CDN は CloudFront、マネージド SSL は Certificate Manager と、複数のサービスを組み合わせ、設定しないといけません。 CDN 性能も、Firebase Hosting で使用されている Google Cloud CDN は CloudFront よりパフォーマンスがいいようです。 比較表     Firebase Hosting AWS     構築 1 コマンド S3 を作成。HTTPS や CDN を使うなら CloudFront を作成して S3 と結合   デプロイ 1 コマンド 1 コマンド   SSL 証明書 自動で作成＆更新＆適用 ACM で作成して CloudFront に適用。自動更新   キャッシュ ブラウザキャッシュ設定のみ CDN キャッシュ設定含め柔軟に設定可   アクセス制限 無し WAF を作成して CloudFront に適用   料金（ストア） $0.</description>
+Firebase Hostingはストレージ、Web ホスティング、CDN 、マネージド SSL を組み込んだサービスです。 AWS ではストレージと Web ホスティングは S3 だけでできますが、CDN は CloudFront、マネージド SSL は Certificate Manager と、複数のサービスを組み合わせ、設定しないといけません。 CDN 性能も、Firebase Hosting で使用されている Google Cloud CDN は CloudFront よりパフォーマンスがいいようです。 比較表 
+    Firebase Hosting AWS     構築 1 コマンド S3 を作成。HTTPS や CDN を使うなら CloudFront を作成して S3 と結合   デプロイ 1 コマンド 1 コマンド   SSL 証明書 自動で作成＆更新＆適用 ACM で作成して CloudFront に適用。自動更新   キャッシュ ブラウザキャッシュ設定のみ CDN キャッシュ設定含め柔軟に設定可   アクセス制限 無し WAF を作成して CloudFront に適用   料金（ストア） $0.</description>
     </item>
     
     <item>
