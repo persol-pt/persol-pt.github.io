@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="canonical" href="https://persol-pt.github.io/posts/firebase-hosting/" />
+    <link rel="canonical" href="https://persol-pt.github.io/tags/sketch/" />
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-boilerplate>
@@ -77,7 +77,7 @@
     
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
-    <title>静的ファイルWebホスティングならS3よりFirebase Hosting - PPT Developers&#39; Blog</title>
+    <title>Sketch - PPT Developers&#39; Blog</title>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat" rel="stylesheet">
     <style amp-custom>table {
   border-collapse: collapse;
@@ -2562,457 +2562,39 @@ h1 {
     </amp-sidebar>
     
     
-<header class="www-header center">
-    <h1 class="mb1">静的ファイルWebホスティングならS3よりFirebase Hosting</h1>
-    <div class="www-index-header-action mx-auto">Sun, Dec 3, 2017</div>
-    <div class="www-index-header-action mx-auto">
+    <header class="www-header">
+        <h1 class="mb4 px2 col-12 sm-col-8 mx-auto">Sketch</h1>
+
         
-        <a href="/categories/boiyaa">boiyaa</a> 
-    </div>
-    <div class="www-index-header-action mx-auto">
-        
-        <a href="/tags/firebase">#Firebase</a> 
-        <a href="/tags/s3">#S3</a> 
-        <a href="/tags/cloudfront">#CloudFront</a> 
-    </div>
 
-    
-</header>
-<amp-selector layout="container">
-    <main class="flex pl2">
-        
-        <aside class="col-1 xs-hide"></aside>
-
-        <article class="www-components flex-auto col-10">
-            <section class="www-component-desc">
-                
-
-<p><br></p>
-
-<p><a href="https://qiita.com/advent-calendar/2017/firebase">Firebase Advent Calendar 2017</a> 3 日目の記事です。</p>
-
-<p><br></p>
-
-<p><a href="https://firebase.google.com/products/hosting/">Firebase Hosting</a>はストレージ、Web ホスティング、CDN 、マネージド SSL を組み込んだサービスです。 <br><br></p>
-
-<p>AWS ではストレージと Web ホスティングは S3 だけでできますが、CDN は CloudFront、マネージド SSL は Certificate Manager と、複数のサービスを組み合わせ、設定しないといけません。 <br><br></p>
-
-<p>CDN 性能も、Firebase Hosting で使用されている Google Cloud CDN は CloudFront より<a href="https://www.cedexis.com/google-reports/">パフォーマンス</a>がいいようです。 <br><br><br></p>
-
-<h3 id="比較表">比較表</h3>
-
-<p><div></p>
-
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Firebase Hosting</th>
-<th>AWS</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>構築</td>
-<td>1 コマンド</td>
-<td>S3 を作成。HTTPS や CDN を使うなら CloudFront を作成して S3 と結合</td>
-</tr>
-
-<tr>
-<td>デプロイ</td>
-<td>1 コマンド</td>
-<td>1 コマンド</td>
-</tr>
-
-<tr>
-<td>SSL 証明書</td>
-<td>自動で作成＆更新＆適用</td>
-<td>ACM で作成して CloudFront に適用。自動更新</td>
-</tr>
-
-<tr>
-<td>キャッシュ</td>
-<td>ブラウザキャッシュ設定のみ</td>
-<td>CDN キャッシュ設定含め柔軟に設定可</td>
-</tr>
-
-<tr>
-<td>アクセス制限</td>
-<td>無し</td>
-<td>WAF を作成して CloudFront に適用</td>
-</tr>
-
-<tr>
-<td>料金（ストア）</td>
-<td>$0.025/GB</td>
-<td>$0.025/GB</td>
-</tr>
-
-<tr>
-<td>料金（転送）</td>
-<td>$0.15/GB</td>
-<td>$0.085~0.250/GB</td>
-</tr>
-</tbody>
-</table>
-
-<p></div><p>アクセス制限が必要なければ、Firebase がとにかく楽です。 </p><br><br><br><br></p>
-
-<h2 id="実際の手順を見てみましょう">実際の手順を見てみましょう</h2>
-
-<h3 id="cli-ツールのインストールと設定の比較">CLI ツールのインストールと設定の比較</h3>
-
-<p><br></p>
-
-<h4 id="firebase">Firebase</h4>
-
-<ul>
-<li>Node.js をインストール</li>
-<li>Firebase CLI をインストール</li>
-</ul>
-
-<pre><code class="language-sh">$ npm install -g firebase-tools
-</code></pre>
-
-<ul>
-<li>Firebase にログイン</li>
-</ul>
-
-<pre><code class="language-sh">$ firebase login
-</code></pre>
-
-<p><br></p>
-
-<h4 id="aws">AWS</h4>
-
-<ul>
-<li>Python をインストール</li>
-<li>AWS CLI をインストール</li>
-</ul>
-
-<pre><code class="language-sh">$ pip install awscli --upgrade --user
-</code></pre>
-
-<ul>
-<li>AWS 認証情報を設定</li>
-</ul>
-
-<pre><code class="language-sh">$ aws configure
-</code></pre>
-
-<ul>
-<li>CloudFront コマンド有効化</li>
-</ul>
-
-<pre><code class="language-sh">$ aws configure set preview.cloudfront true
-</code></pre>
-
-<p><br><br></p>
-
-<h3 id="web-ホスティング環境構築の比較">Web ホスティング環境構築の比較</h3>
-
-<p><br></p>
-
-<h4 id="firebase-の場合">Firebase の場合</h4>
-
-<ul>
-<li>Firebase 設定ファイル作成</li>
-</ul>
-
-<p>プロジェクトディレクトリに移動して、</p>
-
-<pre><code class="language-sh">$ firebase init
-</code></pre>
-
-<p><code>Hosting</code>という項目を選択（スペースキー）する</p>
-
-<ul>
-<li><a href="https://console.firebase.google.com">https://console.firebase.google.com</a>にアクセスしてプロジェクトを作成</li>
-<li>Firebase プロジェクトを紐付ける</li>
-</ul>
-
-<pre><code class="language-sh">$ firebase use --add
-</code></pre>
-
-<ul>
-<li>デプロイ</li>
-</ul>
-
-<pre><code class="language-sh">$ firebase deploy
-</code></pre>
-
-<p>これで<code>https://[project name].firebaseapp.com</code>にホスティングされます。 <br></p>
-
-<p>参考：<a href="https://firebase.google.com/docs/hosting/quickstart">Hosting を使ってみる</a></p>
-
-<p><br><br></p>
-
-<h5 id="firebase-hosting-のカスタムドメイン設定">Firebase Hosting のカスタムドメイン設定</h5>
-
-<ul>
-<li>Firebase Hosting admin panel を開く</li>
-</ul>
-
-<pre><code class="language-sh">firebase open hosting
-</code></pre>
-
-<ul>
-<li><code>Connect Domain</code>または<code>ドメインを接続</code>ボタンを押す</li>
-<li>指定された A レコードを自分の DNS に設定する</li>
-</ul>
-
-<p>なんとこれだけでカスタムドメインの SSL 証明書の作成・更新・適用までやってくれます。<br></p>
-
-<p>参考：<a href="https://firebase.google.com/docs/hosting/custom-domain">カスタム ドメインを接続する</a></p>
-
-<p><br><br><br></p>
-
-<h4 id="aws-の場合-https-非対応">AWS の場合（HTTPS 非対応）</h4>
-
-<ul>
-<li>S3 バケット作成</li>
-</ul>
-
-<pre><code class="language-sh">$ aws s3api create-bucket --bucket [bucket name]
-</code></pre>
-
-<ul>
-<li>バケットポリシー設定</li>
-</ul>
-
-<pre><code class="language-sh">$ cat &gt; bucket-policy.json &lt;&lt; EOF
-{
-  &quot;Statement&quot;: [{
-    &quot;Effect&quot;: &quot;Allow&quot;,
-    &quot;Principal&quot;: &quot;*&quot;,
-    &quot;Action&quot;: [&quot;s3:GetObject&quot;],
-    &quot;Resource&quot;: [&quot;arn:aws:s3:::[bucket name]/*&quot;]
-  }]
-}
-EOF
-
-$ aws s3api put-bucket-policy --bucket [bucket name] --policy file://bucket-policy.json
-</code></pre>
-
-<p>参考：<a href="http://docs.aws.amazon.com/ja_jp/AmazonS3/latest/dev/WebsiteAccessPermissionsReqd.html">ウェブサイトアクセスに必要なアクセス許可</a></p>
-
-<ul>
-<li>Web ホスティング有効化</li>
-</ul>
-
-<pre><code class="language-sh">$ aws s3 website s3://[bucket name] --index-document index.html
-</code></pre>
-
-<ul>
-<li>ファイルのデプロイ</li>
-</ul>
-
-<pre><code class="language-sh">$ aws s3 sync . s3://[bucket name]
-</code></pre>
-
-<p>これで<code>http://[bucket name].s3-website-us-east-1.amazonaws.com/</code>にホスティングされます。</p>
-
-<p><br><br></p>
-
-<h5 id="s3-のカスタムドメイン設定">S3 のカスタムドメイン設定</h5>
-
-<ul>
-<li>ドメインの DNS を Route 53 に切り替える</li>
-<li>A レコードのエイリアスを選択し、作成した S3 バケットを選択する</li>
-</ul>
-
-<p>参考：<a href="http://docs.aws.amazon.com/ja_jp/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html">例 : 独自ドメインを使用して静的ウェブサイトをセットアップする</a></p>
-
-<p><br><br><br></p>
-
-<h4 id="aws-の場合-https-対応">AWS の場合（HTTPS 対応）</h4>
-
-<p>S3 の Web ホスティングでは HTTP のみなので、HTTPS 対応するには CloudFront と組み合わせる必要があります。</p>
-
-<ul>
-<li>S3 バケット作成</li>
-</ul>
-
-<pre><code class="language-sh">$ aws s3api create-bucket --bucket [bucket name]
-</code></pre>
-
-<ul>
-<li>CloudFront OAI 作成</li>
-</ul>
-
-<pre><code class="language-sh">$ aws cloudfront create-cloud-front-origin-access-identity --cloud-front-origin-access-identity-config CallerReference=access-identity-[bucket name],Comment=access-identity-[bucket name]
-</code></pre>
-
-<p>参考：<a href="http://docs.aws.amazon.com/ja_jp/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html#private-content-creating-oai">CloudFront オリジンアクセスアイデンティティを作成してディストリビューションに追加する</a></p>
-
-<ul>
-<li>バケットポリシー設定</li>
-</ul>
-
-<pre><code class="language-sh">$ cat &gt; bucket-policy.json &lt;&lt; EOF
-{
-  &quot;Statement&quot;: [{
-    &quot;Effect&quot;: &quot;Allow&quot;,
-    &quot;Principal&quot;: {&quot;AWS&quot;: &quot;arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity [origin access identity id]&quot;},
-    &quot;Action&quot;: [&quot;s3:GetObject&quot;],
-    &quot;Resource&quot;: [&quot;arn:aws:s3:::[bucket name]/*&quot;]
-  }]
-}
-EOF
-
-$ aws s3api put-bucket-policy --bucket [bucket name] --policy file://bucket-policy.json
-</code></pre>
-
-<p>参考：<a href="http://docs.aws.amazon.com/ja_jp/AmazonS3/latest/dev/example-bucket-policies.html#example-bucket-policies-use-case-6">Amazon CloudFront オリジンアイデンティティへのアクセス権限の付与</a></p>
-
-<ul>
-<li>CloudFront ディストリビューション作成</li>
-</ul>
-
-<pre><code class="language-sh">$ cat &gt; distribution.json &lt;&lt; EOF
-{
-  &quot;Comment&quot;: &quot;&quot;,
-  &quot;Origins&quot;: {
-    &quot;Items&quot;: [
-      {
-        &quot;S3OriginConfig&quot;: {
-          &quot;OriginAccessIdentity&quot;: &quot;origin-access-identity/cloudfront/[origin access identity id]&quot;
-        },
-        &quot;Id&quot;: &quot;origin&quot;,
-        &quot;DomainName&quot;: &quot;[bucket name].s3.amazonaws.com&quot;
-      }
-    ],
-    &quot;Quantity&quot;: 1
-  },
-  &quot;DefaultRootObject&quot;: &quot;index.html&quot;,
-  &quot;PriceClass&quot;: &quot;PriceClass_All&quot;,
-  &quot;Enabled&quot;: true,
-  &quot;DefaultCacheBehavior&quot;: {
-    &quot;TrustedSigners&quot;: {
-      &quot;Enabled&quot;: false,
-      &quot;Quantity&quot;: 0
-    },
-    &quot;TargetOriginId&quot;: &quot;origin&quot;,
-    &quot;ViewerProtocolPolicy&quot;: &quot;allow-all&quot;,
-    &quot;ForwardedValues&quot;: {
-      &quot;Cookies&quot;: {
-        &quot;Forward&quot;: &quot;none&quot;
-      },
-      &quot;QueryString&quot;: false
-    },
-    &quot;MinTTL&quot;: 0,
-    &quot;Compress&quot;: true
-  },
-  &quot;CallerReference&quot;: &quot;distribution-[bucket name]&quot;
-}
-EOF
-
-$ aws cloudfront create-distribution --distribution-config file://distribution.json
-</code></pre>
-
-<ul>
-<li>ファイルのデプロイ</li>
-</ul>
-
-<pre><code class="language-sh">$ aws s3 sync . s3://[bucket name]
-</code></pre>
-
-<p>これで<code>https://[cloudfront domain name]</code>にホスティングされます。</p>
-
-<p><br><br></p>
-
-<h5 id="cloudfront-のカスタムドメイン設定">CloudFront のカスタムドメイン設定</h5>
-
-<ul>
-<li>ACM 証明書リクエスト作成</li>
-</ul>
-
-<pre><code class="language-sh">aws acm request-certificate --domain-name [your domain]
-</code></pre>
-
-<ul>
-<li>ドメイン所有者のメールアドレスや、admin@[your domain]などに承認メールが届くので、承認</li>
-<li>ドメインの DNS を Route 53 に切り替え</li>
-<li>CloudFront ディストリビューション作成</li>
-</ul>
-
-<pre><code class="language-sh">$ cat &gt; distribution.json &lt;&lt; EOF
-{
-  &quot;Comment&quot;: &quot;&quot;,
-  &quot;Origins&quot;: {
-    &quot;Items&quot;: [
-      {
-        &quot;S3OriginConfig&quot;: {
-          &quot;OriginAccessIdentity&quot;: &quot;origin-access-identity/cloudfront/[origin access identity id]&quot;
-        },
-        &quot;Id&quot;: &quot;origin&quot;,
-        &quot;DomainName&quot;: &quot;[bucket name].s3.amazonaws.com&quot;
-      }
-    ],
-    &quot;Quantity&quot;: 1
-  },
-  &quot;DefaultRootObject&quot;: &quot;index.html&quot;,
-  &quot;PriceClass&quot;: &quot;PriceClass_All&quot;,
-  &quot;Enabled&quot;: true,
-  &quot;DefaultCacheBehavior&quot;: {
-    &quot;TrustedSigners&quot;: {
-      &quot;Enabled&quot;: false,
-      &quot;Quantity&quot;: 0
-    },
-    &quot;TargetOriginId&quot;: &quot;origin&quot;,
-    &quot;ViewerProtocolPolicy&quot;: &quot;allow-all&quot;,
-    &quot;ForwardedValues&quot;: {
-      &quot;Cookies&quot;: {
-        &quot;Forward&quot;: &quot;none&quot;
-      },
-      &quot;QueryString&quot;: false
-    },
-    &quot;MinTTL&quot;: 0,
-    &quot;Compress&quot;: true
-  },
-  &quot;CallerReference&quot;: &quot;distribution-[bucket name]&quot;,
-  &quot;ViewerCertificate&quot;: {
-    &quot;SSLSupportMethod&quot;: &quot;sni-only&quot;,
-    &quot;ACMCertificateArn&quot;: &quot;[acm arn]&quot;,
-    &quot;MinimumProtocolVersion&quot;: &quot;TLSv1.1_2016&quot;
-  },
-  &quot;Aliases&quot;: {
-    &quot;Items&quot;: [&quot;[your domain]&quot;],
-    &quot;Quantity&quot;: 1
-  }
-}
-EOF
-
-$ aws cloudfront create-distribution --distribution-config file://distribution.json
-</code></pre>
-
-<ul>
-<li>A レコードのエイリアスを選択し、作成した CloudFront ディストリビューションを選択</li>
-</ul>
-
-<p><br><br><br><br></p>
-
-<h2 id="まとめ">まとめ</h2>
-
-<p>HTTP のみのホスティングまでなら、Firebase と AWS の手順差はあまりありませんが、<br />
-HTTPS やカスタムドメイン SSL が入ってくると AWS は設定が複雑になってきます。<br />
-フロントエンドエンジニアの私は初めて CloudFront 触った時辛かったです。<br />
-SPA のプロジェクトとかでバックエンドとインフラが分離している構成であれば、Firebase Hosting を検討されると良いかと思います。 <br><br></p>
-
-            </section>
-            <section class="www-component-desc">
-                <div>
-                    <amp-social-share type="hatena" data-share-endpoint="http://b.hatena.ne.jp/entry/https://persol-pt.github.io/posts/firebase-hosting/">B!</amp-social-share>
-                    <amp-social-share type="facebook" data-param-app_id="158646288203071"></amp-social-share>
-                    <amp-social-share type="twitter"></amp-social-share>
-                </div>
-            </section>
-        </article>
-
-        <aside class="col-1 xs-hide"></aside>
-    </main>
-</amp-selector>
+        </header>
+    <amp-selector layout="container">
+        <main class="flex pl2">
+
+            <article class="www-components flex-auto col-8">
+                <section class="www-component-desc" id="samples_templates">
+
+                    <div class="abe-examples flex flex-wrap">
+                                                <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
+                            <h3 class="mb1">react-sketchappを使った開発ワークフロー<i class=""></i></h3>
+                            
+                                <p class="mb1">ct #1 Advent Calendar 2017 10 日目の記事です。
+
+react-sketchapp react-sketchappとは、デザインツールの Sketch 用にビルドできる React コンポーネントです。
+README からの引用ですが、こんな概要です。
+ デザインシステムの管理 - react-sketchapp は、Airbnb’s design system用</p>
+                            
+                            <div class="abe-sample-card-actions">
+                            
+                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/react-sketchapp/">Read More…</a></div>
+                        </div>
+
+                    </div>
+                </section>
+
+            </article>
+        </main>
+    </amp-selector>
     
     <footer class="ampstart-footer flex flex-column items-center pxy3">
         
@@ -3032,7 +2614,7 @@ SPA のプロジェクトとかでバックエンドとインフラが分離し�
                     "on": "visible",
                     "request": "pageview",
                     "vars": {
-                        "title": "静的ファイルWebホスティングならS3よりFirebase Hosting"
+                        "title": "Sketch"
                     }
                 }
             }

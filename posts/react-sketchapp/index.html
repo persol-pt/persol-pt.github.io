@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="canonical" href="https://persol-pt.github.io/posts/firebase-hosting/" />
+    <link rel="canonical" href="https://persol-pt.github.io/posts/react-sketchapp/" />
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-boilerplate>
@@ -77,7 +77,7 @@
     
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
-    <title>静的ファイルWebホスティングならS3よりFirebase Hosting - PPT Developers&#39; Blog</title>
+    <title>react-sketchappを使った開発ワークフロー - PPT Developers&#39; Blog</title>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat" rel="stylesheet">
     <style amp-custom>table {
   border-collapse: collapse;
@@ -2563,17 +2563,16 @@ h1 {
     
     
 <header class="www-header center">
-    <h1 class="mb1">静的ファイルWebホスティングならS3よりFirebase Hosting</h1>
-    <div class="www-index-header-action mx-auto">Sun, Dec 3, 2017</div>
+    <h1 class="mb1">react-sketchappを使った開発ワークフロー</h1>
+    <div class="www-index-header-action mx-auto">Sun, Dec 10, 2017</div>
     <div class="www-index-header-action mx-auto">
         
         <a href="/categories/boiyaa">boiyaa</a> 
     </div>
     <div class="www-index-header-action mx-auto">
         
-        <a href="/tags/firebase">#Firebase</a> 
-        <a href="/tags/s3">#S3</a> 
-        <a href="/tags/cloudfront">#CloudFront</a> 
+        <a href="/tags/react">#React</a> 
+        <a href="/tags/sketch">#Sketch</a> 
     </div>
 
     
@@ -2589,421 +2588,200 @@ h1 {
 
 <p><br></p>
 
-<p><a href="https://qiita.com/advent-calendar/2017/firebase">Firebase Advent Calendar 2017</a> 3 日目の記事です。</p>
-
-<p><br></p>
-
-<p><a href="https://firebase.google.com/products/hosting/">Firebase Hosting</a>はストレージ、Web ホスティング、CDN 、マネージド SSL を組み込んだサービスです。 <br><br></p>
-
-<p>AWS ではストレージと Web ホスティングは S3 だけでできますが、CDN は CloudFront、マネージド SSL は Certificate Manager と、複数のサービスを組み合わせ、設定しないといけません。 <br><br></p>
-
-<p>CDN 性能も、Firebase Hosting で使用されている Google Cloud CDN は CloudFront より<a href="https://www.cedexis.com/google-reports/">パフォーマンス</a>がいいようです。 <br><br><br></p>
-
-<h3 id="比較表">比較表</h3>
-
-<p><div></p>
-
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Firebase Hosting</th>
-<th>AWS</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>構築</td>
-<td>1 コマンド</td>
-<td>S3 を作成。HTTPS や CDN を使うなら CloudFront を作成して S3 と結合</td>
-</tr>
-
-<tr>
-<td>デプロイ</td>
-<td>1 コマンド</td>
-<td>1 コマンド</td>
-</tr>
-
-<tr>
-<td>SSL 証明書</td>
-<td>自動で作成＆更新＆適用</td>
-<td>ACM で作成して CloudFront に適用。自動更新</td>
-</tr>
-
-<tr>
-<td>キャッシュ</td>
-<td>ブラウザキャッシュ設定のみ</td>
-<td>CDN キャッシュ設定含め柔軟に設定可</td>
-</tr>
-
-<tr>
-<td>アクセス制限</td>
-<td>無し</td>
-<td>WAF を作成して CloudFront に適用</td>
-</tr>
-
-<tr>
-<td>料金（ストア）</td>
-<td>$0.025/GB</td>
-<td>$0.025/GB</td>
-</tr>
-
-<tr>
-<td>料金（転送）</td>
-<td>$0.15/GB</td>
-<td>$0.085~0.250/GB</td>
-</tr>
-</tbody>
-</table>
-
-<p></div><p>アクセス制限が必要なければ、Firebase がとにかく楽です。 </p><br><br><br><br></p>
-
-<h2 id="実際の手順を見てみましょう">実際の手順を見てみましょう</h2>
-
-<h3 id="cli-ツールのインストールと設定の比較">CLI ツールのインストールと設定の比較</h3>
-
-<p><br></p>
-
-<h4 id="firebase">Firebase</h4>
-
-<ul>
-<li>Node.js をインストール</li>
-<li>Firebase CLI をインストール</li>
-</ul>
-
-<pre><code class="language-sh">$ npm install -g firebase-tools
-</code></pre>
-
-<ul>
-<li>Firebase にログイン</li>
-</ul>
-
-<pre><code class="language-sh">$ firebase login
-</code></pre>
-
-<p><br></p>
-
-<h4 id="aws">AWS</h4>
-
-<ul>
-<li>Python をインストール</li>
-<li>AWS CLI をインストール</li>
-</ul>
-
-<pre><code class="language-sh">$ pip install awscli --upgrade --user
-</code></pre>
-
-<ul>
-<li>AWS 認証情報を設定</li>
-</ul>
-
-<pre><code class="language-sh">$ aws configure
-</code></pre>
-
-<ul>
-<li>CloudFront コマンド有効化</li>
-</ul>
-
-<pre><code class="language-sh">$ aws configure set preview.cloudfront true
-</code></pre>
+<p><a href="https://qiita.com/advent-calendar/2017/react">React #1 Advent Calendar 2017</a> 10 日目の記事です。</p>
 
 <p><br><br></p>
 
-<h3 id="web-ホスティング環境構築の比較">Web ホスティング環境構築の比較</h3>
+<h2 id="react-sketchapp">react-sketchapp</h2>
+
+<p><a href="https://github.com/airbnb/react-sketchapp">react-sketchapp</a>とは、デザインツールの <a href="https://www.sketchapp.com/">Sketch</a> 用にビルドできる React コンポーネントです。</p>
+
+<p>README からの引用ですが、こんな概要です。</p>
+
+<ul>
+<li>デザインシステムの管理 - react-sketchapp は、<a href="http://airbnb.design/building-a-visual-language/">Airbnb’s design system</a>用に作られました。大規模なデザインシステムで Sketch のアセットを管理する最も簡単な方法です。</li>
+<li>デザインに実際のコンポーネントを使用 - コードで React コンポーネントとして実装し、Sketch に描画します。</li>
+<li>実際のデータを使用したデザイン - データを使用したデザインは重要ですが困難です。 react-sketchapp は Sketch ファイルに実際のデータを取得して埋め込むのを簡単にします。</li>
+<li>Sketch 上に新しいツールを作る - Sketch をカスタムデザインツールのキャンバスとして使用する最も簡単な方法</li>
+</ul>
+
+<p>実際に使用した画面の雰囲気は<a href="https://airbnb.design/painting-with-code/">Painting with Code</a>をご覧ください。</p>
+
+<p><br><br></p>
+
+<h2 id="react-sketchapp-を導入するメリット">react-sketchapp を導入するメリット</h2>
+
+<p>一般的にプロダクトの開発ワークフローは、例えばデザイナーからデザインファイルを受け取り、プログラマーがシステムに組み込む、という感じになりますが、そこで react-sketchapp を使ってデザイナー側で React コンポーネントを実装してもらえると、プログラマーは HOC などを利用してロジックを被せるように作っていけば、デザイナーにデザインの修正や改善を直接プロダクトコードに反映してもらえるようになって、手間やミスを削減できます。</p>
 
 <p><br></p>
 
-<h4 id="firebase-の場合">Firebase の場合</h4>
-
-<ul>
-<li>Firebase 設定ファイル作成</li>
-</ul>
-
-<p>プロジェクトディレクトリに移動して、</p>
-
-<pre><code class="language-sh">$ firebase init
-</code></pre>
-
-<p><code>Hosting</code>という項目を選択（スペースキー）する</p>
-
-<ul>
-<li><a href="https://console.firebase.google.com">https://console.firebase.google.com</a>にアクセスしてプロジェクトを作成</li>
-<li>Firebase プロジェクトを紐付ける</li>
-</ul>
-
-<pre><code class="language-sh">$ firebase use --add
-</code></pre>
-
-<ul>
-<li>デプロイ</li>
-</ul>
-
-<pre><code class="language-sh">$ firebase deploy
-</code></pre>
-
-<p>これで<code>https://[project name].firebaseapp.com</code>にホスティングされます。 <br></p>
-
-<p>参考：<a href="https://firebase.google.com/docs/hosting/quickstart">Hosting を使ってみる</a></p>
+<p>デザイナーからすると React コンポーネントを作るというとハードルが高そうに聞こえるかもしれませんが、ステートレスコンポーネントなら HTML に結構似ているので、マークアップできる方であれば学習コストはそれほどない（と思っています）。</p>
 
 <p><br><br></p>
 
-<h5 id="firebase-hosting-のカスタムドメイン設定">Firebase Hosting のカスタムドメイン設定</h5>
+<h2 id="はじめてみる">はじめてみる</h2>
+
+<p>はじめるにあたり以下の環境が必要です。</p>
 
 <ul>
-<li>Firebase Hosting admin panel を開く</li>
+<li>node.js 4+ ( 筆者は 8.9.3 でやりました。)</li>
+<li>Sketch 43+ ( ドキュメントには書いてませんが、version 48 未満でないとビルドに失敗します )</li>
 </ul>
 
-<pre><code class="language-sh">firebase open hosting
-</code></pre>
-
-<ul>
-<li><code>Connect Domain</code>または<code>ドメインを接続</code>ボタンを押す</li>
-<li>指定された A レコードを自分の DNS に設定する</li>
-</ul>
-
-<p>なんとこれだけでカスタムドメインの SSL 証明書の作成・更新・適用までやってくれます。<br></p>
-
-<p>参考：<a href="https://firebase.google.com/docs/hosting/custom-domain">カスタム ドメインを接続する</a></p>
-
-<p><br><br><br></p>
-
-<h4 id="aws-の場合-https-非対応">AWS の場合（HTTPS 非対応）</h4>
-
-<ul>
-<li>S3 バケット作成</li>
-</ul>
-
-<pre><code class="language-sh">$ aws s3api create-bucket --bucket [bucket name]
-</code></pre>
-
-<ul>
-<li>バケットポリシー設定</li>
-</ul>
-
-<pre><code class="language-sh">$ cat &gt; bucket-policy.json &lt;&lt; EOF
-{
-  &quot;Statement&quot;: [{
-    &quot;Effect&quot;: &quot;Allow&quot;,
-    &quot;Principal&quot;: &quot;*&quot;,
-    &quot;Action&quot;: [&quot;s3:GetObject&quot;],
-    &quot;Resource&quot;: [&quot;arn:aws:s3:::[bucket name]/*&quot;]
-  }]
-}
-EOF
-
-$ aws s3api put-bucket-policy --bucket [bucket name] --policy file://bucket-policy.json
-</code></pre>
-
-<p>参考：<a href="http://docs.aws.amazon.com/ja_jp/AmazonS3/latest/dev/WebsiteAccessPermissionsReqd.html">ウェブサイトアクセスに必要なアクセス許可</a></p>
-
-<ul>
-<li>Web ホスティング有効化</li>
-</ul>
-
-<pre><code class="language-sh">$ aws s3 website s3://[bucket name] --index-document index.html
-</code></pre>
-
-<ul>
-<li>ファイルのデプロイ</li>
-</ul>
-
-<pre><code class="language-sh">$ aws s3 sync . s3://[bucket name]
-</code></pre>
-
-<p>これで<code>http://[bucket name].s3-website-us-east-1.amazonaws.com/</code>にホスティングされます。</p>
+<p>こちらのリポジトリ <a href="https://github.com/boiyaa/react-sketchapp-example">boiyaa/react-sketchapp-example</a>を参考にしてください。</p>
 
 <p><br><br></p>
 
-<h5 id="s3-のカスタムドメイン設定">S3 のカスタムドメイン設定</h5>
+<h2 id="web-の-react-との違い">Web の React との違い</h2>
 
-<ul>
-<li>ドメインの DNS を Route 53 に切り替える</li>
-<li>A レコードのエイリアスを選択し、作成した S3 バケットを選択する</li>
-</ul>
+<p>Web の React では、JSX には HTML とほぼ同じ名前のコンポーネント（div, p など）を使用していましたが、</p>
 
-<p>参考：<a href="http://docs.aws.amazon.com/ja_jp/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html">例 : 独自ドメインを使用して静的ウェブサイトをセットアップする</a></p>
+<p>Sketch の React では、react-sketchapp の提供する数種類のコンポーネント（View, Text など）を使用しないとビルドできません。</p>
 
-<p><br><br><br></p>
+<p>React Native も react-native の提供するコンポーネント（View, Text など）を使用しないとビルドできないのと同じで、</p>
 
-<h4 id="aws-の場合-https-対応">AWS の場合（HTTPS 対応）</h4>
-
-<p>S3 の Web ホスティングでは HTTP のみなので、HTTPS 対応するには CloudFront と組み合わせる必要があります。</p>
-
-<ul>
-<li>S3 バケット作成</li>
-</ul>
-
-<pre><code class="language-sh">$ aws s3api create-bucket --bucket [bucket name]
-</code></pre>
-
-<ul>
-<li>CloudFront OAI 作成</li>
-</ul>
-
-<pre><code class="language-sh">$ aws cloudfront create-cloud-front-origin-access-identity --cloud-front-origin-access-identity-config CallerReference=access-identity-[bucket name],Comment=access-identity-[bucket name]
-</code></pre>
-
-<p>参考：<a href="http://docs.aws.amazon.com/ja_jp/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html#private-content-creating-oai">CloudFront オリジンアクセスアイデンティティを作成してディストリビューションに追加する</a></p>
-
-<ul>
-<li>バケットポリシー設定</li>
-</ul>
-
-<pre><code class="language-sh">$ cat &gt; bucket-policy.json &lt;&lt; EOF
-{
-  &quot;Statement&quot;: [{
-    &quot;Effect&quot;: &quot;Allow&quot;,
-    &quot;Principal&quot;: {&quot;AWS&quot;: &quot;arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity [origin access identity id]&quot;},
-    &quot;Action&quot;: [&quot;s3:GetObject&quot;],
-    &quot;Resource&quot;: [&quot;arn:aws:s3:::[bucket name]/*&quot;]
-  }]
-}
-EOF
-
-$ aws s3api put-bucket-policy --bucket [bucket name] --policy file://bucket-policy.json
-</code></pre>
-
-<p>参考：<a href="http://docs.aws.amazon.com/ja_jp/AmazonS3/latest/dev/example-bucket-policies.html#example-bucket-policies-use-case-6">Amazon CloudFront オリジンアイデンティティへのアクセス権限の付与</a></p>
-
-<ul>
-<li>CloudFront ディストリビューション作成</li>
-</ul>
-
-<pre><code class="language-sh">$ cat &gt; distribution.json &lt;&lt; EOF
-{
-  &quot;Comment&quot;: &quot;&quot;,
-  &quot;Origins&quot;: {
-    &quot;Items&quot;: [
-      {
-        &quot;S3OriginConfig&quot;: {
-          &quot;OriginAccessIdentity&quot;: &quot;origin-access-identity/cloudfront/[origin access identity id]&quot;
-        },
-        &quot;Id&quot;: &quot;origin&quot;,
-        &quot;DomainName&quot;: &quot;[bucket name].s3.amazonaws.com&quot;
-      }
-    ],
-    &quot;Quantity&quot;: 1
-  },
-  &quot;DefaultRootObject&quot;: &quot;index.html&quot;,
-  &quot;PriceClass&quot;: &quot;PriceClass_All&quot;,
-  &quot;Enabled&quot;: true,
-  &quot;DefaultCacheBehavior&quot;: {
-    &quot;TrustedSigners&quot;: {
-      &quot;Enabled&quot;: false,
-      &quot;Quantity&quot;: 0
-    },
-    &quot;TargetOriginId&quot;: &quot;origin&quot;,
-    &quot;ViewerProtocolPolicy&quot;: &quot;allow-all&quot;,
-    &quot;ForwardedValues&quot;: {
-      &quot;Cookies&quot;: {
-        &quot;Forward&quot;: &quot;none&quot;
-      },
-      &quot;QueryString&quot;: false
-    },
-    &quot;MinTTL&quot;: 0,
-    &quot;Compress&quot;: true
-  },
-  &quot;CallerReference&quot;: &quot;distribution-[bucket name]&quot;
-}
-EOF
-
-$ aws cloudfront create-distribution --distribution-config file://distribution.json
-</code></pre>
-
-<ul>
-<li>ファイルのデプロイ</li>
-</ul>
-
-<pre><code class="language-sh">$ aws s3 sync . s3://[bucket name]
-</code></pre>
-
-<p>これで<code>https://[cloudfront domain name]</code>にホスティングされます。</p>
+<p>あくまで React の実装方法を利用できるというだけで、HTML で Sketch デザインを表現できるものではありません。</p>
 
 <p><br><br></p>
 
-<h5 id="cloudfront-のカスタムドメイン設定">CloudFront のカスタムドメイン設定</h5>
+<h2 id="react-sketchapp-で-web-サイトを作る時は依存関係が難しい">react-sketchapp で Web サイトを作る時は依存関係が難しい</h2>
 
-<ul>
-<li>ACM 証明書リクエスト作成</li>
-</ul>
+<p>まず下記パッケージが最小構成になります。</p>
 
-<pre><code class="language-sh">aws acm request-certificate --domain-name [your domain]
-</code></pre>
-
-<ul>
-<li>ドメイン所有者のメールアドレスや、admin@[your domain]などに承認メールが届くので、承認</li>
-<li>ドメインの DNS を Route 53 に切り替え</li>
-<li>CloudFront ディストリビューション作成</li>
-</ul>
-
-<pre><code class="language-sh">$ cat &gt; distribution.json &lt;&lt; EOF
-{
-  &quot;Comment&quot;: &quot;&quot;,
-  &quot;Origins&quot;: {
-    &quot;Items&quot;: [
-      {
-        &quot;S3OriginConfig&quot;: {
-          &quot;OriginAccessIdentity&quot;: &quot;origin-access-identity/cloudfront/[origin access identity id]&quot;
-        },
-        &quot;Id&quot;: &quot;origin&quot;,
-        &quot;DomainName&quot;: &quot;[bucket name].s3.amazonaws.com&quot;
-      }
-    ],
-    &quot;Quantity&quot;: 1
+<pre><code class="language-js">{
+  &quot;dependencies&quot;: {
+    &quot;prop-types&quot;: &quot;^15.6.0&quot;,
+    &quot;react&quot;: &quot;^15.6.2&quot;,
+    &quot;react-dom&quot;: &quot;^15.6.2&quot;,
+    &quot;react-primitives&quot;: &quot;^0.4.4&quot;,
+    &quot;react-sketchapp&quot;: &quot;^0.12.1&quot;
   },
-  &quot;DefaultRootObject&quot;: &quot;index.html&quot;,
-  &quot;PriceClass&quot;: &quot;PriceClass_All&quot;,
-  &quot;Enabled&quot;: true,
-  &quot;DefaultCacheBehavior&quot;: {
-    &quot;TrustedSigners&quot;: {
-      &quot;Enabled&quot;: false,
-      &quot;Quantity&quot;: 0
-    },
-    &quot;TargetOriginId&quot;: &quot;origin&quot;,
-    &quot;ViewerProtocolPolicy&quot;: &quot;allow-all&quot;,
-    &quot;ForwardedValues&quot;: {
-      &quot;Cookies&quot;: {
-        &quot;Forward&quot;: &quot;none&quot;
-      },
-      &quot;QueryString&quot;: false
-    },
-    &quot;MinTTL&quot;: 0,
-    &quot;Compress&quot;: true
-  },
-  &quot;CallerReference&quot;: &quot;distribution-[bucket name]&quot;,
-  &quot;ViewerCertificate&quot;: {
-    &quot;SSLSupportMethod&quot;: &quot;sni-only&quot;,
-    &quot;ACMCertificateArn&quot;: &quot;[acm arn]&quot;,
-    &quot;MinimumProtocolVersion&quot;: &quot;TLSv1.1_2016&quot;
-  },
-  &quot;Aliases&quot;: {
-    &quot;Items&quot;: [&quot;[your domain]&quot;],
-    &quot;Quantity&quot;: 1
+  &quot;devDependencies&quot;: {
+    &quot;@skpm/builder&quot;: &quot;0.1.4&quot;,
+    &quot;react-test-renderer&quot;: &quot;^15.6.2&quot;
   }
 }
-EOF
-
-$ aws cloudfront create-distribution --distribution-config file://distribution.json
 </code></pre>
 
+<p>残念ながら React 16 には非対応です。</p>
+
+<p>上記で、Web なら Web の、Sketch なら Sketch の、コンポーネントを実装しないといけないと書きましたが、</p>
+
+<p><a href="https://github.com/lelandrichardson/react-primitives">react-primitives</a>の提供するコンポーネントを使うと、1 つのコンポーネント実装で Web や Sketch や Native など各プラットフォームへビルドできるようになります。</p>
+
+<p>これはとても便利なのですが、react-primitives が Web ビルド用に依存している react-native-web のバージョンが古いため、React 16 が使えません。PR 出ているので、近いうち対応すると思います。<a href="https://github.com/lelandrichardson/react-primitives/pull/95">Fix React 16 for Web. #95</a></p>
+
+<p><br></p>
+
+<p>また、Sketch ビルドに使用する @skpm/builder は最新 0.2 系で、react-sketchapp の examples でもそれが使われているのですが、</p>
+
+<p>筆者の環境では、0.1.4 でないとビルドに失敗します。<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup></p>
+
+<p><br></p>
+
+<p><br><br></p>
+
+<h2 id="コンポーネントを作る">コンポーネントを作る</h2>
+
+<p>コンポーネントファイルの基本的な構成は、</p>
+
 <ul>
-<li>A レコードのエイリアスを選択し、作成した CloudFront ディストリビューションを選択</li>
+<li>使用するモジュール</li>
+<li>スタイル</li>
+<li>React コンポーネント</li>
 </ul>
 
-<p><br><br><br><br></p>
+<p>となります。Sample.js というコンポーネントファイルを作ってみます。</p>
+
+<pre><code class="language-js">// 使用するモジュール
+import React from &quot;react&quot;;
+import { Text, View } from &quot;react-primitives&quot;;
+import { colors, fontSizes } from &quot;./designSystem&quot;;
+
+// スタイル
+const styles = {
+  root: {
+    backgroundColor: colors.white
+  },
+  body: {
+    fontSize: fontSizes.body
+  }
+};
+
+// React コンポーネント
+export default ({ message }) =&gt; (
+  &lt;View name=&quot;Sample&quot; style={styles.root}&gt;
+    &lt;Text style={styles.body}&gt;{message}&lt;/Text&gt;
+  &lt;/View&gt;
+);
+</code></pre>
+
+<p>上記では色やタイポグラフィなどを designSystem.js という別ファイルに分けています。 SASS などと同じ感じです。</p>
+
+<pre><code class="language-js">export const colors = {
+  black: &quot;#000000&quot;,
+  white: &quot;#ffffff&quot;
+};
+
+export const fontSizes = {
+  body: 14
+};
+</code></pre>
+
+<p>Sketch 用のエンドポイントファイルはこんな感じです。</p>
+
+<pre><code class="language-js">import React from &quot;react&quot;;
+import { render, Artboard } from &quot;react-sketchapp&quot;;
+import Sample from &quot;./Sample&quot;;
+
+const Sketch = () =&gt; (
+  &lt;Artboard&gt;
+    &lt;Sample message=&quot;hoge fuga piyo&quot; /&gt;
+  &lt;/Artboard&gt;
+);
+
+export default () =&gt; {
+  render(&lt;Sketch /&gt;, context.document.currentPage());
+};
+</code></pre>
+
+<p>これだけ書けば、<code>skpm-build</code>コマンドで Sketch 上に描画されます。</p>
+
+<p>オプションを付ければ、保存の度に反映されるので、インブラウザデザインのノリで進める事ができます。</p>
+
+<p><br><br></p>
 
 <h2 id="まとめ">まとめ</h2>
 
-<p>HTTP のみのホスティングまでなら、Firebase と AWS の手順差はあまりありませんが、<br />
-HTTPS やカスタムドメイン SSL が入ってくると AWS は設定が複雑になってきます。<br />
-フロントエンドエンジニアの私は初めて CloudFront 触った時辛かったです。<br />
-SPA のプロジェクトとかでバックエンドとインフラが分離している構成であれば、Firebase Hosting を検討されると良いかと思います。 <br><br></p>
+<p>やっぱり純粋なマークアップに比べると難しいので、デザイナーにはハードル高いかもしれません。</p>
+
+<p><br></p>
+
+<p>例えばデザイン初稿はデザインファイルからプログラマーが Sketch コンポーネントで実装して、</p>
+
+<p>以降の細かい修正はデザイナーにお任せする、みたいな感じで取り入れてみようか、みたいな話をうちのチームではしています。</p>
+
+<p><br></p>
+
+<p>ただ、今のところインブラウザデザインを Sketch でできるようにしたものという印象しかなく、</p>
+
+<p><a href="https://github.com/storybooks/storybook">Storybook</a> とかを使ってインブラウザデザインする以上のメリットがどこにあるのか、実はよくわかっていません。</p>
+
+<p><br></p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">ちなみに OS のせいかなと思い、先ほど High Sierra にアップグレードしたら、Sketch に反映されなくなってしまいました。。 <a href="https://github.com/airbnb/react-sketchapp/issues/141">basic-setup doesn&rsquo;t work on macOS High Sierra #141</a> とか <a href="https://github.com/airbnb/react-sketchapp/issues/155">Error while running <code>npm run render</code> for <code>basic-setup</code> example #155</a> 見ても解決できなくて、今ハマっています。
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+</ol>
+</div>
 
             </section>
             <section class="www-component-desc">
                 <div>
-                    <amp-social-share type="hatena" data-share-endpoint="http://b.hatena.ne.jp/entry/https://persol-pt.github.io/posts/firebase-hosting/">B!</amp-social-share>
+                    <amp-social-share type="hatena" data-share-endpoint="http://b.hatena.ne.jp/entry/https://persol-pt.github.io/posts/react-sketchapp/">B!</amp-social-share>
                     <amp-social-share type="facebook" data-param-app_id="158646288203071"></amp-social-share>
                     <amp-social-share type="twitter"></amp-social-share>
                 </div>
@@ -3032,7 +2810,7 @@ SPA のプロジェクトとかでバックエンドとインフラが分離し�
                     "on": "visible",
                     "request": "pageview",
                     "vars": {
-                        "title": "静的ファイルWebホスティングならS3よりFirebase Hosting"
+                        "title": "react-sketchappを使った開発ワークフロー"
                     }
                 }
             }

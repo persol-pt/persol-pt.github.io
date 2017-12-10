@@ -6,10 +6,30 @@
     <description>Recent content on PPT Developers&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 09 Dec 2017 04:22:57 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 10 Dec 2017 23:10:32 +0900</lastBuildDate>
     
 	<atom:link href="https://persol-pt.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>react-sketchappを使った開発ワークフロー</title>
+      <link>https://persol-pt.github.io/posts/react-sketchapp/</link>
+      <pubDate>Sun, 10 Dec 2017 23:10:32 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/posts/react-sketchapp/</guid>
+      <description>React #1 Advent Calendar 2017 10 日目の記事です。
+
+react-sketchapp react-sketchappとは、デザインツールの Sketch 用にビルドできる React コンポーネントです。
+README からの引用ですが、こんな概要です。
+ デザインシステムの管理 - react-sketchapp は、Airbnb’s design system用に作られました。大規模なデザインシステムで Sketch のアセットを管理する最も簡単な方法です。 デザインに実際のコンポーネントを使用 - コードで React コンポーネントとして実装し、Sketch に描画します。 実際のデータを使用したデザイン - データを使用したデザインは重要ですが困難です。 react-sketchapp は Sketch ファイルに実際のデータを取得して埋め込むのを簡単にします。 Sketch 上に新しいツールを作る - Sketch をカスタムデザインツールのキャンバスとして使用する最も簡単な方法  実際に使用した画面の雰囲気はPainting with Codeをご覧ください。
+
+react-sketchapp を導入するメリット 一般的にプロダクトの開発ワークフローは、例えばデザイナーからデザインファイルを受け取り、プログラマーがシステムに組み込む、という感じになりますが、そこで react-sketchapp を使ってデザイナー側で React コンポーネントを実装してもらえると、プログラマーは HOC などを利用してロジックを被せるように作っていけば、デザイナーにデザインの修正や改善を直接プロダクトコードに反映してもらえるようになって、手間やミスを削減できます。
+
+デザイナーからすると React コンポーネントを作るというとハードルが高そうに聞こえるかもしれませんが、ステートレスコンポーネントなら HTML に結構似ているので、マークアップできる方であれば学習コストはそれほどない（と思っています）。
+
+はじめてみる はじめるにあたり以下の環境が必要です。
+ node.js 4+ ( 筆者は 8.</description>
+    </item>
     
     <item>
       <title>Node.jsでHTTP/2を動かしてみる</title>
@@ -67,8 +87,7 @@ Firebase Hostingはストレージ、Web ホスティング、CDN 、マネー�
       <pubDate>Sun, 12 Nov 2017 16:13:55 +0900</pubDate>
       
       <guid>https://persol-pt.github.io/posts/start-publishing/</guid>
-      <description>&lt;p&gt;はじめまして、パーソルプロセス＆テクノロジー株式会社です。みんな PPT と略してま
-す。レガシーなパワポですね。&lt;/p&gt;
+      <description>&lt;p&gt;はじめまして、パーソルプロセス＆テクノロジー株式会社です。みんな PPT と略してます。レガシーなパワポですね。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

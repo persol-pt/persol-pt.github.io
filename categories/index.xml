@@ -6,9 +6,19 @@
     <description>Recent content in Categories on PPT Developers&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
+    <lastBuildDate>Sun, 10 Dec 2017 23:10:32 +0900</lastBuildDate>
     
 	<atom:link href="https://persol-pt.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Boiyaa</title>
+      <link>https://persol-pt.github.io/categories/boiyaa/</link>
+      <pubDate>Sun, 10 Dec 2017 23:10:32 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/categories/boiyaa/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>ビトル</title>
@@ -16,15 +26,6 @@
       <pubDate>Sat, 09 Dec 2017 04:22:57 +0900</pubDate>
       
       <guid>https://persol-pt.github.io/categories/%E3%83%93%E3%83%88%E3%83%AB/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>山本寛人</title>
-      <link>https://persol-pt.github.io/categories/%E5%B1%B1%E6%9C%AC%E5%AF%9B%E4%BA%BA/</link>
-      <pubDate>Wed, 06 Dec 2017 01:32:59 +0900</pubDate>
-      
-      <guid>https://persol-pt.github.io/categories/%E5%B1%B1%E6%9C%AC%E5%AF%9B%E4%BA%BA/</guid>
       <description></description>
     </item>
     

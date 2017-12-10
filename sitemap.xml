@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://persol-pt.github.io/posts/react-sketchapp/</loc>
+    <lastmod>2017-12-10T23:10:32+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://persol-pt.github.io/posts/using-http2-with-nodejs/</loc>
     <lastmod>2017-12-09T04:22:57+09:00</lastmod>
   </url>
@@ -35,7 +40,14 @@
   </url>
   
   <url>
+    <loc>https://persol-pt.github.io/categories/boiyaa/</loc>
+    <lastmod>2017-12-10T23:10:32+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://persol-pt.github.io/categories/</loc>
+    <lastmod>2017-12-10T23:10:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -83,13 +95,19 @@
   
   <url>
     <loc>https://persol-pt.github.io/</loc>
-    <lastmod>2017-12-09T04:22:57+09:00</lastmod>
+    <lastmod>2017-12-10T23:10:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://persol-pt.github.io/posts/</loc>
-    <lastmod>2017-12-09T04:22:57+09:00</lastmod>
+    <lastmod>2017-12-10T23:10:32+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://persol-pt.github.io/tags/react/</loc>
+    <lastmod>2017-12-10T23:10:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -108,6 +126,12 @@
   <url>
     <loc>https://persol-pt.github.io/tags/silverline/</loc>
     <lastmod>2017-12-06T01:32:59+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://persol-pt.github.io/tags/sketch/</loc>
+    <lastmod>2017-12-10T23:10:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -138,12 +162,6 @@
   <url>
     <loc>https://persol-pt.github.io/tags/%E4%BC%9A%E7%A4%BE%E7%B4%B9%E4%BB%8B/</loc>
     <lastmod>2017-11-12T16:13:55+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://persol-pt.github.io/categories/%E5%B1%B1%E6%9C%AC%E5%AF%9B%E4%BA%BA/</loc>
-    <lastmod>2017-12-06T01:32:59+09:00</lastmod>
     <priority>0</priority>
   </url>
   

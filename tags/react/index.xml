@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>React on PPT Developers&#39; Blog</title>
+    <link>https://persol-pt.github.io/tags/react/</link>
+    <description>Recent content in React on PPT Developers&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sun, 10 Dec 2017 23:10:32 +0900</lastBuildDate>
+    
+	<atom:link href="https://persol-pt.github.io/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>react-sketchappを使った開発ワークフロー</title>
+      <link>https://persol-pt.github.io/posts/react-sketchapp/</link>
+      <pubDate>Sun, 10 Dec 2017 23:10:32 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/posts/react-sketchapp/</guid>
+      <description>React #1 Advent Calendar 2017 10 日目の記事です。
+
+react-sketchapp react-sketchappとは、デザインツールの Sketch 用にビルドできる React コンポーネントです。
+README からの引用ですが、こんな概要です。
+ デザインシステムの管理 - react-sketchapp は、Airbnb’s design system用に作られました。大規模なデザインシステムで Sketch のアセットを管理する最も簡単な方法です。 デザインに実際のコンポーネントを使用 - コードで React コンポーネントとして実装し、Sketch に描画します。 実際のデータを使用したデザイン - データを使用したデザインは重要ですが困難です。 react-sketchapp は Sketch ファイルに実際のデータを取得して埋め込むのを簡単にします。 Sketch 上に新しいツールを作る - Sketch をカスタムデザインツールのキャンバスとして使用する最も簡単な方法  実際に使用した画面の雰囲気はPainting with Codeをご覧ください。
+
+react-sketchapp を導入するメリット 一般的にプロダクトの開発ワークフローは、例えばデザイナーからデザインファイルを受け取り、プログラマーがシステムに組み込む、という感じになりますが、そこで react-sketchapp を使ってデザイナー側で React コンポーネントを実装してもらえると、プログラマーは HOC などを利用してロジックを被せるように作っていけば、デザイナーにデザインの修正や改善を直接プロダクトコードに反映してもらえるようになって、手間やミスを削減できます。
+
+デザイナーからすると React コンポーネントを作るというとハードルが高そうに聞こえるかもしれませんが、ステートレスコンポーネントなら HTML に結構似ているので、マークアップできる方であれば学習コストはそれほどない（と思っています）。
+
+はじめてみる はじめるにあたり以下の環境が必要です。
+ node.js 4+ ( 筆者は 8.</description>
+    </item>
+    
+  </channel>
+</rss>
