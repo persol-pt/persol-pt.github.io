@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://persol-pt.github.io/posts/back_to_swift/</loc>
+    <lastmod>2017-12-11T15:43:02+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://persol-pt.github.io/posts/react-sketchapp/</loc>
     <lastmod>2017-12-10T23:10:32+09:00</lastmod>
   </url>
@@ -88,6 +93,12 @@
   </url>
   
   <url>
+    <loc>https://persol-pt.github.io/categories/n.yamamoto/</loc>
+    <lastmod>2017-12-11T15:43:02+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://persol-pt.github.io/tags/node.js/</loc>
     <lastmod>2017-12-09T04:22:57+09:00</lastmod>
     <priority>0</priority>
@@ -95,13 +106,13 @@
   
   <url>
     <loc>https://persol-pt.github.io/</loc>
-    <lastmod>2017-12-10T23:10:32+09:00</lastmod>
+    <lastmod>2017-12-11T15:43:02+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://persol-pt.github.io/posts/</loc>
-    <lastmod>2017-12-10T23:10:32+09:00</lastmod>
+    <lastmod>2017-12-11T15:43:02+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -138,6 +149,12 @@
   <url>
     <loc>https://persol-pt.github.io/tags/sucuri/</loc>
     <lastmod>2017-12-06T01:32:59+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://persol-pt.github.io/tags/swift/</loc>
+    <lastmod>2017-12-11T15:43:02+09:00</lastmod>
     <priority>0</priority>
   </url>
   
