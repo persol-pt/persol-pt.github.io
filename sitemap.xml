@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://persol-pt.github.io/posts/line-ojisan-bot/</loc>
+    <lastmod>2017-12-15T16:10:08+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://persol-pt.github.io/posts/back_to_swift/</loc>
     <lastmod>2017-12-11T15:43:02+09:00</lastmod>
   </url>
@@ -45,13 +50,19 @@
   
   <url>
     <loc>https://persol-pt.github.io/tags/aws/</loc>
-    <lastmod>2017-12-06T01:32:59+09:00</lastmod>
+    <lastmod>2017-12-15T16:10:08+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://persol-pt.github.io/categories/boiyaa/</loc>
     <lastmod>2017-12-10T23:10:32+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://persol-pt.github.io/tags/bot/</loc>
+    <lastmod>2017-12-15T16:10:08+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -70,6 +81,12 @@
   <url>
     <loc>https://persol-pt.github.io/tags/cloudfront/</loc>
     <lastmod>2017-12-03T03:13:06+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://persol-pt.github.io/tags/dialogflow/</loc>
+    <lastmod>2017-12-15T16:10:08+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -122,6 +139,18 @@
   </url>
   
   <url>
+    <loc>https://persol-pt.github.io/tags/lambda/</loc>
+    <lastmod>2017-12-15T16:10:08+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://persol-pt.github.io/tags/line/</loc>
+    <lastmod>2017-12-15T16:10:08+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://persol-pt.github.io/categories/n.yamamoto/</loc>
     <lastmod>2017-12-11T15:43:02+09:00</lastmod>
     <priority>0</priority>
@@ -160,6 +189,12 @@
   <url>
     <loc>https://persol-pt.github.io/tags/scutum/</loc>
     <lastmod>2017-12-06T01:32:59+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://persol-pt.github.io/tags/serverless/</loc>
+    <lastmod>2017-12-15T16:10:08+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -206,8 +241,20 @@
   </url>
   
   <url>
+    <loc>https://persol-pt.github.io/tags/%E3%83%9C%E3%83%83%E3%83%88/</loc>
+    <lastmod>2017-12-15T16:10:08+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://persol-pt.github.io/tags/%E4%BC%9A%E7%A4%BE%E7%B4%B9%E4%BB%8B/</loc>
     <lastmod>2017-11-12T16:13:55+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://persol-pt.github.io/categories/%E9%95%B7%E5%B0%BE%E3%83%93%E3%83%88%E3%83%AB/</loc>
+    <lastmod>2017-12-15T16:10:08+09:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Aws on PPT Developers&#39; Blog</title>
-    <link>https://persol-pt.github.io/tags/aws/</link>
-    <description>Recent content in Aws on PPT Developers&#39; Blog</description>
+    <title>Serverless on PPT Developers&#39; Blog</title>
+    <link>https://persol-pt.github.io/tags/serverless/</link>
+    <description>Recent content in Serverless on PPT Developers&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Fri, 15 Dec 2017 16:10:08 +0900</lastBuildDate>
     
-	<atom:link href="https://persol-pt.github.io/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://persol-pt.github.io/tags/serverless/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -42,25 +42,6 @@
 Lambdaで実装したいので、serverless frameworkでデプロイをちゃちゃっとできるようにしておきました。
 まずは構成定義用のyaml。
 # serverless.yml service: name: line-ojisan provider: name: aws runtime: nodejs6.10 stage: dev region: ap-northeast-1 custom: region: ${self:provider.region} prefix: ${self:service}-${self:provider.stage} config: ${self:custom.</description>
-    </item>
-    
-    <item>
-      <title>Cloud-based WAF(Web Application Firewall) 比較</title>
-      <link>https://persol-pt.github.io/posts/waf-comparison/</link>
-      <pubDate>Wed, 06 Dec 2017 01:32:59 +0900</pubDate>
-      
-      <guid>https://persol-pt.github.io/posts/waf-comparison/</guid>
-      <description>Security Advent Calendar 2017 6 日目の記事です。
-
-WAF とは XSS や SQL インジェクションなどの HTTP 攻撃を防ぐための Firewall で、
-Cloud-based WAF では、リクエストが WAF を通るよう WAF サービスに DNS を向け、安全なリクエストのみオリジンへ通す、という方式をとります。
-私は WAF には疎くて、AWS WAF くらいしか知らなかったので、WAF ってのは自分で設定するものなんだろうなぁと思っていたんですが、調べてみたらマネージド WAF サービスって色々あるんですね。
-
-サービス比較するにあたり、海外の WAF 紹介記事調べたり、ガートナーの WAF 市場の図を参考にしました。
-
- Gartner Magic Quadrant for Web Application Firewalls 2016   
- Gartner Magic Quadrant for Web Application Firewalls 2017   
-ということで、市場リーダーの Imperva のIncapsulaと Akamai のクラウド・セキュリティ・ソリューションと F5 Networks のSilverline、そして海外の WAF 紹介記事でよく見かけるCloudflareとSucuri、国産のScutum、AWS を比較してみました。</description>
     </item>
     
   </channel>

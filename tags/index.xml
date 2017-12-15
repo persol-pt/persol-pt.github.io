@@ -23,9 +23,18 @@
     <item>
       <title>Aws</title>
       <link>https://persol-pt.github.io/tags/aws/</link>
-      <pubDate>Wed, 06 Dec 2017 01:32:59 +0900</pubDate>
+      <pubDate>Fri, 15 Dec 2017 16:10:08 +0900</pubDate>
       
       <guid>https://persol-pt.github.io/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bot</title>
+      <link>https://persol-pt.github.io/tags/bot/</link>
+      <pubDate>Fri, 15 Dec 2017 16:10:08 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/tags/bot/</guid>
       <description></description>
     </item>
     
@@ -44,6 +53,15 @@
       <pubDate>Sun, 03 Dec 2017 03:13:06 +0900</pubDate>
       
       <guid>https://persol-pt.github.io/tags/cloudfront/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dialogflow</title>
+      <link>https://persol-pt.github.io/tags/dialogflow/</link>
+      <pubDate>Fri, 15 Dec 2017 16:10:08 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/tags/dialogflow/</guid>
       <description></description>
     </item>
     
@@ -111,6 +129,24 @@
     </item>
     
     <item>
+      <title>Lambda</title>
+      <link>https://persol-pt.github.io/tags/lambda/</link>
+      <pubDate>Fri, 15 Dec 2017 16:10:08 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/tags/lambda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Line</title>
+      <link>https://persol-pt.github.io/tags/line/</link>
+      <pubDate>Fri, 15 Dec 2017 16:10:08 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/tags/line/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Node.js</title>
       <link>https://persol-pt.github.io/tags/node.js/</link>
       <pubDate>Sat, 09 Dec 2017 04:22:57 +0900</pubDate>
@@ -143,6 +179,15 @@
       <pubDate>Wed, 06 Dec 2017 01:32:59 +0900</pubDate>
       
       <guid>https://persol-pt.github.io/tags/scutum/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Serverless</title>
+      <link>https://persol-pt.github.io/tags/serverless/</link>
+      <pubDate>Fri, 15 Dec 2017 16:10:08 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/tags/serverless/</guid>
       <description></description>
     </item>
     
@@ -188,6 +233,15 @@
       <pubDate>Wed, 06 Dec 2017 01:32:59 +0900</pubDate>
       
       <guid>https://persol-pt.github.io/tags/waf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ボット</title>
+      <link>https://persol-pt.github.io/tags/%E3%83%9C%E3%83%83%E3%83%88/</link>
+      <pubDate>Fri, 15 Dec 2017 16:10:08 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/tags/%E3%83%9C%E3%83%83%E3%83%88/</guid>
       <description></description>
     </item>
     
