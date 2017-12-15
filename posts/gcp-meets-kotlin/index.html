@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="canonical" href="https://persol-pt.github.io/tags/sketch/" />
+    <link rel="canonical" href="https://persol-pt.github.io/posts/gcp-meets-kotlin/" />
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-boilerplate>
@@ -77,7 +77,7 @@
     
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
-    <title>Sketch - PPT Developers&#39; Blog</title>
+    <title>GCP Meets Kotlin - PPT Developers&#39; Blog</title>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat" rel="stylesheet">
     <style amp-custom>table {
   border-collapse: collapse;
@@ -2562,45 +2562,513 @@ h1 {
     </amp-sidebar>
     
     
-    <header class="www-header">
-        <h1 class="mb4 px2 col-12 sm-col-8 mx-auto">Sketch</h1>
-
+<header class="www-header center">
+    <h1 class="mb1">GCP Meets Kotlin</h1>
+    <div class="www-index-header-action mx-auto">Fri, Dec 15, 2017</div>
+    <div class="www-index-header-action mx-auto">
         
+        <a href="/categories/keitaro">keitaro</a> 
+    </div>
+    <div class="www-index-header-action mx-auto">
+        
+        <a href="/tags/gcp">#GCP</a> 
+        <a href="/tags/gae">#GAE</a> 
+        <a href="/tags/kotlin">#Kotlin</a> 
+    </div>
 
-        </header>
-    <amp-selector layout="container">
-        <main class="flex pl2">
+    
+</header>
+<amp-selector layout="container">
+    <main class="flex pl2">
+        
+        <aside class="col-1 xs-hide"></aside>
 
-            <article class="www-components flex-auto col-8">
-                <section class="www-component-desc" id="samples_templates">
+        <article class="www-components flex-auto col-10">
+            <section class="www-component-desc">
+                
 
-                    <div class="abe-examples flex flex-wrap">
-                                                <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">react-sketchappを使った開発ワークフロー<i class=""></i>
-                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Sun, Dec 10, 2017</div>
-                                <div style="font-size: 70%">
-                                    
-                                    <a href="/categories/boiyaa">boiyaa</a> 
-                                </div>
-                            </h3>
-                            
-                                <p class="mb1">React #1 Advent Calendar 2017 10 日目の記事です。
+<p>この記事は <a href="https://qiita.com/advent-calendar/2017/gcp">Google Cloud Platform Advent Calendar 2017</a> の15日目の記事です。<br/>
+<br/></p>
 
-react-sketchapp react-sketchappとは、デザインツールの Sketch 用にビルドできる React コンポーネントです。
-README からの引用ですが、こんな概要です。
- デザインシステムの管理 - react-sketchapp は、Airbnb’s design system用</p>
-                            
-                            <div class="abe-sample-card-actions">
-                            
-                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/react-sketchapp/">Read More…</a></div>
-                        </div>
+<h2 id="はじめに">はじめに</h2>
 
-                    </div>
-                </section>
+<p>今年盛り上がったプログラミング言語の一つがKotlinであるというのは衆目の一致するところだと思います。<br/>
+Google I/OでAndoridアプリ開発の公式言語としてサポートされることが発表されたのを始め、様々なニュースが話題になっていました。<br/>
+<br/>
+Kotlinの特徴を簡単にいうと、</p>
 
-            </article>
-        </main>
-    </amp-selector>
+<ul>
+<li>JVM上で動作するプログラミング言語</li>
+<li>Javaとの100%互換</li>
+<li>Null安全、型安全</li>
+</ul>
+
+<p>となります。<br/>
+<br/>
+最近ではサーバサイドのプログラミング言語としても注目され採用事例も増えて来ています(弊社でも採用を検討しています)<br/>
+<br/>
+特徴であげた「Javaとの100%互換」があるため、Javaを使うGoogle Cloud Platformの各種サービスでもKotlinで実装することが出来ます。<br/>
+その実装例を書いていきたいと思います。<br/>
+<br/></p>
+
+<h2 id="google-app-engine-standard-enviroment">Google App Engine [Standard enviroment]</h2>
+
+<p><a href="https://github.com/keitaro1020/gcp-meets-kotlin/tree/master/gae-standard">コード</a> <br/>
+<br/>
+GAE StandardはGoogleが用意した専用コンテナで動作します。使用できる言語が限られていたり制約は多いのですが、その分開発や運用が楽です。<br/>
+どのフレームワークでも多分問題なく動作するとは思いますが、今回はSprinngBoot(2.0.0.M7)で作りました。<br/>
+<br/></p>
+
+<h3 id="プログラムソース">プログラムソース</h3>
+
+<ul>
+<li>メインクラス</li>
+</ul>
+
+<p>warで実行するためにSpringBootServletInitializerクラスを継承し、configureメソッドをオーバーライドします。<br/></p>
+
+<pre><code class="language-kotlin">@SpringBootApplication
+class Application : SpringBootServletInitializer() {
+    @Bean
+    fun cloudDatastoreService(): DatastoreService{
+        return DatastoreServiceFactory.getDatastoreService()
+    }
+
+    override fun configure(builder: SpringApplicationBuilder): SpringApplicationBuilder {
+        return builder.sources(Application::class.java)
+    }
+}
+
+fun main(args: Array&lt;String&gt;) {
+    runApplication&lt;Application&gt;(*args)
+}
+</code></pre>
+
+<ul>
+<li>Datastoreへのアクセス</li>
+</ul>
+
+<p>Datastoreに接続するには「<a href="https://github.com/GoogleCloudPlatform/google-cloud-java/tree/master/google-cloud-datastore">Google Cloud Java Client</a>」か<a href="https://cloud.google.com/appengine/docs/standard/java/javadoc/">appengine API</a>」があります。<br/>
+Standardの場合は「Google Cloud Java Client」を利用するとローカル環境で実行した際に</p>
+
+<pre><code>Caused by: java.lang.IllegalStateException: Must use project ID as app ID if project ID is provided.
+</code></pre>
+
+<p>と例外が出てしまい、ローカルのエミュレータに繋ぐことが出来ないため「appengine API」を使用しました。<br/>
+（どちらを使用してもGAE上での動作は問題ありませんでした。ローカル環境での実行時にローカルDatastore（エミュレータ）に接続できるかどうかの差です）<br/>
+<br/></p>
+
+<h3 id="設定ファイル">設定ファイル</h3>
+
+<ul>
+<li>buiid.gradle</li>
+</ul>
+
+<p>GAE Standardは、warファイルをデプロイしJetty9上で動作させます。<br/>
+そのため、</p>
+
+<ul>
+<li>spring-boot-starter-tomcat を exclude して spring-boot-starter-jetty を適用</li>
+<li>warpluginを使用</li>
+</ul>
+
+<p>しています</p>
+
+<pre><code class="language-java">(略)
+
+apply plugin: 'kotlin'
+apply plugin: &quot;kotlin-spring&quot;
+apply plugin: &quot;org.springframework.boot&quot;
+apply plugin: 'io.spring.dependency-management'
+apply plugin: &quot;com.google.cloud.tools.appengine&quot;
+apply plugin: 'war'
+apply plugin: 'org.akhikhl.gretty'
+
+(略)
+
+dependencies {
+    compile &quot;javax.servlet:javax.servlet-api:3.1.0&quot;
+
+    compile(&quot;org.springframework.boot:spring-boot-starter-freemarker&quot;)
+    compile(&quot;org.springframework.boot:spring-boot-starter-web&quot;){
+        exclude module: &quot;spring-boot-starter-tomcat&quot;
+    }
+    providedRuntime 'org.springframework.boot:spring-boot-starter-jetty'
+
+    compile(&quot;org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}&quot;)
+    compile(&quot;org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}&quot;)
+
+    compile(&quot;com.fasterxml.jackson.module:jackson-module-kotlin:2.9.2&quot;)
+
+    compile(&quot;com.google.appengine:appengine:+&quot;)
+    compile(&quot;com.google.appengine:appengine-api-1.0-sdk:+&quot;)
+
+    testCompile(&quot;org.springframework.boot:spring-boot-starter-test&quot;)
+}
+</code></pre>
+
+<ul>
+<li>appengine-web.xml</li>
+</ul>
+
+<p>runtimeはjava8を使用しますプロジェクト内のサービスを分ける場合は&lt;module&gt;に指定します</p>
+
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;appengine-web-app xmlns=&quot;http://appengine.google.com/ns/1.0&quot;&gt;
+    &lt;runtime&gt;java8&lt;/runtime&gt;
+    &lt;threadsafe&gt;true&lt;/threadsafe&gt;
+    &lt;module&gt;gae-standard&lt;/module&gt;
+    &lt;sessions-enabled&gt;true&lt;/sessions-enabled&gt;
+    &lt;system-properties&gt;
+        &lt;property name=&quot;java.util.logging.config.file&quot; value=&quot;WEB-INF/logging.properties&quot;/&gt;
+    &lt;/system-properties&gt;
+    &lt;automatic-scaling&gt;
+        &lt;min-idle-instances&gt;1&lt;/min-idle-instances&gt;
+        &lt;max-idle-instances&gt;1&lt;/max-idle-instances&gt;
+    &lt;/automatic-scaling&gt;
+&lt;/appengine-web-app&gt;
+</code></pre>
+
+<h3 id="その他">その他</h3>
+
+<ul>
+<li>ローカル環境での実行</li>
+</ul>
+
+<pre><code class="language-sh">&gt; ./gradlew appengineRun
+</code></pre>
+
+<ul>
+<li>デプロイ</li>
+</ul>
+
+<pre><code class="language-sh">&gt; ./gradlew appengineDeploy
+</code></pre>
+
+<h2 id="google-app-engine-flexible-enviroment">Google App Engine [Flexible enviroment]</h2>
+
+<p><a href="https://github.com/keitaro1020/gcp-meets-kotlin/tree/master/gae-flexible">コード</a> <br/>
+<br/>
+GAE FlexibleはGAEを名乗ってはいますが実質GCEです。Dockerコンテナ上でアプリを動作させるためStandardに比べて出来ることは多いですが、起動時間が長かったり、Standardと違って無料枠での利用が出来ない等のデメリットがあります。<br/>
+<br/></p>
+
+<h3 id="プログラムソース-1">プログラムソース</h3>
+
+<ul>
+<li>メインクラス</li>
+</ul>
+
+<pre><code class="language-kotlin">package sample
+
+import com.google.cloud.datastore.Datastore
+import com.google.cloud.datastore.DatastoreOptions
+import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.runApplication
+import org.springframework.context.annotation.Bean
+
+@SpringBootApplication
+class Application {
+    @Bean
+    fun cloudDatastoreService(): Datastore {
+        return DatastoreOptions.getDefaultInstance().service
+    }
+}
+
+fun main(args: Array&lt;String&gt;) {
+    runApplication&lt;Application&gt;(*args)
+}
+</code></pre>
+
+<ul>
+<li>Datastoreへのアクセス</li>
+</ul>
+
+<p>「<a href="https://github.com/GoogleCloudPlatform/google-cloud-java/tree/master/google-cloud-datastore">Google Cloud Java Client</a>」を使用します。<br/>
+<br/></p>
+
+<h3 id="設定ファイル-1">設定ファイル</h3>
+
+<ul>
+<li>buiid.gradle</li>
+</ul>
+
+<p>Dockerコンテナ上でアプリを動作させるため、warファイルを作成せずに実行可能jarを動作させることが出来ます。<br/>
+そのためStandardで利用していたwarpluginは必要ありません。</p>
+
+<pre><code class="language-java">(略)
+apply plugin: 'kotlin'
+apply plugin: &quot;kotlin-spring&quot;
+apply plugin: &quot;org.springframework.boot&quot;
+apply plugin: 'io.spring.dependency-management'
+apply plugin: &quot;com.google.cloud.tools.appengine&quot;
+
+(略)
+
+dependencies {
+    compile &quot;javax.servlet:javax.servlet-api:3.1.0&quot;
+
+    compile(&quot;org.springframework.boot:spring-boot-starter-freemarker&quot;)
+    compile(&quot;org.springframework.boot:spring-boot-starter-web&quot;){
+        exclude module: &quot;spring-boot-starter-tomcat&quot;
+    }
+    compile('org.springframework.boot:spring-boot-starter-jetty')
+
+    compile(&quot;org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}&quot;)
+    compile(&quot;org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}&quot;)
+
+    compile(&quot;com.fasterxml.jackson.module:jackson-module-kotlin:2.9.2&quot;)
+
+    compile(&quot;com.google.appengine:appengine:+&quot;)
+    compile(&quot;com.google.cloud:google-cloud-datastore:1.8.0&quot;)
+
+    testCompile(&quot;org.springframework.boot:spring-boot-starter-test&quot;)
+}
+</code></pre>
+
+<ul>
+<li>Dockerfile</li>
+</ul>
+
+<pre><code>FROM gcr.io/google_appengine/openjdk8
+VOLUME /tmp
+ADD gae-flexible-0.0.1-SNAPSHOT.jar app.jar
+CMD [ &quot;java&quot;,&quot;-Djava.security.egd=file:/dev/./urandom&quot;,&quot;-jar&quot;,&quot;/app.jar&quot;]
+</code></pre>
+
+<ul>
+<li>app.yaml</li>
+</ul>
+
+<pre><code class="language-yaml">runtime: custom
+env: flex
+service: gae-flexible
+
+automatic_scaling:
+  min_num_instances: 1
+  max_num_instances: 1
+</code></pre>
+
+<h3 id="その他-1">その他</h3>
+
+<ul>
+<li>ローカ環境での実行</li>
+</ul>
+
+<pre><code class="language-sh">&gt; ./gradlew bootRun
+</code></pre>
+
+<ul>
+<li>デプロイ
+デプロイは非常に時間がかかります。GAE Standardが1分程度でデプロイ出来るのに比べ、Flexibleでは6〜8分程度かかります。</li>
+</ul>
+
+<pre><code class="language-sh">&gt; ./gradlew appengineDeploy
+</code></pre>
+
+<h2 id="cloud-endpoints-gae-standard-endpoints-framework">Cloud Endpoints + GAE standard(endpoints framework)</h2>
+
+<p><a href="https://github.com/keitaro1020/gcp-meets-kotlin/tree/master/endpoints">コード</a> <br/>
+<br/>
+EndpointsはAPIの保護・監視・管理のためのAPIゲートウェイです。<br/>
+Firebase Authentication、Google 認証、Auth0などのOpenId Connectに対応した認証を利用できるなど、APIの開発効率を上げることができます。<br/></p>
+
+<p>EndPointsは下記の組み合わせで利用できます。<br/></p>
+
+<ul>
+<li>OpenAPI : swagger等で作成した定義ファイルをEndpointsにデプロイし、以下の環境に実装されたAPIを利用
+
+<ul>
+<li>Google App Engine Flexible</li>
+<li>Google Compute Engine</li>
+<li>Google Kubernetes Engine</li>
+</ul></li>
+<li>Endpoints Frameworks : App Engine用のFrameworkで、以下の環境に実装されたAPIを利用
+
+<ul>
+<li>Google App Engine Standard (Java)</li>
+<li>Google App Engine Standard (Python)</li>
+</ul></li>
+<li>gRPC
+
+<ul>
+<li>Google Compute Engine</li>
+<li>Google Kubernetes Engine</li>
+</ul></li>
+</ul>
+
+<p><a href="https://cloud.google.com/endpoints/docs/?hl=ja">公式のサイト</a>にはgRPC + GAE Flexibleが利用できるように書いてありますがこれは誤りのようです(英語版は修正されている)<br/>
+<br/></p>
+
+<h3 id="プログラムソース-2">プログラムソース</h3>
+
+<ul>
+<li>API実装</li>
+</ul>
+
+<p>APIに付けたアノテーションにEndpointsの定義を指定します。このアノテーションからAPIドキュメントやクライアントライブラリを生成できます。</p>
+
+<pre><code class="language-kotlin">@Api(
+  name = &quot;sample&quot;,
+  version = &quot;v1&quot;,
+  namespace =
+    ApiNamespace(
+      ownerDomain = &quot;sample&quot;,
+      ownerName = &quot;sample&quot;,
+      packagePath = &quot;&quot;
+    )
+)
+class MessagesApi {
+
+    val messageRepository: MessagesRepository
+
+    init {
+        messageRepository = DatastoreMessagesRepository(DatastoreServiceFactory.getDatastoreService())
+    }
+
+    @ApiMethod(path = &quot;messages/{id}&quot;, httpMethod = &quot;get&quot;)
+    fun getMessage(@Named(&quot;id&quot;)id: Long) : Message? {
+        return messageRepository.findById(id = id)
+    }
+
+    @ApiMethod(path = &quot;messages&quot;, httpMethod = &quot;get&quot;)
+    fun getMessages() : List&lt;Message&gt; {
+        return messageRepository.findAll()
+    }
+
+    @ApiMethod(path = &quot;messages&quot;, httpMethod = HttpMethod.POST)
+    fun createMessage(message: Message) : Message? {
+        messageRepository.create(message = message)
+        return messageRepository.findById(id = message.id)
+    }
+
+}
+</code></pre>
+
+<h3 id="設定ファイル-2">設定ファイル</h3>
+
+<ul>
+<li>appengine-web.xml</li>
+</ul>
+
+<p>env-variablesにEndpointsサービス名を指定します。</p>
+
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;appengine-web-app xmlns=&quot;http://appengine.google.com/ns/1.0&quot;&gt;
+    &lt;threadsafe&gt;true&lt;/threadsafe&gt;
+    &lt;basic-scaling&gt;
+        &lt;max-instances&gt;2&lt;/max-instances&gt;
+    &lt;/basic-scaling&gt;
+    &lt;system-properties&gt;
+        &lt;property name=&quot;java.util.logging.config.file&quot; value=&quot;WEB-INF/logging.properties&quot;/&gt;
+    &lt;/system-properties&gt;
+    &lt;env-variables&gt;
+        &lt;env-var name=&quot;ENDPOINTS_SERVICE_NAME&quot; value=&quot;${endpoints.project.id}.appspot.com&quot; /&gt;
+    &lt;/env-variables&gt;
+&lt;/appengine-web-app&gt;
+</code></pre>
+
+<ul>
+<li>web.xml</li>
+</ul>
+
+<p>servlet にAPIのクラスを指定し、filterにEndpointsサービス名を指定します。</p>
+
+<pre><code class="language-xml">&lt;web-app xmlns=&quot;http://java.sun.com/xml/ns/javaee&quot;  version=&quot;2.5&quot;&gt;
+    &lt;!-- Wrap the backend with Endpoints Frameworks v2. --&gt;
+    &lt;servlet&gt;
+        &lt;servlet-name&gt;EndpointsServlet&lt;/servlet-name&gt;
+        &lt;servlet-class&gt;com.google.api.server.spi.EndpointsServlet&lt;/servlet-class&gt;
+        &lt;init-param&gt;
+            &lt;param-name&gt;services&lt;/param-name&gt;
+            &lt;param-value&gt;sample.MessagesApi&lt;/param-value&gt;
+        &lt;/init-param&gt;
+    &lt;/servlet&gt;
+    &lt;!-- Route API method requests to the backend. --&gt;
+    &lt;servlet-mapping&gt;
+        &lt;servlet-name&gt;EndpointsServlet&lt;/servlet-name&gt;
+        &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+    &lt;/servlet-mapping&gt;
+    &lt;welcome-file-list&gt;
+        &lt;welcome-file&gt;index.html&lt;/welcome-file&gt;
+    &lt;/welcome-file-list&gt;
+
+    &lt;!-- [START api_management] --&gt;
+    &lt;!-- Add a filter that fetches the service config from service management. --&gt;
+    &lt;filter&gt;
+        &lt;filter-name&gt;endpoints-api-configuration&lt;/filter-name&gt;
+        &lt;filter-class&gt;com.google.api.control.ServiceManagementConfigFilter&lt;/filter-class&gt;
+    &lt;/filter&gt;
+
+    &lt;!-- Add a filter that performs Endpoints logging and monitoring. --&gt;
+    &lt;filter&gt;
+        &lt;filter-name&gt;endpoints-api-controller&lt;/filter-name&gt;
+        &lt;filter-class&gt;com.google.api.control.extensions.appengine.GoogleAppEngineControlFilter&lt;/filter-class&gt;
+        &lt;init-param&gt;
+            &lt;param-name&gt;endpoints.projectId&lt;/param-name&gt;
+            &lt;param-value&gt;${endpoints.project.id}&lt;/param-value&gt;
+        &lt;/init-param&gt;
+        &lt;init-param&gt;
+            &lt;param-name&gt;endpoints.serviceName&lt;/param-name&gt;
+            &lt;param-value&gt;${endpoints.project.id}.appspot.com&lt;/param-value&gt;
+        &lt;/init-param&gt;
+    &lt;/filter&gt;
+
+    &lt;filter-mapping&gt;
+        &lt;filter-name&gt;endpoints-api-configuration&lt;/filter-name&gt;
+        &lt;servlet-name&gt;EndpointsServlet&lt;/servlet-name&gt;
+    &lt;/filter-mapping&gt;
+
+    &lt;filter-mapping&gt;
+        &lt;filter-name&gt;endpoints-api-controller&lt;/filter-name&gt;
+        &lt;servlet-name&gt;EndpointsServlet&lt;/servlet-name&gt;
+    &lt;/filter-mapping&gt;
+    &lt;!-- [END api_management] --&gt;
+&lt;/web-app&gt;
+</code></pre>
+
+<h3 id="その他-2">その他</h3>
+
+<ul>
+<li>デプロイ</li>
+</ul>
+
+<p>作成したAPIからAPIドキュメントを作成します。<br/>
+ドキュメントは<code>build/endpointsOpenApiDocs/openapi.json</code>に作成されます。</p>
+
+<pre><code class="language-sh">&gt; ./gradlew endpointsOpenApiDocs
+</code></pre>
+
+<p>APIドキュメントをEndpointsにデプロイします</p>
+
+<pre><code class="language-sh">&gt; gcloud endpoints services deploy build/endpointsOpenApiDocs/openapi.json
+</code></pre>
+
+<p>APIをデプロイします</p>
+
+<pre><code class="language-sh">&gt; ./gradlew appengineDeploy
+</code></pre>
+
+<h2 id="さいごに">さいごに</h2>
+
+<p>Kotlinが「Javaとの100%互換」を謳っているだけあって、実装すること自体は難しくありません。 <del>GCPの情報が少ない方が辛い</del> <br/>
+今回は取り上げませんでしたが、同じくJavaを使うCloud DataflowでもKotlinでの実装を行うことが出来ます（<a href="https://github.com/keitaro1020/gcp-meets-kotlin/tree/master/dataflow">コード</a>)<br/>
+<br/>
+簡潔で安全に書けるKotlinとGCPの組み合わせ、これからの選択肢としていかがでしょうか？<br/>
+<br/></p>
+
+            </section>
+            <section class="www-component-desc">
+                <div>
+                    <amp-social-share type="hatena" data-share-endpoint="http://b.hatena.ne.jp/entry/https://persol-pt.github.io/posts/gcp-meets-kotlin/">B!</amp-social-share>
+                    <amp-social-share type="facebook" data-param-app_id="158646288203071"></amp-social-share>
+                    <amp-social-share type="twitter"></amp-social-share>
+                </div>
+            </section>
+        </article>
+
+        <aside class="col-1 xs-hide"></aside>
+    </main>
+</amp-selector>
     
     <footer class="ampstart-footer flex flex-column items-center pxy3">
         
@@ -2620,7 +3088,7 @@ README からの引用ですが、こんな概要です。
                     "on": "visible",
                     "request": "pageview",
                     "vars": {
-                        "title": "Sketch"
+                        "title": "GCP Meets Kotlin"
                     }
                 }
             }

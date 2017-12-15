@@ -6,10 +6,24 @@
     <description>Recent content on PPT Developers&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 11 Dec 2017 15:43:02 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 15 Dec 2017 17:16:57 +0900</lastBuildDate>
     
 	<atom:link href="https://persol-pt.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>GCP Meets Kotlin</title>
+      <link>https://persol-pt.github.io/posts/gcp-meets-kotlin/</link>
+      <pubDate>Fri, 15 Dec 2017 17:16:57 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/posts/gcp-meets-kotlin/</guid>
+      <description>この記事は Google Cloud Platform Advent Calendar 2017 の15日目の記事です。 
+はじめに 今年盛り上がったプログラミング言語の一つがKotlinであるというのは衆目の一致するところだと思います。 Google I/OでAndoridアプリ開発の公式言語としてサポートされることが発表されたのを始め、様々なニュースが話題になっていました。  Kotlinの特徴を簡単にいうと、
+ JVM上で動作するプログラミング言語 Javaとの100%互換 Null安全、型安全  となります。  最近ではサーバサイドのプログラミング言語としても注目され採用事例も増えて来ています(弊社でも採用を検討しています)  特徴であげた「Javaとの100%互換」があるため、Javaを使うGoogle Cloud Platformの各種サービスでもKotlinで実装することが出来ます。 その実装例を書いていきたいと思います。 
+Google App Engine [Standard enviroment] コード   GAE StandardはGoogleが用意した専用コンテナで動作します。使用できる言語が限られていたり制約は多いのですが、その分開発や運用が楽です。 どのフレームワークでも多分問題なく動作するとは思いますが、今回はSprinngBoot(2.0.0.M7)で作りました。 
+プログラムソース  メインクラス  warで実行するためにSpringBootServletInitializerクラスを継承し、configureメソッドをオーバーライドします。
+@SpringBootApplication class Application : SpringBootServletInitializer() { @Bean fun cloudDatastoreService(): DatastoreService{ return DatastoreServiceFactory.getDatastoreService() } override fun configure(builder: SpringApplicationBuilder): SpringApplicationBuilder { return builder.sources(Application::class.java) } } fun main(args: Array&amp;lt;String&amp;gt;) { runApplication&amp;lt;Application&amp;gt;(*args) }   Datastoreへのアクセス  Datastoreに接続するには「Google Cloud Java Client」かappengine API」があります。 Standardの場合は「Google Cloud Java Client」を利用するとローカル環境で実行した際に</description>
+    </item>
     
     <item>
       <title>Back_to_swift</title>

@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://persol-pt.github.io/posts/gcp-meets-kotlin/</loc>
+    <lastmod>2017-12-15T17:16:57+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://persol-pt.github.io/posts/back_to_swift/</loc>
     <lastmod>2017-12-11T15:43:02+09:00</lastmod>
   </url>
@@ -75,6 +80,18 @@
   </url>
   
   <url>
+    <loc>https://persol-pt.github.io/tags/gae/</loc>
+    <lastmod>2017-12-15T17:16:57+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://persol-pt.github.io/tags/gcp/</loc>
+    <lastmod>2017-12-15T17:16:57+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://persol-pt.github.io/tags/http/2/</loc>
     <lastmod>2017-12-09T04:22:57+09:00</lastmod>
     <priority>0</priority>
@@ -93,6 +110,18 @@
   </url>
   
   <url>
+    <loc>https://persol-pt.github.io/categories/keitaro/</loc>
+    <lastmod>2017-12-15T17:16:57+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://persol-pt.github.io/tags/kotlin/</loc>
+    <lastmod>2017-12-15T17:16:57+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://persol-pt.github.io/categories/n.yamamoto/</loc>
     <lastmod>2017-12-11T15:43:02+09:00</lastmod>
     <priority>0</priority>
@@ -106,13 +135,13 @@
   
   <url>
     <loc>https://persol-pt.github.io/</loc>
-    <lastmod>2017-12-11T15:43:02+09:00</lastmod>
+    <lastmod>2017-12-15T17:16:57+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://persol-pt.github.io/posts/</loc>
-    <lastmod>2017-12-11T15:43:02+09:00</lastmod>
+    <lastmod>2017-12-15T17:16:57+09:00</lastmod>
     <priority>0</priority>
   </url>
   
