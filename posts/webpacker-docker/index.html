@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="canonical" href="https://persol-pt.github.io/posts/" />
+    <link rel="canonical" href="https://persol-pt.github.io/posts/webpacker-docker/" />
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-boilerplate>
@@ -77,7 +77,7 @@
     
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
-    <title>Posts - PPT Developers&#39; Blog</title>
+    <title>DockerだけでRails、特にWebpackerはハマった - PPT Developers&#39; Blog</title>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat" rel="stylesheet">
     <style amp-custom>table {
   border-collapse: collapse;
@@ -2562,225 +2562,304 @@ h1 {
     </amp-sidebar>
     
     
-    <header class="www-header">
-        <h1 class="mb4 px2 col-12 sm-col-8 mx-auto">Posts</h1>
-
+<header class="www-header center">
+    <h1 class="mb1">DockerだけでRails、特にWebpackerはハマった</h1>
+    <div class="www-index-header-action mx-auto">Sat, Dec 16, 2017</div>
+    <div class="www-index-header-action mx-auto">
         
+        <a href="/categories/boiyaa">boiyaa</a> 
+    </div>
+    <div class="www-index-header-action mx-auto">
+        
+        <a href="/tags/rails">#Rails</a> 
+        <a href="/tags/webpacker">#Webpacker</a> 
+        <a href="/tags/docker">#Docker</a> 
+    </div>
 
-        </header>
-    <amp-selector layout="container">
-        <main class="flex pl2">
+    
+</header>
+<amp-selector layout="container">
+    <main class="flex pl2">
+        
+        <aside class="col-1 xs-hide"></aside>
 
-            <article class="www-components flex-auto col-8">
-                <section class="www-component-desc" id="samples_templates">
+        <article class="www-components flex-auto col-10">
+            <section class="www-component-desc">
+                
 
-                    <div class="abe-examples flex flex-wrap">
-                                                <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">DockerだけでRails、特にWebpackerはハマった<i class=""></i>
-                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Sat, Dec 16, 2017</div>
-                                <div style="font-size: 70%">
-                                    
-                                    <a href="/categories/boiyaa">boiyaa</a> 
-                                </div>
-                            </h3>
-                            
-                                <p class="mb1">すいません遅くなりました。。
-Ruby on Rails Advent Calendar 2017 14 日目の記事です。
+<p>すいません遅くなりました。。</p>
 
-ある日、
+<p><a href="https://qiita.com/advent-calendar/2017/ruby_on_rails">Ruby on Rails Advent Calendar 2017</a> 14 日目の記事です。</p>
 
-「docker run で rails new とか bundle install したい」 
-と、知り合いのそこそこ可愛い女の子が言ってきました。
+<p><br><br></p>
 
-同僚の作ったおじさん LINE ボットの教師データになるほどのオジサンである私は、
-誠意（下心）を持って取り組</p>
-                            
-                            <div class="abe-sample-card-actions">
-                            
-                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/webpacker-docker/">Read More…</a></div>
-                        </div>
+<p>ある日、</p>
 
-                                                <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">GCP Meets Kotlin<i class=""></i>
-                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Fri, Dec 15, 2017</div>
-                                <div style="font-size: 70%">
-                                    
-                                    <a href="/categories/keitaro">keitaro</a> 
-                                </div>
-                            </h3>
-                            
-                                <p class="mb1">この記事は Google Cloud Platform Advent Calendar 2017 の15日目の記事です。 
-はじめに 今年盛り上がったプログラミング言語の一つがKotlinであるというのは衆目の一致するところだと思います。 Google I/OでAndoridアプリ開発の公式言語としてサポートされることが発表されたのを始め、様々なニュースが話題になっていました。  Kotlinの特</p>
-                            
-                            <div class="abe-sample-card-actions">
-                            
-                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/gcp-meets-kotlin/">Read More…</a></div>
-                        </div>
+<p><br></p>
 
-                                                <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">おじさんLINEごっこBOTを作ってみた<i class=""></i>
-                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Fri, Dec 15, 2017</div>
-                                <div style="font-size: 70%">
-                                    
-                                    <a href="/categories/%E9%95%B7%E5%B0%BE%E3%83%93%E3%83%88%E3%83%AB">長尾ビトル</a> 
-                                </div>
-                            </h3>
-                            
-                                <p class="mb1">かなり遅れてしまいましたが、今回はボット (Bot) Advent Calendar 2017の10日目の記事を書きます。
+<h3 id="docker-run-で-rails-new-とか-bundle-install-したい">「docker run で rails new とか bundle install したい」</h3>
 
-突然ですが、みなさん「 おじさんLINEごっこ 」という遊びをご存知ですか？ 最近若い女子同士で流行っているこの遊びですが、今時のSNSにありそうな「おじさんの文章」を真似しながら送り合うというものです。
-まず特徴としては以下が挙げられます：
- 長い 句読点が多い 無駄に褒</p>
-                            
-                            <div class="abe-sample-card-actions">
-                            
-                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/line-ojisan-bot/">Read More…</a></div>
-                        </div>
+<p><br></p>
 
-                                                <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">[初心者向け]GoogleAnalytics を始める時に知っておいたほうが良いこと<i class=""></i>
-                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Fri, Dec 15, 2017</div>
-                                <div style="font-size: 70%">
-                                    
-                                    <a href="/categories/%E5%B7%9D%E5%B4%8E-%E5%8D%93%E6%BA%80">川崎 卓満</a> 
-                                </div>
-                            </h3>
-                            
-                                <p class="mb1">この記事について Google Analytics Advent Calendar 2017 16日目の記事です。 はじめに Google AnalyticsをサイトやWEBサービスで利用するにあたり、予め知っておいたほうが良いと思われる 心構えや、よく使われる内容について、軽く触れておきます。 GAを使う前の心構え 1．gaで計測される割合に関する数値は、統計上支障がない程度に間引かれている  </p>
-                            
-                            <div class="abe-sample-card-actions">
-                            
-                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/starting-google-analytics/">Read More…</a></div>
-                        </div>
+<p>と、知り合いのそこそこ可愛い女の子が言ってきました。</p>
 
-                                                <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">Back_to_swift<i class=""></i>
-                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Mon, Dec 11, 2017</div>
-                                <div style="font-size: 70%">
-                                    
-                                    <a href="/categories/n.yamamoto">N.Yamamoto</a> 
-                                </div>
-                            </h3>
-                            
-                                <p class="mb1"> 出戻り Swift 
-先日、昔（個人事業主をしてた時に）作ったiOSアプリがストアから消えてるんですけど
-というような連絡を受けました。
-何年も前に作りぱなしにしてたので、iOS11リリース頃に消されています。
-最近iOSアプリ開発をしていなかったので、この機会にSwiftでアプリを作ってみます。
-とりあえず、遊びで作った15パズルをSwiftで作り直します。
-昔の素材を引っ張り出すのが面倒なの</p>
-                            
-                            <div class="abe-sample-card-actions">
-                            
-                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/back_to_swift/">Read More…</a></div>
-                        </div>
+<p><br></p>
 
-                                                <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">react-sketchappを使った開発ワークフロー<i class=""></i>
-                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Sun, Dec 10, 2017</div>
-                                <div style="font-size: 70%">
-                                    
-                                    <a href="/categories/boiyaa">boiyaa</a> 
-                                </div>
-                            </h3>
-                            
-                                <p class="mb1">React #1 Advent Calendar 2017 10 日目の記事です。
+<p>同僚の作った<a href="https://persol-pt.github.io/posts/line-ojisan-bot/">おじさん LINE ボット</a>の教師データになるほどのオジサンである私は、</p>
 
-react-sketchapp react-sketchappとは、デザインツールの Sketch 用にビルドできる React コンポーネントです。
-README からの引用ですが、こんな概要です。
- デザインシステムの管理 - react-sketchapp は、Airbnb’s design system用</p>
-                            
-                            <div class="abe-sample-card-actions">
-                            
-                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/react-sketchapp/">Read More…</a></div>
-                        </div>
+<p>誠意（下心）を持って取り組んだのであります。</p>
 
-                                                <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">Node.jsでHTTP/2を動かしてみる<i class=""></i>
-                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Sat, Dec 9, 2017</div>
-                                <div style="font-size: 70%">
-                                    
-                                    <a href="/categories/%E3%83%93%E3%83%88%E3%83%AB">ビトル</a> 
-                                </div>
-                            </h3>
-                            
-                                <p class="mb1">どうも、ビトルです。
-今回はNode.js Advent Calendar 2017の9日目の記事になります。
+<p>しかし、やってみたら色々ハマったので共有します。</p>
 
-この記事ではNode.jsで現在コア機能に実験的に導入されているHTTP/2について書きたいと思います。
+<p><br></p>
 
-Serverside 
-単純なHTTPサーバとしての処理はこんな感じに実装できます。
+<p>ちなみに最終的な状態は<a href="https://github.com/boiyaa/webpacker-in-docker">こちらのリポジトリ</a>にありますので、ここからの長々とした過程を飛ばしたい方はこちらをご覧ください。</p>
 
-const http2 = require(&#39;http2&#39;); const fs = re</p>
-                            
-                            <div class="abe-sample-card-actions">
-                            
-                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/using-http2-with-nodejs/">Read More…</a></div>
-                        </div>
+<p><br><br><br></p>
 
-                                                <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">Cloud-based WAF(Web Application Firewall) 比較<i class=""></i>
-                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Wed, Dec 6, 2017</div>
-                                <div style="font-size: 70%">
-                                    
-                                    <a href="/categories/boiyaa">boiyaa</a> 
-                                </div>
-                            </h3>
-                            
-                                <p class="mb1">Security Advent Calendar 2017 6 日目の記事です。
+<h2 id="rails-の-docker-イメージを作る">Rails の Docker イメージを作る</h2>
 
-WAF とは XSS や SQL インジェクションなどの HTTP 攻撃を防ぐための Firewall で、
-Cloud-based WAF では、リクエストが WAF を通るよう WAF サービスに DNS を向け、安全なリクエストのみオリジンへ通す、という方式をとります。
-私は WAF には疎くて、AWS WA</p>
-                            
-                            <div class="abe-sample-card-actions">
-                            
-                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/waf-comparison/">Read More…</a></div>
-                        </div>
+<p>一般的に Rails アプリケーションと Docker を組み合わせる場合、<a href="https://docs.docker.com/compose/rails/">Quickstart: Compose and Rails</a>にあるように、「Rails アプリケーションを起動する Docker イメージを作る」という使い方が主流のようです。</p>
 
-                                                <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">静的ファイルWebホスティングならS3よりFirebase Hosting<i class=""></i>
-                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Sun, Dec 3, 2017</div>
-                                <div style="font-size: 70%">
-                                    
-                                    <a href="/categories/boiyaa">boiyaa</a> 
-                                </div>
-                            </h3>
-                            
-                                <p class="mb1">Firebase Advent Calendar 2017 3 日目の記事です。
+<p><br></p>
 
-Firebase Hostingはストレージ、Web ホスティング、CDN 、マネージド SSL を組み込んだサービスです。 AWS ではストレージと Web ホスティングは S3 だけでできますが、CDN は CloudFront、マネージド SSL は Certificate Manager と、複数のサービス</p>
-                            
-                            <div class="abe-sample-card-actions">
-                            
-                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/firebase-hosting/">Read More…</a></div>
-                        </div>
+<p><code>docker run</code>で rails コマンドを使用したいのであれば、Rails とその依存するものがインストールされた Docker イメージが必要ですが、</p>
 
-                                                <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">社外発信はじめました<i class=""></i>
-                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Sun, Nov 12, 2017</div>
-                                <div style="font-size: 70%">
-                                    
-                                    <a href="/categories/boiyaa">boiyaa</a> 
-                                </div>
-                            </h3>
-                            
-                                <p class="mb1"><p>はじめまして、パーソルプロセス＆テクノロジー株式会社です。みんな PPT と略してます。レガシーなパワポですね。</p>
+<p><a href="https://hub.docker.com/_/rails/">Rails 公式 Docker イメージ</a>は非推奨でもうメンテされていないので、</p>
 
-<p></p></p>
-                            
-                            <div class="abe-sample-card-actions">
-                            
-                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/start-publishing/">Read More…</a></div>
-                        </div>
+<p>最初はこの Dockerfile を参考にして作りました。</p>
 
-                    </div>
-                </section>
+<p><br></p>
 
-            </article>
-        </main>
-    </amp-selector>
+<pre><code>FROM ruby
+
+RUN apt-get update &amp;&amp; apt-get install -y nodejs --no-install-recommends &amp;&amp; rm -rf /var/lib/apt/lists/*
+
+RUN apt-get update &amp;&amp; apt-get install -y mysql-client postgresql-client sqlite3 --no-install-recommends &amp;&amp; rm -rf /var/lib/apt/lists/*
+
+RUN gem install rails
+</code></pre>
+
+<p>しかしこれで作ったイメージで<code>bundle install --path vendor/bundle</code>しても<code>.bundle</code>ファイルが生成されなくて上手く動きません。</p>
+
+<p>ので<code>BUNDLE_PATH</code>を設定しました。</p>
+
+<p><br></p>
+
+<pre><code>FROM ruby
+
+RUN apt-get update &amp;&amp; apt-get install -y nodejs --no-install-recommends &amp;&amp; rm -rf /var/lib/apt/lists/*
+
+RUN apt-get update &amp;&amp; apt-get install -y mysql-client postgresql-client sqlite3 --no-install-recommends &amp;&amp; rm -rf /var/lib/apt/lists/*
+
+RUN gem install rails
+
+WORKDIR /workdir
+
+ENV BUNDLE_PATH /workdir/vendor/bundle/ruby/2.4.0
+</code></pre>
+
+<p>では Docker イメージをビルドします。</p>
+
+<pre><code class="language-sh">$ docker build -t myrails .
+</code></pre>
+
+<p>最新の Rails （執筆時点では 5.1.4） の Docker イメージができます。</p>
+
+<p>ホストとコンテナを同期してホスト側に生成されたファイルが来るようにしつつ、 <code>rails new</code>、<code>bundle install</code>、<code>rails server</code>します。</p>
+
+<pre><code class="language-sh">$ docker run -it --rm -v $(pwd):/workdir myrails rails new myproject --skip-bundle
+$ cd myproject
+$ docker run -it --rm -v $(pwd):/workdir myrails bundle install --path vendor/bundle
+$ docker run -it --rm -v $(pwd):/workdir -p 3000:3000 myrails rails server -b 0.0.0.0
+=&gt; Booting Puma
+...
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+</code></pre>
+
+<p><a href="http://localhost:3000/">http://localhost:3000/</a>で確認できるところまでいけました。</p>
+
+<p><br><br><br></p>
+
+<h2 id="webpacker-が動作する-docker-イメージを作る">Webpacker が動作する Docker イメージを作る</h2>
+
+<p>せっかく Rails5.1 なら Webpacker が使いたいところですが、</p>
+
+<p>先ほどのイメージの Node.js は 0.10.29、</p>
+
+<p>Webpacker に必要な Node.js は 6.0.0 以上、さらに Yarn 0.25.2 以上が必要です。</p>
+
+<p>なので、先ほどの Dockerfile の Node.js のインストール部分だけ変更して対応したいところです。</p>
+
+<p><br></p>
+
+<pre><code>FROM ruby
+
+# この部分を
+# RUN apt-get update &amp;&amp; apt-get install -y nodejs --no-install-recommends &amp;&amp; rm -rf /var/lib/apt/lists/*
+# こう変える
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - &amp;&amp;\
+    curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - &amp;&amp;\
+    echo &quot;deb https://dl.yarnpkg.com/debian/ stable main&quot; | tee /etc/apt/sources.list.d/yarn.list &amp;&amp;\
+    apt-get update &amp;&amp; apt-get install -y nodejs yarn --no-install-recommends &amp;&amp; rm -rf /var/lib/apt/lists/*
+
+RUN apt-get update &amp;&amp; apt-get install -y mysql-client postgresql-client sqlite3 --no-install-recommends &amp;&amp; rm -rf /var/lib/apt/lists/*
+
+RUN gem install rails
+
+WORKDIR /workdir
+
+ENV BUNDLE_PATH /workdir/vendor/bundle/ruby/2.4.0
+</code></pre>
+
+<p>が、このイメージでプロジェクトを作って<code>webpacker:install</code>しても、実行に必要な webpack が入りません。</p>
+
+<p><br></p>
+
+<pre><code class="language-sh">$ docker run -it --rm -v $(pwd):/workdir myrails bin/webpack
+docker: Error response from daemon: oci runtime error: container_linux.go:265: starting container process caused &quot;exec: \&quot;bin/webpack\&quot;: stat bin/webpack: no such file or directory&quot;.
+</code></pre>
+
+<p>Ruby のバージョン変えたり、Debian イメージから作り直したりしても解決しないので、やけくそで Fedora でイメージ作ってみたら、入りました。</p>
+
+<p><br></p>
+
+<pre><code>FROM fedora
+
+RUN dnf -y update &amp;&amp; \
+    dnf -y group install &quot;C Development Tools and Libraries&quot; &amp;&amp; \
+    curl --silent --location https://rpm.nodesource.com/setup_8.x | bash - &amp;&amp; \
+    curl --silent https://dl.yarnpkg.com/rpm/yarn.repo -o /etc/yum.repos.d/yarn.repo &amp;&amp; \
+    dnf -y install \
+    redhat-rpm-config \
+    wget \
+    zlib-devel \
+    sqlite-devel \
+    mysql-devel \
+    postgresql-devel \
+    ruby-devel \
+    ruby \
+    rubygem-json \
+    nodejs \
+    yarn &amp;&amp; \
+    dnf clean all &amp;&amp; \
+    gem install bundler rails
+
+WORKDIR /workdir
+EXPOSE 3000
+</code></pre>
+
+<p>こんな感じで、もう一回作り直して、</p>
+
+<pre><code class="language-sh">$ docker build -t myrails .
+$ docker run -it --rm -v $(pwd):/workdir myrails rails new myproject --skip-bundle
+$ cd myproject
+$ echo &quot;gem 'webpacker'&quot; &gt;&gt; Gemfile
+$ docker run -it --rm -v $(pwd):/workdir myrails bundle install --path vendor/bundle
+$ docker run -it --rm -v $(pwd):/workdir myrails rails webpacker:install
+$ docker run -it --rm -v $(pwd):/workdir myrails rails webpacker:install:elm
+$ docker run -it --rm -v $(pwd):/workdir myrails rails bin/webpack
+...
+   [8] ./app/javascript/packs/application.js 515 bytes {1} [built]
+   [9] ./app/javascript/packs/hello_react.jsx 739 bytes {0} [built]
+    + 25 hidden modules
+</code></pre>
+
+<p>できました。</p>
+
+<p><br><br><br></p>
+
+<h2 id="db-も-docker-でたてて-rails-から使う">DB も Docker でたてて Rails から使う</h2>
+
+<p>そのような場合は<code>docker-compose.yml</code>で構成するといいでしょう。</p>
+
+<p><br></p>
+
+<pre><code class="language-yml">version: &quot;3&quot;
+services:
+  myproject:
+    container_name: myproject
+    image: myrails
+    command: rails server -b 0.0.0.0
+    environment:
+      # MySQLを使う場合
+      DATABASE_URL: &quot;mysql2://root:11111111@mysql/myproject&quot;
+      # PostgreSQLを使う場合
+      # DATABASE_URL: &quot;postgresql://postgres:11111111@postgres/myproject&quot;
+    volumes:
+       - &quot;./myproject:/workdir&quot;
+    ports:
+      - &quot;3000:3000&quot;
+  # MySQLを使う場合
+  mysql:
+    container_name: mysql
+    image: &quot;mysql:5.6&quot;
+    environment:
+      MYSQL_ROOT_PASSWORD: 11111111
+      MYSQL_DATABASE: myproject
+    volumes:
+       - /var/lib/mysql/data
+  # PostgreSQLを使う場合
+  # postgres:
+  #   container_name: postgres
+  #   image: &quot;postgres:9.6&quot;
+  #   environment:
+  #     POSTGRES_PASSWORD: 11111111
+  #     POSTGRES_USER: postgres
+  #     POSTGRES_DB: myproject
+  #     PGDATA: /var/lib/postgresql/data/pgdata
+  #   volumes:
+  #      - /var/lib/postgresql/data/pgdata
+</code></pre>
+
+<pre><code class="language-sh">$ docker-compose up -d
+$ docker-compose ps
+  Name                Command             State           Ports
+------------------------------------------------------------------------
+myproject   rails server -b 0.0.0.0       Up      0.0.0.0:3000-&gt;3000/tcp
+mysql       docker-entrypoint.sh mysqld   Up      3306/tcp
+</code></pre>
+
+<p><br><br></p>
+
+<h2 id="アプリケーションの-docker-イメージを作る">アプリケーションの Docker イメージを作る</h2>
+
+<p>Rails プロジェクトディレクトリに以下のような Dockerfile を作り、</p>
+
+<pre><code>FROM myrails
+
+ADD . /workdir
+
+CMD rails server -b 0.0.0.0
+</code></pre>
+
+<p>ビルドするといいでしょう。</p>
+
+<pre><code class="language-sh">$ docker build -t myapp .
+</code></pre>
+
+<p><br><br></p>
+
+<h2 id="まとめ">まとめ</h2>
+
+<p>なんとかできなくはない状態にはなりましたが、とにかく遅いです。</p>
+
+<p><br><br></p>
+
+            </section>
+            <section class="www-component-desc">
+                <div>
+                    <amp-social-share type="hatena" data-share-endpoint="http://b.hatena.ne.jp/entry/https://persol-pt.github.io/posts/webpacker-docker/">B!</amp-social-share>
+                    <amp-social-share type="facebook" data-param-app_id="158646288203071"></amp-social-share>
+                    <amp-social-share type="twitter"></amp-social-share>
+                </div>
+            </section>
+        </article>
+
+        <aside class="col-1 xs-hide"></aside>
+    </main>
+</amp-selector>
     
     <footer class="ampstart-footer flex flex-column items-center pxy3">
         
@@ -2800,7 +2879,7 @@ Firebase Hostingはストレージ、Web ホスティング、CDN 、マネー�
                     "on": "visible",
                     "request": "pageview",
                     "vars": {
-                        "title": "Posts"
+                        "title": "DockerだけでRails、特にWebpackerはハマった"
                     }
                 }
             }

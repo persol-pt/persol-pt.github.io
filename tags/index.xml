@@ -66,6 +66,15 @@
     </item>
     
     <item>
+      <title>Docker</title>
+      <link>https://persol-pt.github.io/tags/docker/</link>
+      <pubDate>Sat, 16 Dec 2017 16:50:12 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Firebase</title>
       <link>https://persol-pt.github.io/tags/firebase/</link>
       <pubDate>Sun, 03 Dec 2017 03:13:06 +0900</pubDate>
@@ -174,6 +183,15 @@
     </item>
     
     <item>
+      <title>Rails</title>
+      <link>https://persol-pt.github.io/tags/rails/</link>
+      <pubDate>Sat, 16 Dec 2017 16:50:12 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/tags/rails/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>React</title>
       <link>https://persol-pt.github.io/tags/react/</link>
       <pubDate>Sun, 10 Dec 2017 23:10:32 +0900</pubDate>
@@ -251,6 +269,15 @@
       <pubDate>Wed, 06 Dec 2017 01:32:59 +0900</pubDate>
       
       <guid>https://persol-pt.github.io/tags/waf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Webpacker</title>
+      <link>https://persol-pt.github.io/tags/webpacker/</link>
+      <pubDate>Sat, 16 Dec 2017 16:50:12 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/tags/webpacker/</guid>
       <description></description>
     </item>
     

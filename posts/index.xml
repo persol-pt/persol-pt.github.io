@@ -6,10 +6,39 @@
     <description>Recent content in Posts on PPT Developers&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Fri, 15 Dec 2017 17:16:57 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 16 Dec 2017 16:50:12 +0900</lastBuildDate>
     
 	<atom:link href="https://persol-pt.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>DockerだけでRails、特にWebpackerはハマった</title>
+      <link>https://persol-pt.github.io/posts/webpacker-docker/</link>
+      <pubDate>Sat, 16 Dec 2017 16:50:12 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/posts/webpacker-docker/</guid>
+      <description>すいません遅くなりました。。
+Ruby on Rails Advent Calendar 2017 14 日目の記事です。
+
+ある日、
+
+「docker run で rails new とか bundle install したい」 
+と、知り合いのそこそこ可愛い女の子が言ってきました。
+
+同僚の作ったおじさん LINE ボットの教師データになるほどのオジサンである私は、
+誠意（下心）を持って取り組んだのであります。
+しかし、やってみたら色々ハマったので共有します。
+
+ちなみに最終的な状態はこちらのリポジトリにありますので、ここからの長々とした過程を飛ばしたい方はこちらをご覧ください。
+
+Rails の Docker イメージを作る 一般的に Rails アプリケーションと Docker を組み合わせる場合、Quickstart: Compose and Railsにあるように、「Rails アプリケーションを起動する Docker イメージを作る」という使い方が主流のようです。
+
+docker runで rails コマンドを使用したいのであれば、Rails とその依存するものがインストールされた Docker イメージが必要ですが、
+Rails 公式 Docker イメージは非推奨でもうメンテされていないので、
+最初はこの Dockerfile を参考にして作りました。
+
+FROM ruby RUN apt-get update &amp;amp;&amp;amp; apt-get install -y nodejs --no-install-recommends &amp;amp;&amp;amp; rm -rf /var/lib/apt/lists/* RUN apt-get update &amp;amp;&amp;amp; apt-get install -y mysql-client postgresql-client sqlite3 --no-install-recommends &amp;amp;&amp;amp; rm -rf /var/lib/apt/lists/* RUN gem install rails  しかしこれで作ったイメージでbundle install --path vendor/bundleしても.</description>
+    </item>
     
     <item>
       <title>GCP Meets Kotlin</title>
