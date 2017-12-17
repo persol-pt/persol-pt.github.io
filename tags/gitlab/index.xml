@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gitlab on PPT Developers&#39; Blog</title>
+    <link>https://persol-pt.github.io/tags/gitlab/</link>
+    <description>Recent content in Gitlab on PPT Developers&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Mon, 18 Dec 2017 00:56:09 +0900</lastBuildDate>
+    
+	<atom:link href="https://persol-pt.github.io/tags/gitlab/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>TerraformでAmazon ECS上にGitLabを構築</title>
+      <link>https://persol-pt.github.io/posts/gitlab-ecs/</link>
+      <pubDate>Mon, 18 Dec 2017 00:56:09 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/posts/gitlab-ecs/</guid>
+      <description>GitLab Advent Calendar 2017 17 日目の記事です。
+
+私のプロジェクトではプロジェクト管理に GitLab を使っていて、元々シングルインスタンスに docker-compose で構築していて、こんな記事も書いたのですが、コンテナクラスターを一度触ってみたかったので、勉強がてら ECS 上に GitLab 構築してみました。
+
+その結果の構成コードがこちらのリポジトリになりますので、同じことをやりたい方の参考になればと思います。
+
+最初に結論 GitLab だけしか立てないなら ECS 上に構築するのはイマイチ旨味がありません。
+もし HA を求めるなら、公式がHigh Availability on AWS - GitLab Documentationというページを用意していますので、これに従った方がいいと思います。
+
+主に負荷の増減が大きいのは GitLab Runner の方なんですが、仕様上 ECS で管理できなかったので、スケーリングする機会がなく、また思ってた以上に ECS 構築が超絶面倒臭くて、Fat Terraform になってしまい、ただただ手間のかかった docker-compose みたいなものになっています。
+
+先日 ECS インスタンスをフルマネージドしてくれる新サービスAWS Fargateが発表されましたので、インスタンス周りの設定を大幅に削れそうなら ECS でもいいかもしれません。
+
+あと、Gitlab Meetup Tokyo #2 でこちらのAnsible で作る、AWS で「器の大きい」Omnibus-GitLab // Speaker Deckという LT を拝聴して、「俺も 8,390,000TB にしたい！」という衝動にかられ、バージニアの EFS に構築したせいか普通に立てた時よりあきらかにもっさりしています。。</description>
+    </item>
+    
+  </channel>
+</rss>

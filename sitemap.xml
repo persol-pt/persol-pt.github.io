@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://persol-pt.github.io/posts/gitlab-ecs/</loc>
+    <lastmod>2017-12-18T00:56:09+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://persol-pt.github.io/posts/using-lambda-with-aws-xray/</loc>
     <lastmod>2017-12-17T17:51:27+09:00</lastmod>
   </url>
@@ -65,13 +70,13 @@
   
   <url>
     <loc>https://persol-pt.github.io/tags/aws/</loc>
-    <lastmod>2017-12-17T17:51:27+09:00</lastmod>
+    <lastmod>2017-12-18T00:56:09+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://persol-pt.github.io/categories/boiyaa/</loc>
-    <lastmod>2017-12-16T16:50:12+09:00</lastmod>
+    <lastmod>2017-12-18T00:56:09+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -83,7 +88,7 @@
   
   <url>
     <loc>https://persol-pt.github.io/categories/</loc>
-    <lastmod>2017-12-16T16:50:12+09:00</lastmod>
+    <lastmod>2017-12-18T00:56:09+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -112,6 +117,18 @@
   </url>
   
   <url>
+    <loc>https://persol-pt.github.io/tags/ecs/</loc>
+    <lastmod>2017-12-18T00:56:09+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://persol-pt.github.io/tags/efs/</loc>
+    <lastmod>2017-12-18T00:56:09+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://persol-pt.github.io/tags/firebase/</loc>
     <lastmod>2017-12-03T03:13:06+09:00</lastmod>
     <priority>0</priority>
@@ -132,6 +149,12 @@
   <url>
     <loc>https://persol-pt.github.io/tags/gcp/</loc>
     <lastmod>2017-12-15T17:16:57+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://persol-pt.github.io/tags/gitlab/</loc>
+    <lastmod>2017-12-18T00:56:09+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -197,13 +220,13 @@
   
   <url>
     <loc>https://persol-pt.github.io/</loc>
-    <lastmod>2017-12-17T17:51:27+09:00</lastmod>
+    <lastmod>2017-12-18T00:56:09+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://persol-pt.github.io/posts/</loc>
-    <lastmod>2017-12-17T17:51:27+09:00</lastmod>
+    <lastmod>2017-12-18T00:56:09+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -264,6 +287,12 @@
   <url>
     <loc>https://persol-pt.github.io/tags/</loc>
     <lastmod>2017-12-06T01:32:59+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://persol-pt.github.io/tags/terraform/</loc>
+    <lastmod>2017-12-18T00:56:09+09:00</lastmod>
     <priority>0</priority>
   </url>
   

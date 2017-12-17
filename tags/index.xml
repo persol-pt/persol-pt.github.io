@@ -23,7 +23,7 @@
     <item>
       <title>Aws</title>
       <link>https://persol-pt.github.io/tags/aws/</link>
-      <pubDate>Sun, 17 Dec 2017 17:51:27 +0900</pubDate>
+      <pubDate>Mon, 18 Dec 2017 00:56:09 +0900</pubDate>
       
       <guid>https://persol-pt.github.io/tags/aws/</guid>
       <description></description>
@@ -75,6 +75,24 @@
     </item>
     
     <item>
+      <title>Ecs</title>
+      <link>https://persol-pt.github.io/tags/ecs/</link>
+      <pubDate>Mon, 18 Dec 2017 00:56:09 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/tags/ecs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Efs</title>
+      <link>https://persol-pt.github.io/tags/efs/</link>
+      <pubDate>Mon, 18 Dec 2017 00:56:09 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/tags/efs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Firebase</title>
       <link>https://persol-pt.github.io/tags/firebase/</link>
       <pubDate>Sun, 03 Dec 2017 03:13:06 +0900</pubDate>
@@ -107,6 +125,15 @@
       <pubDate>Fri, 15 Dec 2017 17:16:57 +0900</pubDate>
       
       <guid>https://persol-pt.github.io/tags/gcp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gitlab</title>
+      <link>https://persol-pt.github.io/tags/gitlab/</link>
+      <pubDate>Mon, 18 Dec 2017 00:56:09 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/tags/gitlab/</guid>
       <description></description>
     </item>
     
@@ -260,6 +287,15 @@
       <pubDate>Mon, 11 Dec 2017 15:43:02 +0900</pubDate>
       
       <guid>https://persol-pt.github.io/tags/swift/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Terraform</title>
+      <link>https://persol-pt.github.io/tags/terraform/</link>
+      <pubDate>Mon, 18 Dec 2017 00:56:09 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/tags/terraform/</guid>
       <description></description>
     </item>
     
