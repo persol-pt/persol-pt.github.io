@@ -6,10 +6,28 @@
     <description>Recent content in Aws on PPT Developers&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Fri, 15 Dec 2017 16:10:08 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 17 Dec 2017 17:51:27 +0900</lastBuildDate>
     
 	<atom:link href="https://persol-pt.github.io/tags/aws/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AWS X-Rayを使ってLambda内の処理をトレースしてみる</title>
+      <link>https://persol-pt.github.io/posts/using-lambda-with-aws-xray/</link>
+      <pubDate>Sun, 17 Dec 2017 17:51:27 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/posts/using-lambda-with-aws-xray/</guid>
+      <description>どもどもビトルです。 今回は AWS Lambda Advent Calendar 2017の１７日目の記事を書きます。
+僕は今年の Serverlessconf Tokyoに行ってきたのですが、その時にちょくちょくAWSのX-Rayというサービスを耳にして気になったので、それについて書きます。
+
+AWS X-Rayとは？ まず以下の特徴があります：
+ リクエストのトレース 例外の収集 プロファイリング機能 分散型アプリケーションの動作分析の支援  概要としては、開発者が作ったアプリケーション内のリクエストに関するデータを収集し、 それらを可視化・フィルタリングできるようにしてアプリケーション内のボトルネックの発見などを手助けします。 また、収集したリクエストのデータを元にリクエストとレスポンスだけでなく、アプリ内でコールされたDBやWeb APIなどのAWS内のリソース・サービスに関する情報も収集することができます。
+
+実際に使ってみた ではさっそく試して見ましょうか。
+今回もちゃちゃっとServerless Frameworkを使ってデプロイします。まずプロジェクトを作成しましょう。
+sls create -t aws-nodejs-ecma-script -p aws-xray cd aws-xray  そして serverless.yml を以下のように編集します。
+service: name: aws-xray plugins: - serverless-webpack - serverless-plugin-tracing # トレース有効用のプラグイン provider: name: aws runtime: nodejs6.10 stage: dev region: ap-northeast-1 tracing: true # X-Rayでのトレースを有効にする iamRoleStatements: - Effect: Allow Action: - dynamodb:GetItem - dynamodb:PutItem - xray:PutTraceSegments #X-Ray周りの権限も忘れずに - xray:PutTelemetryRecords #X-Ray周りの権限も忘れずに Resource: &amp;quot;*&amp;quot; custom: region: ${self:provider.</description>
+    </item>
     
     <item>
       <title>おじさんLINEごっこBOTを作ってみた</title>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Node.js on PPT Developers&#39; Blog</title>
-    <link>https://persol-pt.github.io/tags/node.js/</link>
-    <description>Recent content in Node.js on PPT Developers&#39; Blog</description>
+    <title>X Ray on PPT Developers&#39; Blog</title>
+    <link>https://persol-pt.github.io/tags/x-ray/</link>
+    <description>Recent content in X Ray on PPT Developers&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Sun, 17 Dec 2017 17:51:27 +0900</lastBuildDate>
     
-	<atom:link href="https://persol-pt.github.io/tags/node.js/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://persol-pt.github.io/tags/x-ray/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -27,25 +27,6 @@ AWS X-Rayとは？ まず以下の特徴があります：
 今回もちゃちゃっとServerless Frameworkを使ってデプロイします。まずプロジェクトを作成しましょう。
 sls create -t aws-nodejs-ecma-script -p aws-xray cd aws-xray  そして serverless.yml を以下のように編集します。
 service: name: aws-xray plugins: - serverless-webpack - serverless-plugin-tracing # トレース有効用のプラグイン provider: name: aws runtime: nodejs6.10 stage: dev region: ap-northeast-1 tracing: true # X-Rayでのトレースを有効にする iamRoleStatements: - Effect: Allow Action: - dynamodb:GetItem - dynamodb:PutItem - xray:PutTraceSegments #X-Ray周りの権限も忘れずに - xray:PutTelemetryRecords #X-Ray周りの権限も忘れずに Resource: &amp;quot;*&amp;quot; custom: region: ${self:provider.</description>
-    </item>
-    
-    <item>
-      <title>Node.jsでHTTP/2を動かしてみる</title>
-      <link>https://persol-pt.github.io/posts/using-http2-with-nodejs/</link>
-      <pubDate>Sat, 09 Dec 2017 04:22:57 +0900</pubDate>
-      
-      <guid>https://persol-pt.github.io/posts/using-http2-with-nodejs/</guid>
-      <description>どうも、ビトルです。
-今回はNode.js Advent Calendar 2017の9日目の記事になります。
-
-この記事ではNode.jsで現在コア機能に実験的に導入されているHTTP/2について書きたいと思います。
-
-Serverside 
-単純なHTTPサーバとしての処理はこんな感じに実装できます。
-
-const http2 = require(&#39;http2&#39;); const fs = require(&#39;fs&#39;); const server = http2.createSecureServer({ key: fs.readFileSync(&#39;localhost-privkey.pem&#39;), cert: fs.readFileSync(&#39;localhost-cert.pem&#39;) }); server.on(&#39;error&#39;, (err) =&amp;gt; console.error(err)); server.on(&#39;socketError&#39;, (err) =&amp;gt; console.error(err)); server.on(&#39;stream&#39;, (stream, headers) =&amp;gt; { stream.respond({ &#39;content-type&#39;: &#39;text/html&#39;, &#39;:status&#39;: 200 }); stream.end(&#39;&amp;lt;h1&amp;gt;Hello World&amp;lt;/h1&amp;gt;&#39;); }); server.listen(8080);  ChromeやFirefoxなどのブラウザはHTTP/2を利用する際はSSLが必須となっているので、証明書を用意する必要があります。 証明書は自己証明書でも作成できます。
-
-openssl req -x509 -newkey rsa:2048 -nodes -sha256 -subj &#39;/CN=localhost&#39; \ -keyout localhost-privkey.pem -out localhost-cert.</description>
     </item>
     
   </channel>

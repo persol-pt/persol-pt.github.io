@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://persol-pt.github.io/posts/using-lambda-with-aws-xray/</loc>
+    <lastmod>2017-12-17T17:51:27+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://persol-pt.github.io/posts/webpacker-docker/</loc>
     <lastmod>2017-12-16T16:50:12+09:00</lastmod>
   </url>
@@ -60,7 +65,7 @@
   
   <url>
     <loc>https://persol-pt.github.io/tags/aws/</loc>
-    <lastmod>2017-12-15T16:10:08+09:00</lastmod>
+    <lastmod>2017-12-17T17:51:27+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -150,7 +155,7 @@
   
   <url>
     <loc>https://persol-pt.github.io/tags/javascript/</loc>
-    <lastmod>2017-12-09T04:22:57+09:00</lastmod>
+    <lastmod>2017-12-17T17:51:27+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -168,7 +173,7 @@
   
   <url>
     <loc>https://persol-pt.github.io/tags/lambda/</loc>
-    <lastmod>2017-12-15T16:10:08+09:00</lastmod>
+    <lastmod>2017-12-17T17:51:27+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -186,19 +191,19 @@
   
   <url>
     <loc>https://persol-pt.github.io/tags/node.js/</loc>
-    <lastmod>2017-12-09T04:22:57+09:00</lastmod>
+    <lastmod>2017-12-17T17:51:27+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://persol-pt.github.io/</loc>
-    <lastmod>2017-12-16T16:50:12+09:00</lastmod>
+    <lastmod>2017-12-17T17:51:27+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://persol-pt.github.io/posts/</loc>
-    <lastmod>2017-12-16T16:50:12+09:00</lastmod>
+    <lastmod>2017-12-17T17:51:27+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -275,8 +280,14 @@
   </url>
   
   <url>
+    <loc>https://persol-pt.github.io/tags/x-ray/</loc>
+    <lastmod>2017-12-17T17:51:27+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://persol-pt.github.io/categories/%E3%83%93%E3%83%88%E3%83%AB/</loc>
-    <lastmod>2017-12-09T04:22:57+09:00</lastmod>
+    <lastmod>2017-12-17T17:51:27+09:00</lastmod>
     <priority>0</priority>
   </url>
   
