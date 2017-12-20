@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ci on PPT Developers&#39; Blog</title>
+    <link>https://persol-pt.github.io/tags/ci/</link>
+    <description>Recent content in Ci on PPT Developers&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Fri, 08 Dec 2017 18:48:09 +0900</lastBuildDate>
+    
+	<atom:link href="https://persol-pt.github.io/tags/ci/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>てくてく勉強会12月6日</title>
+      <link>https://persol-pt.github.io/posts/tech-workshop1206/</link>
+      <pubDate>Fri, 08 Dec 2017 18:48:09 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/posts/tech-workshop1206/</guid>
+      <description>皆さんこんにちは、2017年入社の藤井です。
+今回のブログでは弊社の私たちストラテジーサービス部テクノロジーサービスグループテクノロジーサービスチーム(通称テクテク)が
+毎週行っている技術勉強会について新人目線で触れていきたいと思います。
+
+テクテクでは毎週水曜日に技術勉強会を行っています。
+この勉強会では、それぞれ自分が学びたいテーマを宣言し、1人ずつリレー形式で発表を行っています。
+テクテクは現在13名のため、2か月に1回のペースで自分の発表が回ってくるイメージですね。
+
+テーマはサーバーレスアーキテクチャ、機械学習、ブロックチェーンのようなニッチな技術領域のものであったり、
+Vue.jsやKotlin、XamarinやGCPなど言語やクラウドを学んで何かアプリを作成してくるなど人によって様々です。
+
+では、実際に勉強会をレポートしていきましょう！
+12月6日の勉強会　テーマ「フロントエンドにおけるIaCとCI」 
+  2017年12月6日の勉強会-1   
+これは12月6日に行われた勉強会の写真です。
+
+今回の発表者は外部のフロントエンド関連の勉強会で多く発表されている山本さん。
+
+今回のお話は「フロントエンドにおけるIaCとCI」についてでした
+
+IaC (Infrastructure as Code) ということで、
+ なぜITインフラの構成をコード化すべきなのか IaCの実際の使用方法
+  など基本的なところから、
+ IoCで作成したテンプレートのプロビジョニングの自動化(CI)について
+ 利用するCIツールのそれぞれの区分けや比較
+ 実際に行ったCUIでのCIツールでの管理の具体的な構成や手順
+  などをお話頂きました。
+
+  2017年12月6日の勉強会-2   
+発表の詳しい内容はこちらをご覧ください！！↓↓↓
+
+フロントエンドのIaCとCIとLoC
+
+OpenAPIでAPI GatewayのモックAPIを作り、コード不要のAPIテストツールDreddでテスト
+
+インフラ基盤のコード化、ビルドやテストの自動化は
+開発の効率化・省力化にもつながりますし、
+コード管理できればメンテナンスが属人化されることも防げます。
+
+いいことずくめですね。
+
+ぜひIoCとCIで安全・スマート・モテル駆動開発を！</description>
+    </item>
+    
+  </channel>
+</rss>
