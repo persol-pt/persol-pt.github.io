@@ -6,10 +6,49 @@
     <description>Recent content in 藤井 大祐daitasu on PPT Developers&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Fri, 08 Dec 2017 18:48:09 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 14 Dec 2017 00:19:21 +0900</lastBuildDate>
     
 	<atom:link href="https://persol-pt.github.io/categories/%E8%97%A4%E4%BA%95-%E5%A4%A7%E7%A5%90daitasu/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Dialogflow &#43; VoiceTextで音声会話Botをさくっと作ろう</title>
+      <link>https://persol-pt.github.io/posts/audio-conversation-bot/</link>
+      <pubDate>Thu, 14 Dec 2017 00:19:21 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/posts/audio-conversation-bot/</guid>
+      <description>dialogflow + VoiceTextでさくっと音声会話botを作ろう
+ どうもこんにちは、藤井です。
+今回は新卒ながら自分もAdvent Calenderの記事投稿に加わらせて頂きました。
+この記事は、新卒専用 Advent Calendar 2017 19日目の記事になります。
+本記事では、dialogflowを用いて簡単にチャットボットを作り、そこにVoiceTextを足し合わせた音声会話Botの作り方をお伝えしたいと思います。
+
+今回作るものの概要 
+完成品 
+何はともあれ実物を見てみましょう。今回作成した音声会話Botはこちらです。↓↓↓
+
+Dialogflow + VoiceTextで音声チャットボットを作ってみた(youtube)
+
+① この動画のような感じでBotとの音声を文字列に変換しBotが認識
+② AIが反応し対応する言葉を返答
+③ テキストと同時に、音声にも変換して返事を返す
+
+今回は相手役としてカワウソちゃんとおしゃべりできるようにしようと思います！
+
+仕組み 
+流れ図としては以下のようになります。
+ 音声会話Botの概要   使った技術 
+今回使った技術は以下の通りです。
+ Node.js &amp;hellip; サーバサイドのJavascriptランタイム環境。フレームワークにはexpressを用い、テンプレートエンジンとしてejsを使用しました。
+ VoiceText(Node.js SDK) &amp;hellip; HOYA株式会社さんの音声合成ソフトウェア。流暢な発声と感情表現できるのが特徴です。
+ Dialogflow &amp;hellip; 自然言語対話のAIを簡単に作れるプラットフォームです。さくっとBotを作るのに向いています。
+  作成の流れ 
+では実際に作成していきましょう。
+Dialogflow 
+まずはDialogflowで対話するAIBotを作っていきます。
+Dialogflowにログインし、「Create new agent」で新しいエージェントを作成します。
+ Entity</description>
+    </item>
     
     <item>
       <title>てくてく勉強会12月6日</title>
