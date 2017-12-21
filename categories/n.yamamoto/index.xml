@@ -6,13 +6,43 @@
     <description>Recent content in N.yamamoto on PPT Developers&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 11 Dec 2017 15:43:02 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 21 Dec 2017 17:43:55 +0900</lastBuildDate>
     
 	<atom:link href="https://persol-pt.github.io/categories/n.yamamoto/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Back_to_swift</title>
+      <title>HealthKitアプリを作る（その１）</title>
+      <link>https://persol-pt.github.io/posts/healthkit-app-part1/</link>
+      <pubDate>Thu, 21 Dec 2017 17:43:55 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/posts/healthkit-app-part1/</guid>
+      <description>Apple Watch Series3を買いました。
+Series1からの買い替えです。
+CellularじゃなくてGPSの方です。
+Apple Watch Series3を使った感想は「去年買っておけばよかった」です。
+Nike+ Run Clubで走るの楽しい。
+とりあえず２週間続いてます。
+目標は「フルマラソン走ってた時の体重に戻して、来シーズンフルマラソン走る」ことにしました。
+「アクティビティ」と「Nike+ Run Club」のアプリでも記録は見られるのですが、
+ジョギングを習慣化するために、走ったログを簡単に参照できるアプリを作ってみます。
+ついでに体重の変化も見たいですね。（体重が減る前提）
+「HealthKitアプリを作る」不定期連載その１ 
+iOS11 / Swift4を使います。
+今回は、自分のiPhoneに登録してある体重、ワークアウトの記録をXcodeのコンソールで見るところまでです。
+1.おもむろにXcodeを開いてシングルページアプリケーションのプロジェクトを作る
+2.プロジェクトでHealthKitが使えるようにする
+TARGETS→Capabiliteis→HealthKitをONにする
+TARGETS→General→Linked Frameworks and Librariesに「HealthKit.framework」と「HealthKitUI.framework」を設定
+Info.plistを開いて&amp;rdquo;Add Row&amp;rdquo;して 「Privacy - Health Update Usage Description」を追加
+続けて&amp;rdquo;Add Row&amp;rdquo;して「Privacy - Health Share Usage Description」を追加
+3.このアプリからiOS内のデータにアクセスする許可をもらう画面を出す
+ViewController.swiftの viewDidLoadあたりをこんなかんじで
+ let myHealthStore = HKHealthStore() override func viewDidLoad() { super.viewDidLoad() // Do any additional setup after loading the view, typically from a nib.</description>
+    </item>
+    
+    <item>
+      <title>久しぶりのiOSアプリ</title>
       <link>https://persol-pt.github.io/posts/back_to_swift/</link>
       <pubDate>Mon, 11 Dec 2017 15:43:02 +0900</pubDate>
       

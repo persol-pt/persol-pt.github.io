@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="canonical" href="https://persol-pt.github.io/tags/webpacker/" />
+    <link rel="canonical" href="https://persol-pt.github.io/posts/healthkit-app-part1/" />
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-boilerplate>
@@ -77,7 +77,7 @@
     
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
-    <title>Webpacker - PPT Developers&#39; Blog</title>
+    <title>HealthKitアプリを作る（その１） - PPT Developers&#39; Blog</title>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat" rel="stylesheet">
     <style amp-custom>table {
   border-collapse: collapse;
@@ -2567,50 +2567,198 @@ h1 {
     </amp-sidebar>
     
     
-    <header class="www-header">
-        <h1 class="mb4 px2 col-12 sm-col-8 mx-auto">Webpacker</h1>
-
+<header class="www-header center">
+    <h1 class="mb1">HealthKitアプリを作る（その１）</h1>
+    <div class="www-index-header-action mx-auto">Thu, Dec 21, 2017</div>
+    <div class="www-index-header-action mx-auto">
         
+        <a href="/categories/n.yamamoto">N.Yamamoto</a> 
+    </div>
+    <div class="www-index-header-action mx-auto">
+        
+        <a href="/tags/ios">#iOS</a> 
+        <a href="/tags/swift">#Swift</a> 
+        <a href="/tags/healthkit">#HealthKit</a> 
+    </div>
 
-        </header>
-    <amp-selector layout="container">
-        <main class="flex pl2">
+    
+</header>
+<amp-selector layout="container">
+    <main class="flex pl2">
+        
+        <aside class="col-1 xs-hide"></aside>
 
-            <article class="www-components flex-auto col-8">
-                <section class="www-component-desc" id="samples_templates">
+        <article class="www-components flex-auto col-10">
+            <section class="www-component-desc">
+                
 
-                    <div class="abe-examples flex flex-wrap">
-                                                <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">DockerだけでRails、特にWebpackerはハマった<i class=""></i>
-                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Sat, Dec 16, 2017</div>
-                                <div style="font-size: 70%">
-                                    
-                                    <a href="/categories/boiyaa">boiyaa</a> 
-                                </div>
-                            </h3>
-                            
-                                <p class="mb1">すいません遅くなりました。。
-Ruby on Rails Advent Calendar 2017 14 日目の記事です。
+<p>Apple Watch Series3を買いました。<br />
+Series1からの買い替えです。<br />
+CellularじゃなくてGPSの方です。<br />
+<br />
+Apple Watch Series3を使った感想は「去年買っておけばよかった」です。<br />
+<br />
+Nike+ Run Clubで走るの楽しい。<br />
+とりあえず２週間続いてます。<br />
+<br />
+目標は「フルマラソン走ってた時の体重に戻して、来シーズンフルマラソン走る」ことにしました。<br />
+<br />
+「アクティビティ」と「Nike+ Run Club」のアプリでも記録は見られるのですが、<br />
+ジョギングを習慣化するために、走ったログを簡単に参照できるアプリを作ってみます。<br />
+ついでに体重の変化も見たいですね。（体重が減る前提）<br />
+<br /></p>
 
-ある日、
+<h3 id="healthkitアプリを作る-不定期連載その１">「HealthKitアプリを作る」不定期連載その１</h3>
 
-「docker run で rails new とか bundle install したい」 
-と、知り合いのそこそこ可愛い女の子が言ってきました。
+<p><br />
+iOS11 / Swift4を使います。<br />
+<br />
+今回は、自分のiPhoneに登録してある体重、ワークアウトの記録をXcodeのコンソールで見るところまでです。<br />
+<br />
+<strong>1.おもむろにXcodeを開いてシングルページアプリケーションのプロジェクトを作る</strong><br />
+<br />
+<strong>2.プロジェクトでHealthKitが使えるようにする</strong><br />
+<br />
+TARGETS→Capabiliteis→HealthKitをONにする<br />
+<br />
+TARGETS→General→Linked Frameworks and Librariesに「HealthKit.framework」と「HealthKitUI.framework」を設定<br />
+<br />
+Info.plistを開いて&rdquo;Add Row&rdquo;して 「Privacy - Health Update Usage Description」を追加<br />
+<br />
+続けて&rdquo;Add Row&rdquo;して「Privacy - Health Share Usage Description」を追加<br />
+<br />
+<strong>3.このアプリからiOS内のデータにアクセスする許可をもらう画面を出す</strong><br />
+<br />
+ViewController.swiftの viewDidLoadあたりをこんなかんじで</p>
 
-同僚の作ったおじさん LINE ボットの教師データになるほどのオジサンである私は、
-誠意（下心）を持って取り組</p>
-                            
-                            <div class="abe-sample-card-actions">
-                            
-                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/webpacker-docker/">Read More…</a></div>
-                        </div>
+<pre><code>    let myHealthStore = HKHealthStore()
 
-                    </div>
-                </section>
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        let readTypes = Set([
+            HKWorkoutType.workoutType(),
+            HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyMass)!
+        ])
+        let writeTypes = Set([
+            HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyMass)!
+        ])
+        
+        myHealthStore.requestAuthorization(toShare: writeTypes, read: readTypes, completion: { success, error in
+            if success {
+                print(&quot;Success&quot;)
+            } else {
+                print(&quot;Error&quot;)
+            }
+        })
+    }
+</code></pre>
 
-            </article>
-        </main>
-    </amp-selector>
+<p>体重の書き込み許可<br />
+ワークアウト、体重への読み込み許可<br />
+をお願いしています<br />
+<br /></p>
+
+<p><strong>4.次に体重データを取得してみる</strong><br />
+<br />
+12月の1ヶ月間の体重の最大と最小値を取得。<br />
+日付は直書きですが、1日ごとにループしてやれば体重の変化は取れそうですね。</p>
+
+<pre><code>    func getWeight(){
+        // 取得する期間を設定
+        let dateformatter = DateFormatter()
+        dateformatter.dateFormat = &quot;yyyy/MM/dd&quot;
+        let startDate = dateformatter.date(from: &quot;2017/12/01&quot;)
+        let endDate = dateformatter.date(from: &quot;2018/01/01&quot;)
+        
+        // 取得するデータを設定
+        let typeOfWeight = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyMass)
+        let statsOptions: HKStatisticsOptions = [HKStatisticsOptions.discreteMin, HKStatisticsOptions.discreteMax]
+        
+        let predicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: HKQueryOptions.strictStartDate)
+        let query = HKStatisticsQuery(quantityType: typeOfWeight!, quantitySamplePredicate: predicate, options: statsOptions, completionHandler: { (query, result, error) in
+            if let e = error {
+                print(&quot;Error: \(e.localizedDescription)&quot;)
+                return
+            }
+            DispatchQueue.main.async {
+                guard let r = result else {
+                    return
+                }
+                let min = r.minimumQuantity()
+                let max = r.maximumQuantity()
+                if min != nil &amp;&amp; max != nil {
+                    print(&quot;\(r.startDate) : \(r.endDate) 最小:\(min!) 最大:\(max!)&quot;)
+                }
+            }
+        })
+        myHealthStore.execute(query)
+    }
+
+</code></pre>
+
+<p>実機で実行したら動いたので次へ。<br />
+<br />
+<strong>5.ワークアウトを取得してみる</strong><br />
+<br /></p>
+
+<pre><code>    func getWorkout(){
+        // 取得する期間を設定
+        let dateformatter = DateFormatter()
+        dateformatter.dateFormat = &quot;yyyy/MM/dd&quot;
+        let startDate = dateformatter.date(from: &quot;2017/12/01&quot;)
+        let endDate = dateformatter.date(from: &quot;2018/01/01&quot;)
+
+        // 取得するデータを設定
+        let predicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: [])
+        let sort = [NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: true)]
+        let q = HKSampleQuery(sampleType: HKObjectType.workoutType(), predicate: predicate, limit: 0, sortDescriptors: sort, resultsHandler:{
+            (query, result, error) in
+
+            if let e = error {
+                print(&quot;Error: \(e.localizedDescription)&quot;)
+                return
+            }
+            DispatchQueue.main.async {
+                guard let r = result else {
+                    return
+                }
+            
+                let workouts = r as! [HKWorkout]
+                for workout in workouts {
+                    print(workout.startDate)
+                    print(workout.totalDistance!)
+                    print(workout.totalEnergyBurned!)
+                }
+            }
+        })
+        
+        myHealthStore.execute(q)
+    }
+</code></pre>
+
+<p>こちらはワークアウトの回数分データが取れました。<br />
+めでたしめでたし。<br />
+<br />
+この後はデータをどう表示するかなのですが。<br />
+まだ決めてないのでそのうち。<br />
+<br />
+<br /></p>
+
+            </section>
+            <section class="www-component-desc">
+                <div>
+                    <amp-social-share type="hatena" data-share-endpoint="http://b.hatena.ne.jp/entry/https://persol-pt.github.io/posts/healthkit-app-part1/">B!</amp-social-share>
+                    <amp-social-share type="facebook" data-param-app_id="158646288203071"></amp-social-share>
+                    <amp-social-share type="twitter"></amp-social-share>
+                </div>
+            </section>
+        </article>
+
+        <aside class="col-1 xs-hide"></aside>
+    </main>
+</amp-selector>
     
     <footer class="ampstart-footer flex flex-column items-center pxy3">
         
@@ -2630,7 +2778,7 @@ Ruby on Rails Advent Calendar 2017 14 日目の記事です。
                     "on": "visible",
                     "request": "pageview",
                     "vars": {
-                        "title": "Webpacker"
+                        "title": "HealthKitアプリを作る（その１）"
                     }
                 }
             }

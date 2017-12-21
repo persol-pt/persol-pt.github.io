@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://persol-pt.github.io/posts/healthkit-app-part1/</loc>
+    <lastmod>2017-12-21T17:43:55+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://persol-pt.github.io/posts/gitlab-ecs/</loc>
     <lastmod>2017-12-18T00:56:09+09:00</lastmod>
   </url>
@@ -181,6 +186,12 @@
   </url>
   
   <url>
+    <loc>https://persol-pt.github.io/tags/healthkit/</loc>
+    <lastmod>2017-12-21T17:43:55+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://persol-pt.github.io/tags/http/2/</loc>
     <lastmod>2017-12-09T04:22:57+09:00</lastmod>
     <priority>0</priority>
@@ -195,6 +206,12 @@
   <url>
     <loc>https://persol-pt.github.io/tags/incapsula/</loc>
     <lastmod>2017-12-06T01:32:59+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://persol-pt.github.io/tags/ios/</loc>
+    <lastmod>2017-12-21T17:43:55+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -230,7 +247,7 @@
   
   <url>
     <loc>https://persol-pt.github.io/categories/n.yamamoto/</loc>
-    <lastmod>2017-12-11T15:43:02+09:00</lastmod>
+    <lastmod>2017-12-21T17:43:55+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -248,13 +265,13 @@
   
   <url>
     <loc>https://persol-pt.github.io/</loc>
-    <lastmod>2017-12-18T00:56:09+09:00</lastmod>
+    <lastmod>2017-12-21T17:43:55+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://persol-pt.github.io/posts/</loc>
-    <lastmod>2017-12-18T00:56:09+09:00</lastmod>
+    <lastmod>2017-12-21T17:43:55+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -308,7 +325,7 @@
   
   <url>
     <loc>https://persol-pt.github.io/tags/swift/</loc>
-    <lastmod>2017-12-11T15:43:02+09:00</lastmod>
+    <lastmod>2017-12-21T17:43:55+09:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -2090,7 +2090,7 @@ body .www-component-anchors .www-component-anchor[option][selected] {
   line-height: 1rem;
   font-size: 1.125rem;
   white-space: pre-line;
-  background: #f9f7f7;
+  background: #383838;
   overflow-y: auto;
   margin: 0;
 }
@@ -2452,7 +2452,7 @@ pre {
   line-height: 1.4;
 }
 pre > code {
-  padding: 0;
+  padding: 5px;
 }
 code {
   padding: 2px 4px;
@@ -2481,9 +2481,11 @@ code {
   margin-bottom: 2rem;
   padding: 0;
 }
-.www-component-desc > .ampstart-card,
-.www-component-desc > pre {
+.www-component-desc > .ampstart-card{
   padding: 1rem;
+}
+.www-component-desc > pre {
+  padding: 5px;
 }
 @media (max-width: 40rem) {
   .www-component-desc > amp-iframe,
@@ -2501,7 +2503,7 @@ code {
 .www-component-desc > pre > code {
   white-space: pre-wrap;
   overflow-x: auto;
-  padding: 0;
+  padding: 10px;
   margin: 0;
 }
 .abe-code-container {
@@ -2535,6 +2537,9 @@ h1 {
   color: red;
 }
 </style>
+    <link rel="stylesheet" href="/css/hybrid.css">
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 <body>
@@ -2576,7 +2581,30 @@ h1 {
 
                     <div class="abe-examples flex flex-wrap">
                                                 <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">Back_to_swift<i class=""></i>
+                            <h3 class="mb1">HealthKitアプリを作る（その１）<i class=""></i>
+                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Thu, Dec 21, 2017</div>
+                                <div style="font-size: 70%">
+                                    
+                                    <a href="/categories/n.yamamoto">N.Yamamoto</a> 
+                                </div>
+                            </h3>
+                            
+                                <p class="mb1">Apple Watch Series3を買いました。
+Series1からの買い替えです。
+CellularじゃなくてGPSの方です。
+Apple Watch Series3を使った感想は「去年買っておけばよかった」です。
+Nike&#43; Run Clubで走るの楽しい。
+とりあえず２週間続いてます。
+目標は「フルマラソン走ってた時の体重に戻して、来シーズンフルマラソン走る」ことにしました。
+「アクティ</p>
+                            
+                            <div class="abe-sample-card-actions">
+                            
+                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/healthkit-app-part1/">Read More…</a></div>
+                        </div>
+
+                                                <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
+                            <h3 class="mb1">久しぶりのiOSアプリ<i class=""></i>
                                 <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Mon, Dec 11, 2017</div>
                                 <div style="font-size: 70%">
                                     
