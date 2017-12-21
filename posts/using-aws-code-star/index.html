@@ -2,9 +2,8 @@
 <html ⚡>
 
 <head>
-	<meta name="generator" content="Hugo 0.30.2" />
     <meta charset="utf-8">
-    <link rel="canonical" href="https://persol-pt.github.io/" />
+    <link rel="canonical" href="https://persol-pt.github.io/posts/using-aws-code-star/" />
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-boilerplate>
@@ -78,7 +77,7 @@
     
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
-    <title>PPT Developers&#39; Blog</title>
+    <title>Aws CodeStarを試してみる - PPT Developers&#39; Blog</title>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat" rel="stylesheet">
     <style amp-custom>table {
   border-collapse: collapse;
@@ -2568,331 +2567,341 @@ h1 {
     </amp-sidebar>
     
     
-<header class="www-header">
-    <h1 class="mb4 px2 col-12 sm-col-8 mx-auto">PPT Developers&#39; Blog</h1>
+<header class="www-header center">
+    <h1 class="mb1">Aws CodeStarを試してみる</h1>
+    <div class="www-index-header-action mx-auto">Thu, Dec 21, 2017</div>
+    <div class="www-index-header-action mx-auto">
+        
+        <a href="/categories/%E3%83%93%E3%83%88%E3%83%AB">ビトル</a> 
+    </div>
+    <div class="www-index-header-action mx-auto">
+        
+        <a href="/tags/aws">#AWS</a> 
+        <a href="/tags/codestar">#CodeStar</a> 
+        <a href="/tags/codecommit">#CodeCommit</a> 
+        <a href="/tags/codebuild">#CodeBuild</a> 
+        <a href="/tags/codedeploy">#CodeDeploy</a> 
+        <a href="/tags/lambda">#Lambda</a> 
+        <a href="/tags/node.js">#Node.js</a> 
+    </div>
 
-    <span class="h3 block mb4 px2 col-12 sm-col-8 mx-auto">パーソルプロセス＆テクノロジー 開発者ブログ</span>
-
+    
 </header>
 <amp-selector layout="container">
     <main class="flex pl2">
         
-        <article class="www-components flex-auto col-8">
-            <section class="www-component-desc" id="samples_templates">
+        <aside class="col-1 xs-hide"></aside>
+
+        <article class="www-components flex-auto col-10">
+            <section class="www-component-desc">
                 
-                <div class="abe-examples flex flex-wrap">                         <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">HealthKitアプリを作る（その１）<i class=""></i>
-                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Thu, Dec 21, 2017</div>
-                                <div style="font-size: 70%">
-                                    
-                                    <a href="/categories/n.yamamoto">N.Yamamoto</a> 
-                                </div>
-                            </h3>
-                            
-                                <p class="mb1">Apple Watch Series3を買いました。
-Series1からの買い替えです。
-CellularじゃなくてGPSの方です。
-Apple Watch Series3を使った感想は「去年買っておけばよかった」です。
-Nike&#43; Run Clubで走るの楽しい。
-とりあえず２週間続いてます。
-目標は「フルマラソン走ってた時の体重に戻して、来シーズンフルマラソン走る」ことにしました。
-「アクティ</p>
-                            
-                            <div class="abe-sample-card-actions">
-                            
-                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/healthkit-app-part1/">Read More…</a></div>
-                        </div>
-                         <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">Aws CodeStarを試してみる<i class=""></i>
-                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Thu, Dec 21, 2017</div>
-                                <div style="font-size: 70%">
-                                    
-                                    <a href="/categories/%E3%83%93%E3%83%88%E3%83%AB">ビトル</a> 
-                                </div>
-                            </h3>
-                            
-                                <p class="mb1">今回は Amazon Web Services Advent Calendar 2017の22日目の記事を書きたいと思います。
 
-AWS CodeStarについて書こうと思います。
-CodeStarは一言で言うとCI/CD環境を全てAWSで構築・運用できるサービスです。
-Code三兄弟(Code Commit、Code Build、Code Deploy)などのサービスと連携して、 アプリケーショ</p>
-                            
-                            <div class="abe-sample-card-actions">
-                            
-                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/using-aws-code-star/">Read More…</a></div>
-                        </div>
-                         <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">TerraformでAmazon ECS上にGitLabを構築<i class=""></i>
-                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Mon, Dec 18, 2017</div>
-                                <div style="font-size: 70%">
-                                    
-                                    <a href="/categories/boiyaa">boiyaa</a> 
-                                </div>
-                            </h3>
-                            
-                                <p class="mb1">GitLab Advent Calendar 2017 17 日目の記事です。
+<p>今回は <a href="https://qiita.com/advent-calendar/2017/aws">Amazon Web Services Advent Calendar 2017</a>の22日目の記事を書きたいと思います。</p>
 
-私のプロジェクトではプロジェクト管理に GitLab を使っていて、元々シングルインスタンスに docker-compose で構築していて、こんな記事も書いたのですが、コンテナクラスターを一度触ってみたかったので、勉強がてら ECS 上に GitLab 構築してみました。
+<p><br></p>
 
-その結果の構成コードがこちらのリポジトリ</p>
-                            
-                            <div class="abe-sample-card-actions">
-                            
-                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/gitlab-ecs/">Read More…</a></div>
-                        </div>
-                         <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">AWS X-Rayを使ってLambda内の処理をトレースしてみる<i class=""></i>
-                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Sun, Dec 17, 2017</div>
-                                <div style="font-size: 70%">
-                                    
-                                    <a href="/categories/%E3%83%93%E3%83%88%E3%83%AB">ビトル</a> 
-                                </div>
-                            </h3>
-                            
-                                <p class="mb1">どもどもビトルです。 今回は AWS Lambda Advent Calendar 2017の１７日目の記事を書きます。
-僕は今年の Serverlessconf Tokyoに行ってきたのですが、その時にちょくちょくAWSのX-Rayというサービスを耳にして気になったので、それについて書きます。
+<p>AWS CodeStarについて書こうと思います。</p>
 
-AWS X-Rayとは？ まず以下の特徴があります：
- リクエストのトレース 例外の収集 プロファイ</p>
-                            
-                            <div class="abe-sample-card-actions">
-                            
-                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/using-lambda-with-aws-xray/">Read More…</a></div>
-                        </div>
-                         <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">DockerだけでRails、特にWebpackerはハマった<i class=""></i>
-                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Sat, Dec 16, 2017</div>
-                                <div style="font-size: 70%">
-                                    
-                                    <a href="/categories/boiyaa">boiyaa</a> 
-                                </div>
-                            </h3>
-                            
-                                <p class="mb1">すいません遅くなりました。。
-Ruby on Rails Advent Calendar 2017 14 日目の記事です。
+<p>CodeStarは一言で言うとCI/CD環境を全てAWSで構築・運用できるサービスです。</p>
 
-ある日、
+<p>Code三兄弟(Code Commit、Code Build、Code Deploy)などのサービスと連携して、
+アプリケーションコードのコーディング、ビルド、テスト、デプロイできる環境の構築を可能にします。</p>
 
-「docker run で rails new とか bundle install したい」 
-と、知り合いのそこそこ可愛い女の子が言ってきました。
+<p>開発者は素早く必要なアプリケーション開発環境と動作するコードを用意することでできるそうです。</p>
 
-同僚の作ったおじさん LINE ボットの教師データになるほどのオジサンである私は、
-誠意（下心）を持って取り組</p>
-                            
-                            <div class="abe-sample-card-actions">
-                            
-                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/webpacker-docker/">Read More…</a></div>
-                        </div>
-                         <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">GCP Meets Kotlin<i class=""></i>
-                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Fri, Dec 15, 2017</div>
-                                <div style="font-size: 70%">
-                                    
-                                    <a href="/categories/keitaro">keitaro</a> 
-                                </div>
-                            </h3>
-                            
-                                <p class="mb1">この記事は Google Cloud Platform Advent Calendar 2017 の15日目の記事です。 
-はじめに 今年盛り上がったプログラミング言語の一つがKotlinであるというのは衆目の一致するところだと思います。 Google I/OでAndoridアプリ開発の公式言語としてサポートされることが発表されたのを始め、様々なニュースが話題になっていました。  Kotlinの特</p>
-                            
-                            <div class="abe-sample-card-actions">
-                            
-                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/gcp-meets-kotlin/">Read More…</a></div>
-                        </div>
-                         <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">おじさんLINEごっこBOTを作ってみた<i class=""></i>
-                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Fri, Dec 15, 2017</div>
-                                <div style="font-size: 70%">
-                                    
-                                    <a href="/categories/%E3%83%93%E3%83%88%E3%83%AB">ビトル</a> 
-                                </div>
-                            </h3>
-                            
-                                <p class="mb1">かなり遅れてしまいましたが、今回はボット (Bot) Advent Calendar 2017の10日目の記事を書きます。
+<p><br></p>
 
-突然ですが、みなさん「 おじさんLINEごっこ 」という遊びをご存知ですか？ 最近若い女子同士で流行っているこの遊びですが、今時のSNSにありそうな「おじさんの文章」を真似しながら送り合うというものです。
-まず特徴としては以下が挙げられます：
- 長い 句読点が多い 無駄に褒</p>
-                            
-                            <div class="abe-sample-card-actions">
-                            
-                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/line-ojisan-bot/">Read More…</a></div>
-                        </div>
-                         <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">[初心者向け]GoogleAnalytics を始める時に知っておいたほうが良いこと<i class=""></i>
-                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Fri, Dec 15, 2017</div>
-                                <div style="font-size: 70%">
-                                    
-                                    <a href="/categories/%E5%B7%9D%E5%B4%8E-%E5%8D%93%E6%BA%80">川崎 卓満</a> 
-                                </div>
-                            </h3>
-                            
-                                <p class="mb1">この記事について Google Analytics Advent Calendar 2017 16日目の記事です。 はじめに Google AnalyticsをサイトやWEBサービスで利用するにあたり、予め知っておいたほうが良いと思われる 心構えや、よく使われる内容について、軽く触れておきます。 GAを使う前の心構え 1．gaで計測される割合に関する数値は、統計上支障がない程度に間引かれている  </p>
-                            
-                            <div class="abe-sample-card-actions">
-                            
-                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/starting-google-analytics/">Read More…</a></div>
-                        </div>
-                         <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">Dialogflow &#43; VoiceTextで音声会話Botをさくっと作ろう<i class=""></i>
-                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Thu, Dec 14, 2017</div>
-                                <div style="font-size: 70%">
-                                    
-                                    <a href="/categories/%E8%97%A4%E4%BA%95-%E5%A4%A7%E7%A5%90daitasu">藤井 大祐(daitasu)</a> 
-                                </div>
-                            </h3>
-                            
-                                <p class="mb1">dialogflow &#43; VoiceTextでさくっと音声会話botを作ろう
- どうもこんにちは、藤井です。
-今回は新卒ながら自分もAdvent Calenderの記事投稿に加わらせて頂きました。
-この記事は、新卒専用 Advent Calendar 2017 19日目の記事になります。
-本記事では、dialogflowを用いて簡単にチャットボットを作り、そこにVoiceTextを足し合わせた音声</p>
-                            
-                            <div class="abe-sample-card-actions">
-                            
-                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/audio-conversation-bot/">Read More…</a></div>
-                        </div>
-                         <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">久しぶりのiOSアプリ<i class=""></i>
-                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Mon, Dec 11, 2017</div>
-                                <div style="font-size: 70%">
-                                    
-                                    <a href="/categories/n.yamamoto">N.Yamamoto</a> 
-                                </div>
-                            </h3>
-                            
-                                <p class="mb1"> 出戻り Swift 
-先日、昔（個人事業主をしてた時に）作ったiOSアプリがストアから消えてるんですけど
-というような連絡を受けました。
-何年も前に作りぱなしにしてたので、iOS11リリース頃に消されています。
-最近iOSアプリ開発をしていなかったので、この機会にSwiftでアプリを作ってみます。
-とりあえず、遊びで作った15パズルをSwiftで作り直します。
-昔の素材を引っ張り出すのが面倒なの</p>
-                            
-                            <div class="abe-sample-card-actions">
-                            
-                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/back_to_swift/">Read More…</a></div>
-                        </div>
-                         <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">react-sketchappを使った開発ワークフロー<i class=""></i>
-                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Sun, Dec 10, 2017</div>
-                                <div style="font-size: 70%">
-                                    
-                                    <a href="/categories/boiyaa">boiyaa</a> 
-                                </div>
-                            </h3>
-                            
-                                <p class="mb1">React #1 Advent Calendar 2017 10 日目の記事です。
+<p><br></p>
 
-react-sketchapp react-sketchappとは、デザインツールの Sketch 用にビルドできる React コンポーネントです。
-README からの引用ですが、こんな概要です。
- デザインシステムの管理 - react-sketchapp は、Airbnb’s design system用</p>
-                            
-                            <div class="abe-sample-card-actions">
-                            
-                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/react-sketchapp/">Read More…</a></div>
-                        </div>
-                         <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">Node.jsでHTTP/2を動かしてみる<i class=""></i>
-                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Sat, Dec 9, 2017</div>
-                                <div style="font-size: 70%">
-                                    
-                                    <a href="/categories/%E3%83%93%E3%83%88%E3%83%AB">ビトル</a> 
-                                </div>
-                            </h3>
-                            
-                                <p class="mb1">どうも、ビトルです。
-今回はNode.js Advent Calendar 2017の9日目の記事になります。
+<h2 id="試してみる">試してみる</h2>
 
-この記事ではNode.jsで現在コア機能に実験的に導入されているHTTP/2について書きたいと思います。
+<p>まずはアプリケーションのテンプレートを一つ選びます。</p>
 
-Serverside 
-単純なHTTPサーバとしての処理はこんな感じに実装できます。
+<p>今回はNode.jsのLambdaアプリケーションを選びます。</p>
 
-const http2 = require(&#39;http2&#39;); const fs = re</p>
-                            
-                            <div class="abe-sample-card-actions">
-                            
-                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/using-http2-with-nodejs/">Read More…</a></div>
-                        </div>
-                         <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">てくてく勉強会12月6日<i class=""></i>
-                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Fri, Dec 8, 2017</div>
-                                <div style="font-size: 70%">
-                                    
-                                    <a href="/categories/%E8%97%A4%E4%BA%95-%E5%A4%A7%E7%A5%90daitasu">藤井 大祐(daitasu)</a> 
-                                </div>
-                            </h3>
-                            
-                                <p class="mb1">皆さんこんにちは、2017年入社の藤井です。
-今回のブログでは弊社の私たちストラテジーサービス部テクノロジーサービスグループテクノロジーサービスチーム(通称テクテク)が
-毎週行っている技術勉強会について新人目線で触れていきたいと思います。
+<p><br></p>
 
-テクテクでは毎週水曜日に技術勉強会を行っています。
-この勉強会では、それぞれ自分が学びたいテーマを宣言し、1人ずつリレー形式で発表を行っています。
-テクテクは</p>
-                            
-                            <div class="abe-sample-card-actions">
-                            
-                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/tech-workshop1206/">Read More…</a></div>
-                        </div>
-                         <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">Cloud-based WAF(Web Application Firewall) 比較<i class=""></i>
-                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Wed, Dec 6, 2017</div>
-                                <div style="font-size: 70%">
-                                    
-                                    <a href="/categories/boiyaa">boiyaa</a> 
-                                </div>
-                            </h3>
-                            
-                                <p class="mb1">Security Advent Calendar 2017 6 日目の記事です。
 
-WAF とは XSS や SQL インジェクションなどの HTTP 攻撃を防ぐための Firewall で、
-Cloud-based WAF では、リクエストが WAF を通るよう WAF サービスに DNS を向け、安全なリクエストのみオリジンへ通す、という方式をとります。
-私は WAF には疎くて、AWS WA</p>
-                            
-                            <div class="abe-sample-card-actions">
-                            
-                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/waf-comparison/">Read More…</a></div>
-                        </div>
-                         <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">静的ファイルWebホスティングならS3よりFirebase Hosting<i class=""></i>
-                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Sun, Dec 3, 2017</div>
-                                <div style="font-size: 70%">
-                                    
-                                    <a href="/categories/boiyaa">boiyaa</a> 
-                                </div>
-                            </h3>
-                            
-                                <p class="mb1">Firebase Advent Calendar 2017 3 日目の記事です。
+<figure >
+    
+        <img src="/images/codestar1.png" />
+    
+    
+</figure>
 
-Firebase Hostingはストレージ、Web ホスティング、CDN 、マネージド SSL を組み込んだサービスです。 AWS ではストレージと Web ホスティングは S3 だけでできますが、CDN は CloudFront、マネージド SSL は Certificate Manager と、複数のサービス</p>
-                            
-                            <div class="abe-sample-card-actions">
-                            
-                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/firebase-hosting/">Read More…</a></div>
-                        </div>
-                         <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">社外発信はじめました<i class=""></i>
-                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Sun, Nov 12, 2017</div>
-                                <div style="font-size: 70%">
-                                    
-                                    <a href="/categories/boiyaa">boiyaa</a> 
-                                </div>
-                            </h3>
-                            
-                                <p class="mb1"><p>はじめまして、パーソルプロセス＆テクノロジー株式会社です。みんな PPT と略してます。レガシーなパワポですね。</p>
 
-<p></p></p>
-                            
-                            <div class="abe-sample-card-actions">
-                            
-                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/start-publishing/">Read More…</a></div>
-                        </div>
+<p>次にプロジェクトの詳細を設定します。プロジェクト名は好きなものを入れてください。</p>
 
+<p>レポジトリはAWS CodeCommitとGitHubのどちらかを選べますが、今回はCodeCommitを選びます。</p>
+
+<p><br></p>
+
+
+<figure >
+    
+        <img src="/images/codestar2.png" />
+    
+    
+</figure>
+
+
+<p>ここではプロジェクトのどの部分でどのサービスが利用されるかが確認できます。</p>
+
+<p>ソースの管理からデプロイまで全てAWS のサービスで管理できることがわかります。</p>
+
+<p><br></p>
+
+
+<figure >
+    
+        <img src="/images/codestar3.png" />
+    
+    
+</figure>
+
+
+<p>次にコードの編集方法を選択します。</p>
+
+<p>EclipseやVisual StudioなどのIDEと連携もできますが、今回はコマンドラインで編集します。</p>
+
+<p><br></p>
+
+
+<figure >
+    
+        <img src="/images/codestar4.png" />
+    
+    
+</figure>
+
+
+<p>次の画面ではアプリケーションのソースの取得方法の手順を確認できます。</p>
+
+<p>今回はsshでソースを取得しますので、ssh周りの設定が終わったらこの画面に表示されているソースのレポジトリのURLをコピーしましょう。</p>
+
+<p><br></p>
+
+
+<figure >
+    
+        <img src="/images/codestar5.png" />
+    
+    
+</figure>
+
+
+<p>ではコピーしたレポジトリのURLでgit cloneしましょう。</p>
+
+<p><br></p>
+
+<pre><code class="language-sh">$ git clone ssh://git-codecommit.ap-northeast-1.amazonaws.com/v1/repos/awsCodeStartTest
+Cloning into 'awsCodeStartTest'...
+The authenticity of host 'git-codecommit.ap-northeast-1.amazonaws.com (xx.xxx.xxx.xxx)' can't be established.
+RSA key fingerprint is SHA256:xxx/xxxxx/x/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'git-codecommit.ap-northeast-1.amazonaws.com,xx.xxx.xxx.xxx' (RSA) to the list of known hosts.
+remote: Counting objects: 16, done.
+Receiving objects: 100% (16/16), 6.25 KiB | 0 bytes/s, done.
+</code></pre>
+
+<p>レポジトリの中身はこんな感じになります。
+CodeBuildの <code>buildspec.yml</code> と CloudFormation <code>template.yml</code> があることが確認できますね。</p>
+
+<p><br></p>
+
+<pre><code class="language-sh">├── README.md
+├── buildspec.yml
+├── index.js
+├── public
+│   ├── assets
+│   │   ├── css
+│   │   │   ├── gradients.css
+│   │   │   └── styles.css
+│   │   ├── img
+│   │   │   └── tweet.svg
+│   │   └── js
+│   │       └── set-background.js
+│   └── index.html
+└── template.yml
+</code></pre>
+
+<p>では実際のアプリケーションのコードを見てみましょう。
+単純にHTMLを返しているだけのシンプルなコードになっています。</p>
+
+<p><br></p>
+
+<pre><code class="language-js">// index.js
+
+'use strict';
+var fs = require('fs');
+
+ exports.get = function(event, context) {
+   var contents = fs.readFileSync(&quot;public/index.html&quot;);
+   context.succeed({
+     statusCode: 200,
+     body: contents.toString(),
+     headers: {'Content-Type': 'text/html'}
+   });
+ };
+</code></pre>
+
+<p>次にもう一度CodeStarのコンソール画面に戻って作成したプロジェクトを選択してみましょう。</p>
+
+
+<figure >
+    
+        <img src="/images/codestar6.png" />
+    
+    
+</figure>
+
+
+<p>これがCodeStarプロジェクトのダッシュボード画面になります。</p>
+
+<p>右下の「アプリケーションのエンドポイント」の下に記載されているURLにアクセスしてましょう。</p>
+
+
+<figure >
+    
+        <img src="/images/codestar7.png" />
+    
+    
+</figure>
+
+
+<p>アプリケーションのテンプレートのページが表示されました。</p>
+
+<p>数秒でアプリケーションが出来上がりましたね。</p>
+
+
+<figure >
+    
+        <img src="/images/codestar8.png" />
+    
+    
+</figure>
+
+
+<p>では次にソースを変更してpushしてみましょう。</p>
+
+<p><br></p>
+
+<pre><code class="language-js">  'use strict';
+- var fs = require('fs');
+
+  exports.get = function(event, context) {
+-   var contents = fs.readFileSync(&quot;public/index.html&quot;);
+    context.succeed({
+      statusCode: 200,
+-     body: contents.toString(),
++     body: 'Hello world',
+      headers: {'Content-Type': 'text/html'}
+    });
+  };
+</code></pre>
+
+<pre><code class="language-sh">$ git add index.js
+$ git commit -m &quot;modify my code&quot;
+$ git push
+</code></pre>
+
+<p>CodeStarのダッシュボードに戻ると、先ほどpushしたコミットが反映されていることが確認できます。</p>
+
+
+<figure >
+    
+        <img src="/images/codestar9.png" />
+    
+    
+</figure>
+
+
+<p>ソースの反映が終わったら、次にビルドが走りました。</p>
+
+<p>buildspec.ymlに記載されているタスクが順番に実行されていきます。</p>
+
+
+<figure >
+    
+        <img src="/images/codestar10.png" />
+    
+    
+</figure>
+
+
+<p>少し待つと、ビルドが無事完了しました。</p>
+
+
+<figure >
+    
+        <img src="/images/codestar11.png" />
+    
+    
+</figure>
+
+
+<p>次にデプロイが走り、CloudFormationによって各リソースが更新されます。</p>
+
+
+<figure >
+    
+        <img src="/images/codestar12.png" />
+    
+    
+</figure>
+
+
+<p>また少し待つと、デプロイが完了しました。</p>
+
+<p>では先ほどと同じエンドポイントにアクセスしてみましょう。</p>
+
+
+<figure >
+    
+        <img src="/images/codestar13.png" />
+    
+    
+</figure>
+
+
+<p>無事反映されました！！</p>
+
+
+<figure >
+    
+        <img src="/images/codestar15.png" />
+    
+    
+</figure>
+
+
+<h2 id="まとめ">まとめ</h2>
+
+<p>アプリケーションの実行環境だけでなく、ソース管理・ビルド・テスト・デプロイまで一通りできるCI環境が数分で構築できるのはかなり魅力的ですね。</p>
+
+<p>開発者もアプリのソースコードにより集中できるので、生産性がかなり上がるかと思います。</p>
+
+<p>今後自社サービスを作るときには使ってみたいですね。</p>
+
+<p><br></p>
+
+<p>ではまた！</p>
+
+<p><br></p>
+
+<p><br></p>
+
+            </section>
+            <section class="www-component-desc">
+                <div>
+                    <amp-social-share type="hatena" data-share-endpoint="http://b.hatena.ne.jp/entry/https://persol-pt.github.io/posts/using-aws-code-star/">B!</amp-social-share>
+                    <amp-social-share type="facebook" data-param-app_id="158646288203071"></amp-social-share>
+                    <amp-social-share type="twitter"></amp-social-share>
                 </div>
             </section>
         </article>
+
+        <aside class="col-1 xs-hide"></aside>
     </main>
 </amp-selector>
     
@@ -2914,7 +2923,7 @@ Firebase Hostingはストレージ、Web ホスティング、CDN 、マネー�
                     "on": "visible",
                     "request": "pageview",
                     "vars": {
-                        "title": "PPT Developers\x27 Blog"
+                        "title": "Aws CodeStarを試してみる"
                     }
                 }
             }

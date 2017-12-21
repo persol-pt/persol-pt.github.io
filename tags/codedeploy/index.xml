@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Codedeploy on PPT Developers&#39; Blog</title>
+    <link>https://persol-pt.github.io/tags/codedeploy/</link>
+    <description>Recent content in Codedeploy on PPT Developers&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Thu, 21 Dec 2017 12:35:16 +0900</lastBuildDate>
+    
+	<atom:link href="https://persol-pt.github.io/tags/codedeploy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Aws CodeStarを試してみる</title>
+      <link>https://persol-pt.github.io/posts/using-aws-code-star/</link>
+      <pubDate>Thu, 21 Dec 2017 12:35:16 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/posts/using-aws-code-star/</guid>
+      <description>今回は Amazon Web Services Advent Calendar 2017の22日目の記事を書きたいと思います。
+
+AWS CodeStarについて書こうと思います。
+CodeStarは一言で言うとCI/CD環境を全てAWSで構築・運用できるサービスです。
+Code三兄弟(Code Commit、Code Build、Code Deploy)などのサービスと連携して、 アプリケーションコードのコーディング、ビルド、テスト、デプロイできる環境の構築を可能にします。
+開発者は素早く必要なアプリケーション開発環境と動作するコードを用意することでできるそうです。
+
+
+試してみる まずはアプリケーションのテンプレートを一つ選びます。
+今回はNode.jsのLambdaアプリケーションを選びます。
+
+ 次にプロジェクトの詳細を設定します。プロジェクト名は好きなものを入れてください。
+レポジトリはAWS CodeCommitとGitHubのどちらかを選べますが、今回はCodeCommitを選びます。
+
+ ここではプロジェクトのどの部分でどのサービスが利用されるかが確認できます。
+ソースの管理からデプロイまで全てAWS のサービスで管理できることがわかります。
+
+ 次にコードの編集方法を選択します。
+EclipseやVisual StudioなどのIDEと連携もできますが、今回はコマンドラインで編集します。
+
+ 次の画面ではアプリケーションのソースの取得方法の手順を確認できます。
+今回はsshでソースを取得しますので、ssh周りの設定が終わったらこの画面に表示されているソースのレポジトリのURLをコピーしましょう。
+
+ ではコピーしたレポジトリのURLでgit cloneしましょう。
+
+$ git clone ssh://git-codecommit.ap-northeast-1.amazonaws.com/v1/repos/awsCodeStartTest Cloning into &#39;awsCodeStartTest&#39;... The authenticity of host &#39;git-codecommit.ap-northeast-1.amazonaws.com (xx.xxx.xxx.xxx)&#39; can&#39;t be established. RSA key fingerprint is SHA256:xxx/xxxxx/x/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx. Are you sure you want to continue connecting (yes/no)?</description>
+    </item>
+    
+  </channel>
+</rss>

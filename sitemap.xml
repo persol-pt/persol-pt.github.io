@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://persol-pt.github.io/posts/using-aws-code-star/</loc>
+    <lastmod>2017-12-21T12:35:16+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://persol-pt.github.io/posts/gitlab-ecs/</loc>
     <lastmod>2017-12-18T00:56:09+09:00</lastmod>
   </url>
@@ -85,7 +90,7 @@
   
   <url>
     <loc>https://persol-pt.github.io/tags/aws/</loc>
-    <lastmod>2017-12-18T00:56:09+09:00</lastmod>
+    <lastmod>2017-12-21T12:35:16+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -122,6 +127,30 @@
   <url>
     <loc>https://persol-pt.github.io/tags/cloudfront/</loc>
     <lastmod>2017-12-03T03:13:06+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://persol-pt.github.io/tags/codebuild/</loc>
+    <lastmod>2017-12-21T12:35:16+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://persol-pt.github.io/tags/codecommit/</loc>
+    <lastmod>2017-12-21T12:35:16+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://persol-pt.github.io/tags/codedeploy/</loc>
+    <lastmod>2017-12-21T12:35:16+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://persol-pt.github.io/tags/codestar/</loc>
+    <lastmod>2017-12-21T12:35:16+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -235,7 +264,7 @@
   
   <url>
     <loc>https://persol-pt.github.io/tags/lambda/</loc>
-    <lastmod>2017-12-17T17:51:27+09:00</lastmod>
+    <lastmod>2017-12-21T12:35:16+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -253,7 +282,7 @@
   
   <url>
     <loc>https://persol-pt.github.io/tags/node.js/</loc>
-    <lastmod>2017-12-17T17:51:27+09:00</lastmod>
+    <lastmod>2017-12-21T12:35:16+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -373,7 +402,7 @@
   
   <url>
     <loc>https://persol-pt.github.io/categories/%E3%83%93%E3%83%88%E3%83%AB/</loc>
-    <lastmod>2017-12-17T17:51:27+09:00</lastmod>
+    <lastmod>2017-12-21T12:35:16+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -416,12 +445,6 @@
   <url>
     <loc>https://persol-pt.github.io/categories/%E8%97%A4%E4%BA%95-%E5%A4%A7%E7%A5%90daitasu/</loc>
     <lastmod>2017-12-14T00:19:21+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://persol-pt.github.io/categories/%E9%95%B7%E5%B0%BE%E3%83%93%E3%83%88%E3%83%AB/</loc>
-    <lastmod>2017-12-15T16:10:08+09:00</lastmod>
     <priority>0</priority>
   </url>
   
