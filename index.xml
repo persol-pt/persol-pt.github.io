@@ -6,10 +6,41 @@
     <description>Recent content on PPT Developers&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 21 Dec 2017 17:43:55 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 21 Dec 2017 23:59:59 +0900</lastBuildDate>
     
 	<atom:link href="https://persol-pt.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>We Are JavaScripters!で弟のふんどしで相撲をとってきました</title>
+      <link>https://persol-pt.github.io/posts/wejs14/</link>
+      <pubDate>Thu, 21 Dec 2017 23:59:59 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/posts/wejs14/</guid>
+      <description>JavaScript Advent Calendar 2017 21 日目の記事です。
+
+本日はWe Are JavaScripters! @14th【初心者歓迎 LT 大会】で LT してきました。
+私の大好きなコミュニティで、よく参加させていただいてます。
+
+私のチームでは React, Flow, Jest など、Facebook 製品をよく使っておりますので Facebook のフロントエンド開発スタイルについて発表してきました。
+
+  ご覧いただいてわかったと思いますが、
+今回、ただ弟の知識だけを書いたあげく、最終的に弟を前に出してインタビューするだけという非常にエコな資料を作りまして、
+
+「お前いらなかったじゃねーかよ！」「弟の肩にのっかりすぎだろ！」「帰れ！」など、とても反響が大きく、
+
+私はとても気持ちがよかったです。
+
+ちなみに Facebook には訪問した方々が落書きをする THE FACEBOOK WALL がありますが、
+私も先日に遊びに行ったとき落書きさせてもらいました。どこかわかりますか？（どうでもいいですよね）
+ 左下でした！
+ 会社名ではなく、自分の名前を書く、自分中心の男、それが私です。
+ちなみにシアトルの風景画は別の方が描いた絵ですが、おかげさまでただの YAMAMOTO がオシャレな YAMAMOTO になりました。
+
+WeJS の他の方の資料はもっと魅力的ですので、ぜひご覧ください
+    
+以上、徹底気に他人のふんどしを履きまくる男、山本がお送りしました。</description>
+    </item>
     
     <item>
       <title>HealthKitアプリを作る（その１）</title>

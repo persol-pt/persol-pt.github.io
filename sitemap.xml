@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://persol-pt.github.io/posts/wejs14/</loc>
+    <lastmod>2017-12-21T23:59:59+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://persol-pt.github.io/posts/healthkit-app-part1/</loc>
     <lastmod>2017-12-21T17:43:55+09:00</lastmod>
   </url>
@@ -96,7 +101,7 @@
   
   <url>
     <loc>https://persol-pt.github.io/categories/boiyaa/</loc>
-    <lastmod>2017-12-18T00:56:09+09:00</lastmod>
+    <lastmod>2017-12-21T23:59:59+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -108,7 +113,7 @@
   
   <url>
     <loc>https://persol-pt.github.io/categories/</loc>
-    <lastmod>2017-12-18T00:56:09+09:00</lastmod>
+    <lastmod>2017-12-21T23:59:59+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -175,6 +180,12 @@
   <url>
     <loc>https://persol-pt.github.io/tags/efs/</loc>
     <lastmod>2017-12-18T00:56:09+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://persol-pt.github.io/tags/facebook/</loc>
+    <lastmod>2017-12-21T23:59:59+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -246,7 +257,7 @@
   
   <url>
     <loc>https://persol-pt.github.io/tags/javascript/</loc>
-    <lastmod>2017-12-17T17:51:27+09:00</lastmod>
+    <lastmod>2017-12-21T23:59:59+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -294,13 +305,13 @@
   
   <url>
     <loc>https://persol-pt.github.io/</loc>
-    <lastmod>2017-12-21T17:43:55+09:00</lastmod>
+    <lastmod>2017-12-21T23:59:59+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://persol-pt.github.io/posts/</loc>
-    <lastmod>2017-12-21T17:43:55+09:00</lastmod>
+    <lastmod>2017-12-21T23:59:59+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -420,7 +431,7 @@
   
   <url>
     <loc>https://persol-pt.github.io/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/</loc>
-    <lastmod>2017-12-08T18:48:09+09:00</lastmod>
+    <lastmod>2017-12-21T23:59:59+09:00</lastmod>
     <priority>0</priority>
   </url>
   
