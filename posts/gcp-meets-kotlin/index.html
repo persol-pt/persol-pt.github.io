@@ -2632,7 +2632,7 @@ GAE StandardはGoogleが用意した専用コンテナで動作します。使�
 
 <p>warで実行するためにSpringBootServletInitializerクラスを継承し、configureメソッドをオーバーライドします。<br/></p>
 
-<pre><code class="language-kotlin">@SpringBootApplication
+<pre><code class="language-java">@SpringBootApplication
 class Application : SpringBootServletInitializer() {
     @Bean
     fun cloudDatastoreService(): DatastoreService{
@@ -2763,7 +2763,7 @@ GAE FlexibleはGAEを名乗ってはいますが実質GCEです。Dockerコン�
 <li>メインクラス</li>
 </ul>
 
-<pre><code class="language-kotlin">package sample
+<pre><code class="language-Java">package sample
 
 import com.google.cloud.datastore.Datastore
 import com.google.cloud.datastore.DatastoreOptions
@@ -2912,7 +2912,7 @@ Firebase Authentication、Google 認証、Auth0などのOpenId Connectに対応�
 
 <p>APIに付けたアノテーションにEndpointsの定義を指定します。このアノテーションからAPIドキュメントやクライアントライブラリを生成できます。</p>
 
-<pre><code class="language-kotlin">@Api(
+<pre><code class="language-Java">@Api(
   name = &quot;sample&quot;,
   version = &quot;v1&quot;,
   namespace =
