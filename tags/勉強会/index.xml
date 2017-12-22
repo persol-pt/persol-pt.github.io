@@ -6,10 +6,50 @@
     <description>Recent content in 勉強会 on PPT Developers&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 21 Dec 2017 23:59:59 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 22 Dec 2017 02:48:09 +0900</lastBuildDate>
     
 	<atom:link href="https://persol-pt.github.io/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>てくてく勉強会12月15日</title>
+      <link>https://persol-pt.github.io/posts/tech-workshop1215/</link>
+      <pubDate>Fri, 22 Dec 2017 02:48:09 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/posts/tech-workshop1215/</guid>
+      <description>皆さんこんにちは、新卒の藤井大祐(daitasu)です。
+今週も私たちストラテジーサービス部テクノロジーサービスグループテクノロジーサービスチーム(通称テクテク)が
+行っている技術勉強会のレポートをしていきたいと思います。
+
+今週のテーマは 「YUBIKEYを用いた二要素認証」 です。
+12月15日の勉強会　テーマ「YUBIKEYを用いた二要素認証」 
+  
+近年、セキュリティがより重視されるようになり、
+二要素認証という言葉を聞くことが増えてきました。
+
+一般的には、認証というと
+ 「ID + パスワード」
+ 秘密の質問(通っていた学校は？親の旧名は？)
+という1つの要素の認証が標準です。
+しかし、これに＋して、
+  ・本人の生体情報 (顔認証、指紋認証、網膜スキャン等)
+・本人だけが所有するもの (スマホやPCなどのハードウェアトークン、メールで届くワンタイムパスワード)
+などを用いてもう一つ認証を増やすのが2要素認証になります。
+今週の発表では、上記の 本人が所有するもの として YUBIKEY という
+認証デバイスを用いた二要素認証の説明がありました。
+ YUBIKEYの機能一覧   
+こちらはPCに直接差して、デバイスの真ん中にあるボタンを押すだけで
+二要素認証ができるというシンプルな仕組みになっています。
+YUBIKEYには多くの機能が含まれているのですが、
+今回は、 Yubico OTP 、 FIDO U2F に焦点を当てたお話でした。
+この記事ではFIDOの内容に少しだけ触れていきたいと思います。
+FIDO U2F(Fast Identity Online Universal 2nd Factor) 
+この機能では、Google、Facebook、Dropbox、Github、GitLabなどの
+WEBサービスにおいて、
+U2Fを登録し、チャレンジレスポンス認証を利用可能にします。
+チャレンジレスポンス方式の認証というのは、「認証される側」と「認証する側」の間のやり取りを
+ 「認証をする側」が「認証される側」に キーワード を発行</description>
+    </item>
     
     <item>
       <title>We Are JavaScripters!で弟のふんどしで相撲をとってきました</title>
