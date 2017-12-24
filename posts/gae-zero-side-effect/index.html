@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="canonical" href="https://persol-pt.github.io/tags/gcp/" />
+    <link rel="canonical" href="https://persol-pt.github.io/posts/gae-zero-side-effect/" />
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-boilerplate>
@@ -77,7 +77,7 @@
     
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
-    <title>Gcp - PPT Developers&#39; Blog</title>
+    <title>純粋な App Engine - PPT Developers&#39; Blog</title>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat" rel="stylesheet">
     <style amp-custom>table {
   border-collapse: collapse;
@@ -2567,62 +2567,469 @@ h1 {
     </amp-sidebar>
     
     
-    <header class="www-header">
-        <h1 class="mb4 px2 col-12 sm-col-8 mx-auto">Gcp</h1>
-
+<header class="www-header center">
+    <h1 class="mb1">純粋な App Engine</h1>
+    <div class="www-index-header-action mx-auto">Mon, Dec 25, 2017</div>
+    <div class="www-index-header-action mx-auto">
         
+        <a href="/categories/boiyaa">boiyaa</a> 
+    </div>
+    <div class="www-index-header-action mx-auto">
+        
+        <a href="/tags/gcp">#GCP</a> 
+        <a href="/tags/gae">#GAE</a> 
+        <a href="/tags/elm">#Elm</a> 
+        <a href="/tags/haskell">#Haskell</a> 
+    </div>
 
-        </header>
-    <amp-selector layout="container">
-        <main class="flex pl2">
+    
+</header>
+<amp-selector layout="container">
+    <main class="flex pl2">
+        
+        <aside class="col-1 xs-hide"></aside>
 
-            <article class="www-components flex-auto col-8">
-                <section class="www-component-desc" id="samples_templates">
+        <article class="www-components flex-auto col-10">
+            <section class="www-component-desc">
+                
 
-                    <div class="abe-examples flex flex-wrap">
-                                                <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">純粋な App Engine<i class=""></i>
-                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Mon, Dec 25, 2017</div>
-                                <div style="font-size: 70%">
-                                    
-                                    <a href="/categories/boiyaa">boiyaa</a> 
-                                </div>
-                            </h3>
-                            
-                                <p class="mb1">Google Cloud Platform Advent Calendar 2017 24 日目の記事です。
+<p><a href="https://qiita.com/advent-calendar/2017/gcp">Google Cloud Platform Advent Calendar 2017</a> 24 日目の記事です。</p>
 
-先日弊社のシシドさんが書いたGCP Meets Kotlinを参考に、
-サンタクロースを信じる私の娘のように純粋な関数型言語で GAE(Google App Engine) アプリケーションを作ってみます。
-※私はガチ勢ではなく、Elm の簡単さが好きなだけの人ですので、内容超浅いです。</p>
-                            
-                            <div class="abe-sample-card-actions">
-                            
-                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/gae-zero-side-effect/">Read More…</a></div>
-                        </div>
+<p><br></p>
 
-                                                <div class="ampstart-card abe-sample-card flex flex-column flex-auto p1 mb1">
-                            <h3 class="mb1">GCP Meets Kotlin<i class=""></i>
-                                <div style="font:italic normal bold 60% 'メイリオ',sans-serif;">Fri, Dec 15, 2017</div>
-                                <div style="font-size: 70%">
-                                    
-                                    <a href="/categories/keitaro">keitaro</a> 
-                                </div>
-                            </h3>
-                            
-                                <p class="mb1">この記事は Google Cloud Platform Advent Calendar 2017 の15日目の記事です。 
-はじめに 今年盛り上がったプログラミング言語の一つがKotlinであるというのは衆目の一致するところだと思います。 Google I/OでAndoridアプリ開発の公式言語としてサポートされることが発表されたのを始め、様々なニュースが話題になっていました。  Kotlinの特</p>
-                            
-                            <div class="abe-sample-card-actions">
-                            
-                            <a class="ampstart-btn caps text-decoration-none inline-block" href="https://persol-pt.github.io/posts/gcp-meets-kotlin/">Read More…</a></div>
-                        </div>
+<p>先日弊社のシシドさんが書いた<a href="https://persol-pt.github.io/posts/gcp-meets-kotlin/">GCP Meets Kotlin</a>を参考に、</p>
 
-                    </div>
-                </section>
+<p>サンタクロースを信じる私の娘のように純粋な関数型言語で GAE(Google App Engine) アプリケーションを作ってみます。</p>
 
-            </article>
-        </main>
-    </amp-selector>
+<p>※私はガチ勢ではなく、Elm の簡単さが好きなだけの人ですので、内容超浅いです。</p>
+
+<p><br></p>
+
+<p><a href="https://github.com/boiyaa/gae-zero-side-effect-stack-example">今回のソースコード</a></p>
+
+<p><br><br></p>
+
+<h2 id="app-engine-の準備">App Engine の準備</h2>
+
+<p>Google にログインしている状態で、<a href="https://console.cloud.google.com/projectcreate">GCP コンソールのプロジェクト作成画面</a>を開き、プロジェクトを作成します。</p>
+
+
+<figure >
+    
+        <img src="/images/gae-zero-side-effect/gcp-createproject.png" />
+    
+    
+</figure>
+
+
+<p><a href="https://console.cloud.google.com/apis/library/appengine.googleapis.com/">Google App Engine Admin API</a>を有効にします。</p>
+
+<p><br></p>
+
+<p><a href="https://cloud.google.com/sdk/">Google Cloud SDK</a>をインストールします。</p>
+
+<pre><code class="language-sh">$ curl https://sdk.cloud.google.com | bash
+$ exec -l $SHELL
+$ gcloud init
+</code></pre>
+
+<p>先ほど作成したプロジェクトに切り替えます。</p>
+
+<pre><code class="language-sh">$ gcloud config set project your-project
+</code></pre>
+
+<p>App Engine を作成します。</p>
+
+<pre><code class="language-sh">$ gcloud app create
+</code></pre>
+
+<p>以上です。</p>
+
+<p><br><br></p>
+
+<h2 id="web-api-の実装">Web API の実装</h2>
+
+<p>人生初の Haskell コーディングです。</p>
+
+<p><a href="https://www.slant.co/topics/727/~best-haskell-web-frameworks-for-building-restful-web-services">What are the best Haskell web frameworks for building RESTful web services?</a>という記事を参考に、</p>
+
+<p>今回は<a href="https://www.spock.li/">Spock</a>という、Java 屋には紛らわしい名前の Web Framework を使います。</p>
+
+<p>理由は Sinatra インスパイアで、公式サイトのデザインとチュートリアルの内容が他より Welcome な感じだったからという、怒られそうな理由です、すいません。</p>
+
+<p><br></p>
+
+<p>では<a href="https://www.spock.li/tutorials/rest-api">Building a REST API</a>を参考に実装してみます。</p>
+
+<p><code>Stack</code>という Haskell の npm 的なやつをインストールします。</p>
+
+<pre><code class="language-sh">$ curl -sSL https://get.haskellstack.org/ | sh
+</code></pre>
+
+<p>Haskell プロジェクト作ります。</p>
+
+<pre><code class="language-sh">$ stack new your-project
+$ cd your-project
+</code></pre>
+
+<p><code>stack.yaml</code>を以下のように編集します。</p>
+
+<pre><code class="language-diff">-resolver: lts-10.0
++resolver: lts-8.13
+</code></pre>
+
+<p><code>package.yaml</code>を以下のように編集します。</p>
+
+<pre><code class="language-diff">executables:
+  your-project-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+-    - your-project
++    - aeson
++    - Spock
++    - text
+</code></pre>
+
+<p><code>app/Main.hs</code>を作ります。</p>
+
+<pre><code class="language-elm">{-# LANGUAGE DeriveGeneric #-}
+{-# LANGUAGE OverloadedStrings #-}
+
+import Web.Spock
+import Web.Spock.Config
+
+import Data.Aeson hiding (json)
+import Data.Monoid ((&lt;&gt;))
+import Data.Text (Text, pack)
+import GHC.Generics
+
+
+data Person = Person
+  { name :: Text
+  , country :: Text
+  , city :: Text
+  , salary :: Text
+  } deriving (Generic, Show)
+
+instance ToJSON Person
+
+instance FromJSON Person
+
+
+type Api = SpockM () () () ()
+
+type ApiAction a = SpockAction () () () a
+
+main :: IO ()
+main = do
+  spockCfg &lt;- defaultSpockCfg () PCNoDatabase ()
+  runSpock 8080 (spock spockCfg app)
+
+corsHeader = do
+  ctx &lt;- getContext
+  setHeader &quot;Access-Control-Allow-Origin&quot; &quot;*&quot;
+  pure ctx
+
+app :: Api
+app = prehook corsHeader $ do
+  get &quot;people&quot; $ do
+    json [ Person { name = &quot;Dakota Rice&quot;, country = &quot;Niger&quot;, city = &quot;Oud-Turnhout&quot;, salary = &quot;$36,738&quot; }
+         , Person { name = &quot;Minerva Hooper&quot;, country = &quot;Curaçao&quot;, city = &quot;Sinaai-Waas&quot;, salary = &quot;$23,789&quot; }
+         , Person { name = &quot;Sage Rodriguez&quot;, country = &quot;Netherlands&quot;, city = &quot;Baileux&quot;, salary = &quot;$56,142&quot; }
+         , Person { name = &quot;Philip Chaney&quot;, country = &quot;Korea, South&quot;, city = &quot;Overland Park&quot;, salary = &quot;$38,735&quot; }
+         , Person { name = &quot;Doris Greene&quot;, country = &quot;Malawi&quot;, city = &quot;Feldkirchen in Kärnten&quot;, salary = &quot;$63,542&quot; }
+         , Person { name = &quot;Mason Porter&quot;, country = &quot;Chile&quot;, city = &quot;Gloucester&quot;, salary = &quot;$78,615&quot; }
+         ]
+</code></pre>
+
+<p>ビルドします。</p>
+
+<pre><code class="language-sh">$ stack build
+</code></pre>
+
+<p>起動します。</p>
+
+<pre><code class="language-sh">$ stack exec your-project-exe
+</code></pre>
+
+<p>叩いてみます。</p>
+
+<pre><code class="language-sh">$ curl localhost:8080/people
+[{&quot;salary&quot;:&quot;$36,738&quot;,&quot;country&quot;:&quot;Niger&quot;,&quot;name&quot;:&quot;Dakota Rice&quot;,&quot;city&quot;:&quot;Oud-Turnhout&quot;},{&quot;salary&quot;:&quot;$23,789&quot;,&quot;country&quot;:&quot;Curaçao&quot;,&quot;name&quot;:&quot;Minerva Hooper&quot;,&quot;city&quot;:&quot;Sinaai-Waas&quot;},{&quot;salary&quot;:&quot;$56,142&quot;,&quot;country&quot;:&quot;Netherlands&quot;,&quot;name&quot;:&quot;Sage Rodriguez&quot;,&quot;city&quot;:&quot;Baileux&quot;},{&quot;salary&quot;:&quot;$38,735&quot;,&quot;country&quot;:&quot;Korea, South&quot;,&quot;name&quot;:&quot;Philip Chaney&quot;,&quot;city&quot;:&quot;Overland Park&quot;},{&quot;salary&quot;:&quot;$63,542&quot;,&quot;country&quot;:&quot;Malawi&quot;,&quot;name&quot;:&quot;Doris Greene&quot;,&quot;city&quot;:&quot;Feldkirchen in Kärnten&quot;},{&quot;salary&quot;:&quot;$78,615&quot;,&quot;country&quot;:&quot;Chile&quot;,&quot;name&quot;:&quot;Mason Porter&quot;,&quot;city&quot;:&quot;Gloucester&quot;}]
+</code></pre>
+
+<p>意外にさらっと動きますね。では GAE にデプロイしていきます。</p>
+
+<p><code>app.yaml</code>を作ります。</p>
+
+<pre><code class="language-yaml">runtime: custom
+env: flex
+</code></pre>
+
+<p>Linux ビルド用の<code>Dockerfile.build</code>を作成します。</p>
+
+<pre><code class="language-Dockerfile">FROM haskell:8.0.2
+WORKDIR /workdir
+ADD . .
+RUN stack build
+EXPOSE 8080
+CMD [&quot;stack&quot;, &quot;exec&quot;, &quot;your-project-exe&quot;]
+</code></pre>
+
+<p>ビルドします。</p>
+
+<pre><code class="language-sh">$ docker build -t gcr.io/your-project/web-api -f Dockerfile.build .
+</code></pre>
+
+<p>GCP にデプロイします。</p>
+
+<pre><code class="language-sh">$ gcloud docker -- push gcr.io/your-project/web-api
+</code></pre>
+
+<p>GAE 用の<code>Dockerfile</code>を作成します。</p>
+
+<pre><code class="language-Dockerfile">FROM gcr.io/your-project/web-api
+</code></pre>
+
+<p>アプリケーションをデプロイします。</p>
+
+<pre><code class="language-sh">$ gcloud app deploy
+</code></pre>
+
+<p>叩いてみます。</p>
+
+<pre><code class="language-sh">$ curl https://your-project.appspot.com/people
+[{&quot;salary&quot;:&quot;$36,738&quot;,&quot;country&quot;:&quot;Niger&quot;,&quot;name&quot;:&quot;Dakota Rice&quot;,&quot;city&quot;:&quot;Oud-Turnhout&quot;},{&quot;salary&quot;:&quot;$23,789&quot;,&quot;country&quot;:&quot;Curaçao&quot;,&quot;name&quot;:&quot;Minerva Hooper&quot;,&quot;city&quot;:&quot;Sinaai-Waas&quot;},{&quot;salary&quot;:&quot;$56,142&quot;,&quot;country&quot;:&quot;Netherlands&quot;,&quot;name&quot;:&quot;Sage Rodriguez&quot;,&quot;city&quot;:&quot;Baileux&quot;},{&quot;salary&quot;:&quot;$38,735&quot;,&quot;country&quot;:&quot;Korea, South&quot;,&quot;name&quot;:&quot;Philip Chaney&quot;,&quot;city&quot;:&quot;Overland Park&quot;},{&quot;salary&quot;:&quot;$63,542&quot;,&quot;country&quot;:&quot;Malawi&quot;,&quot;name&quot;:&quot;Doris Greene&quot;,&quot;city&quot;:&quot;Feldkirchen in Kärnten&quot;},{&quot;salary&quot;:&quot;$78,615&quot;,&quot;country&quot;:&quot;Chile&quot;,&quot;name&quot;:&quot;Mason Porter&quot;,&quot;city&quot;:&quot;Gloucester&quot;}]
+</code></pre>
+
+<p>Web API できあがり。</p>
+
+<p><br><br></p>
+
+<h2 id="web-ui-の実装">Web UI の実装</h2>
+
+<p>フロントエンドは <a href="http://elm-lang.org/">Elm</a> でやります。使いこなすことを目指さなければ、下手すりゃ最近の JS フレームワークより簡単だと思ってます。</p>
+
+<p><br></p>
+
+<p>Elm を npm でインストールします。</p>
+
+<pre><code class="language-sh">$ npm install -g elm
+</code></pre>
+
+<p>必要なパッケージをインストールします。</p>
+
+<pre><code class="language-sh">$ elm-package install -y elm-lang/http
+</code></pre>
+
+<p><code>app/Main.elm</code>を作ります。</p>
+
+<pre><code class="language-elm">module Main exposing (..)
+
+import Html exposing (..)
+import Html.Attributes exposing (..)
+import Http
+import Json.Decode as Decode
+
+main : Program Never Model Msg
+main =
+    Html.program
+        { init = ( [], getPeople )
+        , view = view
+        , update = update
+        , subscriptions = \_ -&gt; Sub.none
+        }
+
+-- MODEL
+type alias Person =
+    { name : String
+    , country : String
+    , city : String
+    , salary : String
+    }
+
+type alias People =
+    List Person
+
+type alias Model =
+    People
+
+-- UPDATE
+type Msg
+    = ListPeople (Result Http.Error People)
+
+update : Msg -&gt; Model -&gt; ( Model, Cmd Msg )
+update msg model =
+    case msg of
+        ListPeople (Ok people) -&gt;
+            ( people, Cmd.none )
+
+        ListPeople (Err _) -&gt;
+            ( model, Cmd.none )
+
+-- VIEW
+view : Model -&gt; Html Msg
+view model =
+    table [ class &quot;table&quot; ]
+        [ thead [ class &quot;text-primary&quot; ]
+            [ th []
+                [ text &quot;Name&quot; ]
+            , th []
+                [ text &quot;Country&quot; ]
+            , th []
+                [ text &quot;City&quot; ]
+            , th []
+                [ text &quot;Salary&quot; ]
+            ]
+        , tbody [] (List.map personRow model)
+        ]
+
+personRow : Person -&gt; Html Msg
+personRow person =
+    tr []
+        [ td []
+            [ text person.name ]
+        , td []
+            [ text person.country ]
+        , td []
+            [ text person.city ]
+        , td [ class &quot;text-primary&quot; ]
+            [ text person.salary ]
+        ]
+
+-- HTTP
+getPeople : Cmd Msg
+getPeople =
+    Http.send ListPeople (Http.get &quot;https://your-project.appspot.com/people&quot; decodePeople)
+
+decodePeople : Decode.Decoder People
+decodePeople =
+    Decode.list
+        (Decode.map4 Person
+            (Decode.field &quot;name&quot; Decode.string)
+            (Decode.field &quot;country&quot; Decode.string)
+            (Decode.field &quot;city&quot; Decode.string)
+            (Decode.field &quot;salary&quot; Decode.string)
+        )
+</code></pre>
+
+<p>開発サーバーを起動します。</p>
+
+<pre><code class="language-sh">$ elm-reactor
+</code></pre>
+
+<p><a href="http://localhost:8000/app/Main.elm">http://localhost:8000/app/Main.elm</a>にアクセスしてみます。</p>
+
+
+<figure >
+    
+        <img src="/images/gae-zero-side-effect/people-elm.png" />
+    
+    
+</figure>
+
+
+<p>よさそうですね。</p>
+
+<p>ビルドします。</p>
+
+<pre><code class="language-sh">$ elm-make app/Main.elm --yes --output=public/main.js
+</code></pre>
+
+<p>このままだと味気ないので、カリスマ管理画面デザイナー（と私が勝手に呼んでいる）である Creative Tim さんの<a href="https://www.creative-tim.com/product/material-dashboard">Material Dashboard</a>を使います。</p>
+
+<p>ダウンロードしたら、<code>examples/table.html</code>を<code>public/index.html</code>に持ってきて、必要な<code>assets</code>も持ってきて、テーブル部分を Elm アプリケーションにします。</p>
+
+<pre><code class="language-diff">-                                &lt;div class=&quot;card-content table-responsive&quot;&gt;
++                                &lt;div id=&quot;people&quot; class=&quot;card-content table-responsive&quot;&gt;
+...
+
++&lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;
++&lt;script type=&quot;text/javascript&quot;&gt;Elm.Main.embed(document.getElementById(&quot;people&quot;))&lt;/script&gt;
+</code></pre>
+
+<p>簡易 Web サーバーを起動して確認してみます。</p>
+
+<pre><code class="language-sh">$ serve public
+</code></pre>
+
+<p><a href="http://localhost:5000">http://localhost:5000</a>にアクセスしてみます。</p>
+
+
+<figure >
+    
+        <img src="/images/gae-zero-side-effect/people-tim.png" />
+    
+    
+</figure>
+
+
+<p>う〜ん、ティム！</p>
+
+<p><code>public/app.yaml</code>を作ります。</p>
+
+<pre><code class="language-yaml">runtime: php55
+service: web-ui
+handlers:
+  -
+    url: /(.*)
+    static_files: \1
+    upload: .*
+  -
+    url: /
+    static_files: index.html
+    upload: index.html
+</code></pre>
+
+<p>静的ファイルをデプロイします。</p>
+
+<pre><code class="language-sh">$ cd public
+$ gcloud app deploy
+</code></pre>
+
+<p><code>https://web-ui-dot-your-project.appspot.com/</code>にアクセスしてみます。</p>
+
+
+<figure >
+    
+        <img src="/images/gae-zero-side-effect/people-gae.png" />
+    
+    
+</figure>
+
+
+<p>できあがり。</p>
+
+<p><br><br></p>
+
+<h2 id="まとめ">まとめ</h2>
+
+<p>長い上に役に立たないものを書いてしまった。。</p>
+
+<p>haskell イメージからビルドすると何十分もかかるので、やり方考えないと難しいですね。</p>
+
+<p>ちなみに<a href="https://elm-tokyo.connpass.com/event/72654/">Elm 入門者向けハンズオン</a>というイベントにメンターで参加予定（私に何ができるのだろうか・・）ですので、興味あれば是非いらしてください。</p>
+
+<p><br></p>
+
+            </section>
+            <section class="www-component-desc">
+                <div>
+                    <amp-social-share type="hatena" data-share-endpoint="http://b.hatena.ne.jp/entry/https://persol-pt.github.io/posts/gae-zero-side-effect/">B!</amp-social-share>
+                    <amp-social-share type="facebook" data-param-app_id="158646288203071"></amp-social-share>
+                    <amp-social-share type="twitter"></amp-social-share>
+                </div>
+            </section>
+        </article>
+
+        <aside class="col-1 xs-hide"></aside>
+    </main>
+</amp-selector>
     
     <footer class="ampstart-footer flex flex-column items-center pxy3">
         
@@ -2642,7 +3049,7 @@ h1 {
                     "on": "visible",
                     "request": "pageview",
                     "vars": {
-                        "title": "Gcp"
+                        "title": "純粋な App Engine"
                     }
                 }
             }
