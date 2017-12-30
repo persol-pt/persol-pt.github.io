@@ -6,10 +6,28 @@
     <description>Recent content in 会社紹介 on PPT Developers&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Fri, 22 Dec 2017 02:48:09 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 30 Dec 2017 19:47:43 +0900</lastBuildDate>
     
 	<atom:link href="https://persol-pt.github.io/tags/%E4%BC%9A%E7%A4%BE%E7%B4%B9%E4%BB%8B/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>仕事納め2017</title>
+      <link>https://persol-pt.github.io/posts/osame17/</link>
+      <pubDate>Sat, 30 Dec 2017 19:47:43 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/posts/osame17/</guid>
+      <description>一昨日は、飲みたい気分だったので、仕事納めにも関わらず何も予定が無い寂しい人たちで吉野家で盛大に忘年会しました！！
+ 
+なんと3人で3,000円でお釣りがくるというエコノミクス
+ 
+今年は個人的には割と技術キャッチアップや挑戦に割ける機会と時間があって、ReduxやElmなどで関数型パラダイム、CQRSやESなどリアクティブシステム向きのアーキテクチャ、Terraformなどによるパブリッククラウドの構成管理、に足を踏み入れたりして、また技術以外にもチームを運用する経験ができたりして、会社には文句ばっかり言っていましたが、振り返ってみれば割と充実した１年だったかもしれません。
+
+来年は、エンジニアとしては久々に本番運用を経験したいですね。チーム運用としては、グループビジョンの「人と組織の成長創造インフラへ」を体現できるようなチームを作るために、文化・制度・採用を関連部署と連携して挑戦していきたいと思っています。
+
+ということで、来年もよろしくお願いします
+良いお年を〜</description>
+    </item>
     
     <item>
       <title>てくてく勉強会12月15日</title>
