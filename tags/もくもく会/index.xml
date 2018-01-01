@@ -6,10 +6,52 @@
     <description>Recent content in もくもく会 on PPT Developers&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Fri, 22 Dec 2017 02:48:09 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 29 Dec 2017 23:58:18 +0900</lastBuildDate>
     
 	<atom:link href="https://persol-pt.github.io/tags/%E3%82%82%E3%81%8F%E3%82%82%E3%81%8F%E4%BC%9A/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>てくてく勉強会12月22日</title>
+      <link>https://persol-pt.github.io/posts/tech-workshop1222/</link>
+      <pubDate>Fri, 29 Dec 2017 23:58:18 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/posts/tech-workshop1222/</guid>
+      <description>皆さんこんにちは、新卒の藤井大祐(daitasu)です。
+
+今週も私たちパーソルプロセスアンドテクノロジーのテクテクチームが
+行っている技術勉強会のレポートをしていきたいと思います。
+今年の勉強会ブログはこれで最後になります。
+今週の発表者は定期的に自身でパッケージを作成し、OSSに貢献しているnissyさん。
+テーマは 「http request multiplexer と文字列マッチング」 でした。
+12月22日の勉強会　テーマ「http request multiplexer と文字列マッチング」 
+  
+通常URLにリクエストする際、そのURL文字列にマッチするパターンを
+登録されているパターンの中から検索し、呼び出されるハンドラを決めようとします。
+このルーティング処理はその言語やフレームワークでの処理方法によって
+大きく処理速度が異なります。
+今回nissyさんは基数木(パトリシア木)という集合データ構造を用いて
+Go言語でルーティング処理を行うパッケージを作成しました。
+Bon(https://github.com/nissy/bon)
+
+今回のお話では、
+基本的なマッチングパターンのルールから
+トライ木(Trie)による複数パターンマッチング や KMP といった
+代表的な文字列パターンマッチングのアルゴリズム紹介
+に始まり、
+
+いくつかの代表的なアルゴリズムの速度比較を行いまいした。
+以下はパトリシア木(Patricia Trie)の構造紹介とその速度表です。
+
+Patricia Trie(https://github.com/nissy/mux/tree/patricia)
+
+  Patricia Trieの構造     Patricia Trie 速度   
+そしてその後、実際に自身がPatricia Trieをもとにチューニングし、
+Go言語で作成したルーティング手法のパッケージ「 Bon 」についての紹介を行い、
+他のGo言語フレームワークとの速度比較を行いました。
+
+  Bon 比較     BonとGo言語フレームワークの速度比較</description>
+    </item>
     
     <item>
       <title>てくてく勉強会12月15日</title>
