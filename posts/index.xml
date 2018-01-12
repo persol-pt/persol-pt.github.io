@@ -6,10 +6,66 @@
     <description>Recent content in Posts on PPT Developers&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 30 Dec 2017 19:47:43 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jan 2018 17:38:09 +0900</lastBuildDate>
     
 	<atom:link href="https://persol-pt.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>てくてく勉強会1月10日年初め</title>
+      <link>https://persol-pt.github.io/posts/tech-workshop20180110/</link>
+      <pubDate>Fri, 12 Jan 2018 17:38:09 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/posts/tech-workshop20180110/</guid>
+      <description>あけましておめでとうございます!!
+本年もどうぞよろしくお願い致します。
+
+  
+今年も毎週の勉強会の様子や会社の取り組みなどをこちらのブログで発信していきます。
+お時間がある際にぜひのぞいてみてください。
+また、技術的なブログについては今後Qiitaの方に移行することになりました。
+テクテクチームのメンバーが各々に書き進めていますのでこちらもぜひご覧ください。
+Qiita - パーソルプロセス&amp;amp;テクノロジー
+
+今週の発表者は川崎さん。
+テーマは 「最近のJavascriptフレームワーク選定について」 でした。
+2018年1月22日の勉強会　テーマ「最近のJavascriptフレームワーク選定について」 
+  
+Javascriptフレームワークといえば、その流行の移り変わりが早いことで有名ですが、
+今回はそんなフロントエンドのフレームワーク選定で何を選んだらよいのか、
+人気のReact、Angular、Vue.jsの3つの比較を紹介くださりました。
+  
+
+今回のお話では、技術選定時に意識することとして以下のような点を述べられていました。
+ どんなものを作るのか
+ 出来上がるコードの品質
+・可読性
+・拡張性
+ 開発体制
+・開発期間
+・開発・運用人数
+・採用・新メンバーの参入障壁
+ 公式ドキュメントの充実度
+  
+結論
+ 
+それぞれのフレームワークで向いているシステムは以下のようにまとめられます。
+
+  
+AngularはReactやVue.jsとは異なり、開発に必要な機能をひとしきり揃えているため、
+自分でそろえる負担が少ない一方、自由度は下がる印象です。
+逆にReactは基本的にViewを作成するためのライブラリなので、
+自身でほかのライブラリと組み合わせていく必要がありますが自由度は高めでUI作成は得意です。
+またReactはJSXで書かれるというのも特徴ですね。
+学習コストとしてはAngularが一番高く、React、VueJSの順に下がっていくようです。
+ReactやVueJSは自身でライブラリを追加していかなければなりませんが、
+CLIもあるのでそういった負担の差は最近だいぶ減ってきているみたいですね。
+いずれにしても、合う合わないはいろんな観点から考える必要がありそうなので、
+ある程度触れてみてからの検証が必要そうです。
+まだまだフロントエンド界隈は終わりなき戦いが続くのでしょうか?
+日々流行にアンテナを張り続けていかなければなりませんね。
+それでは、今週はここまで。</description>
+    </item>
     
     <item>
       <title>仕事納め2017</title>
