@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://persol-pt.github.io/posts/tech-workshop20180131/</loc>
+    <lastmod>2018-01-31T13:38:55+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://persol-pt.github.io/posts/tech-workshop20180119/</loc>
+    <lastmod>2018-01-26T12:06:17+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://persol-pt.github.io/posts/tech-workshop20180110/</loc>
     <lastmod>2018-01-12T17:38:09+09:00</lastmod>
   </url>
@@ -354,13 +364,13 @@
   
   <url>
     <loc>https://persol-pt.github.io/</loc>
-    <lastmod>2018-01-12T17:38:09+09:00</lastmod>
+    <lastmod>2018-01-31T13:38:55+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://persol-pt.github.io/posts/</loc>
-    <lastmod>2018-01-12T17:38:09+09:00</lastmod>
+    <lastmod>2018-01-31T13:38:55+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -373,6 +383,12 @@
   <url>
     <loc>https://persol-pt.github.io/tags/react/</loc>
     <lastmod>2017-12-10T23:10:32+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://persol-pt.github.io/tags/run/</loc>
+    <lastmod>2018-01-26T12:06:17+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -443,6 +459,12 @@
   </url>
   
   <url>
+    <loc>https://persol-pt.github.io/tags/webrtc/</loc>
+    <lastmod>2018-01-31T13:38:55+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://persol-pt.github.io/tags/x-ray/</loc>
     <lastmod>2017-12-17T17:51:27+09:00</lastmod>
     <priority>0</priority>
@@ -456,7 +478,13 @@
   
   <url>
     <loc>https://persol-pt.github.io/tags/%E3%82%82%E3%81%8F%E3%82%82%E3%81%8F%E4%BC%9A/</loc>
-    <lastmod>2018-01-12T17:38:09+09:00</lastmod>
+    <lastmod>2018-01-31T13:38:55+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://persol-pt.github.io/tags/%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88/</loc>
+    <lastmod>2018-01-26T12:06:17+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -492,13 +520,25 @@
   
   <url>
     <loc>https://persol-pt.github.io/tags/%E4%BC%9A%E7%A4%BE%E7%B4%B9%E4%BB%8B/</loc>
-    <lastmod>2018-01-12T17:38:09+09:00</lastmod>
+    <lastmod>2018-01-31T13:38:55+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://persol-pt.github.io/tags/%E5%80%8B%E4%BA%BA%E9%96%8B%E7%99%BA/</loc>
+    <lastmod>2018-01-26T12:06:17+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://persol-pt.github.io/tags/%E5%85%A5%E9%96%80/</loc>
+    <lastmod>2018-01-31T13:38:55+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://persol-pt.github.io/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/</loc>
-    <lastmod>2018-01-12T17:38:09+09:00</lastmod>
+    <lastmod>2018-01-31T13:38:55+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -528,7 +568,7 @@
   
   <url>
     <loc>https://persol-pt.github.io/categories/%E8%97%A4%E4%BA%95-%E5%A4%A7%E7%A5%90daitasu/</loc>
-    <lastmod>2018-01-12T17:38:09+09:00</lastmod>
+    <lastmod>2018-01-31T13:38:55+09:00</lastmod>
     <priority>0</priority>
   </url>
   

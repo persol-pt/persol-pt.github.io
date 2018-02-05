@@ -6,10 +6,78 @@
     <description>Recent content in 勉強会 on PPT Developers&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Fri, 12 Jan 2018 17:38:09 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 31 Jan 2018 13:38:55 +0900</lastBuildDate>
     
 	<atom:link href="https://persol-pt.github.io/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>てくてく勉強会1月24日</title>
+      <link>https://persol-pt.github.io/posts/tech-workshop20180131/</link>
+      <pubDate>Wed, 31 Jan 2018 13:38:55 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/posts/tech-workshop20180131/</guid>
+      <description> 
+みなさんこんにちは、パーソルプロセスアンドテクノロジー株式会社のAS統括部、daitasuです。
+今週も私たち、テクテクチームの毎週の勉強会の様子を発信していきます！
+技術的なブログについては現在QiitaのOrganizationに移行しております。
+テクテクチームのメンバーが各々に書き進めていますのでこちらもぜひご覧ください。
+Qiita - パーソルプロセス&amp;amp;テクノロジー
+
+さて、今週の発表者は毎週このブログをお届けしております、私、藤井 大祐(daitasu)です。
+テーマは 「WebRTCコトハジメ」 。
+Web RTCを始めるにあたっての基礎知識・導入を発表しました。 2018年1月22日の勉強会　 テーマ「Web RTC コトハジメ」 
+  
+本発表では、Web RTCの基本的な内容について、
+実際にP2P通信を行うまでについての説明と実際のDEMOを行いました。
+ Web RTC DEMO   今回の内容に関してはQiitaの方に記載しております。
+よろしければそちらをご覧ください。
+WebRTCの基本とP2P通信が成立するまでを学ぶ(Qiita)
+また、この発表ではWeb RTCの仕組みの説明がメインになってしまったのですが、
+今度はそれを使ってちょっとしたアプリを作ろうと思っています。
+ 次回作成したいもの   
+それでは、また来週お会いしましょう！ </description>
+    </item>
+    
+    <item>
+      <title>てくてく勉強会1月19日</title>
+      <link>https://persol-pt.github.io/posts/tech-workshop20180119/</link>
+      <pubDate>Fri, 26 Jan 2018 12:06:17 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/posts/tech-workshop20180119/</guid>
+      <description>みなさんこんにちは、パーソルプロセスアンドテクノロジー株式会社のAS統括部、daitasuです。
+今週もこの場で毎週の勉強会の様子を発信していきます！
+また、再掲になりますが、技術的なブログについては今後Qiitaの方に移行することになりました。
+テクテクチームのメンバーが各々に書き進めていますのでこちらもぜひご覧ください。
+Qiita - パーソルプロセス&amp;amp;テクノロジー
+
+さて、今週の発表者は定期的に個人開発をしていらっしゃるN.yamamotoさん。
+テーマは 「年末年始で買ったものと最近の個人開発アプリについて」 でした。
+2018年1月22日の勉強会　 テーマ「年末年始で買ったものと最近の個人開発アプリについて」 
+  
+最近スマートスピーカーが話題となり、Google Home、Amazon Echo、LINE Clovaなど
+色んな製品が話題に上がっています。
+今回は最近いろんなガジェットを購入し試しているN.yamamotoさんが
+最近買ったものの紹介と、その活用法などをご紹介してくださりました。
+N.yamamotoさんが最近買ったものは
+ Apple Watch3(GPS)
+ Kindle Fire HD 10タブレット Amazon Echo スマートリモコン  
+N.yamamotoさんの家は今までApple製品に覆われていたそうですが、
+最近はAmazon製品に家野中が浸食されつつあるそうです。
+APP WATCH3(GPS) 
+ランニングが趣味のN.yamamotoさんは
+月によっては100km近く、アスリートばりに走っています。
+そんなランニング好きにおすすめのAPPLE WATCH3。
+NIKE + RunClub というアプリを使って走っているそうです。
+こちらは1kmごとに平均タイムを記録してくれ、
+信号で止まるとワークアウトを中断してくれるという優れもの。
+腕時計なら邪魔にもならず、Bluetoothヘッドフォンもあれば、
+音楽を聴きつつ優雅に走れます。
+ランニングが趣味の方はぜひぜひ購入を検討してみてくださいね。
+KINDLE FIRE HD 10 タブレット 
+  
+なんとこちらのタブレット、Amazonプライムで19,000円というお得価格から</description>
+    </item>
     
     <item>
       <title>てくてく勉強会1月10日年初め</title>

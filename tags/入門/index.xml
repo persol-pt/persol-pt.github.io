@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>入門 on PPT Developers&#39; Blog</title>
+    <link>https://persol-pt.github.io/tags/%E5%85%A5%E9%96%80/</link>
+    <description>Recent content in 入門 on PPT Developers&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Wed, 31 Jan 2018 13:38:55 +0900</lastBuildDate>
+    
+	<atom:link href="https://persol-pt.github.io/tags/%E5%85%A5%E9%96%80/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>てくてく勉強会1月24日</title>
+      <link>https://persol-pt.github.io/posts/tech-workshop20180131/</link>
+      <pubDate>Wed, 31 Jan 2018 13:38:55 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/posts/tech-workshop20180131/</guid>
+      <description> 
+みなさんこんにちは、パーソルプロセスアンドテクノロジー株式会社のAS統括部、daitasuです。
+今週も私たち、テクテクチームの毎週の勉強会の様子を発信していきます！
+技術的なブログについては現在QiitaのOrganizationに移行しております。
+テクテクチームのメンバーが各々に書き進めていますのでこちらもぜひご覧ください。
+Qiita - パーソルプロセス&amp;amp;テクノロジー
+
+さて、今週の発表者は毎週このブログをお届けしております、私、藤井 大祐(daitasu)です。
+テーマは 「WebRTCコトハジメ」 。
+Web RTCを始めるにあたっての基礎知識・導入を発表しました。 2018年1月22日の勉強会　 テーマ「Web RTC コトハジメ」 
+  
+本発表では、Web RTCの基本的な内容について、
+実際にP2P通信を行うまでについての説明と実際のDEMOを行いました。
+ Web RTC DEMO   今回の内容に関してはQiitaの方に記載しております。
+よろしければそちらをご覧ください。
+WebRTCの基本とP2P通信が成立するまでを学ぶ(Qiita)
+また、この発表ではWeb RTCの仕組みの説明がメインになってしまったのですが、
+今度はそれを使ってちょっとしたアプリを作ろうと思っています。
+ 次回作成したいもの   
+それでは、また来週お会いしましょう！ </description>
+    </item>
+    
+  </channel>
+</rss>
