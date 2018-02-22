@@ -6,10 +6,48 @@
     <description>Recent content on PPT Developers&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Wed, 31 Jan 2018 13:38:55 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 10 Feb 2018 11:37:32 +0900</lastBuildDate>
     
 	<atom:link href="https://persol-pt.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>てくてく勉強会2月8日</title>
+      <link>https://persol-pt.github.io/posts/tech-workshop20180208/</link>
+      <pubDate>Sat, 10 Feb 2018 11:37:32 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/posts/tech-workshop20180208/</guid>
+      <description>みなさんこんにちは、パーソルプロセスアンドテクノロジー株式会社のAS統括部、daitasuです。
+今回も毎週の勉強会の様子を発信していきます！
+また、技術的なブログについては現在Qiitaの方に移行しております。
+テクテクチームのメンバーが各々に書き進めていますのでこちらもぜひご覧ください。
+Qiita - パーソルプロセス&amp;amp;テクノロジー
+
+さて、今週の発表者はサーバエンジニアであるビトルさん。
+テーマは 「GraphQL入門」 でした。
+2018年2月8日の勉強会　 テーマ「GraphQL入門」 
+  
+今回のお話では、ここ数年話題に上がっていたFacebookによって開発された
+クエリ言語、「GraphQL」をご紹介いただきました。
+GraphQLはよくRESTfulと比較されることが良くありますが、
+そういった話も織り交ぜながら、今回は実際にビトルさんが触ってみて感じたこと、
+利点や課題点についての説明でした。
+GraphQLの特徴  APIの定義にあたるのがSchema クエリ言語なので対象のDBなどのデータストレージは何でもいい バージョンレスAPI 多数のプログラミング言語で利用できる  特徴としては、上記のようなお話がありました。
+ここからは実際の処理を見ていきます。
+GraphQLの処理 
+  
+GraphQLでは上記のようにSchemaを定義していきます。
+例では、Shopというオブジェクト型を定義し、
+idとnameフィールドを定義しています。
+GraphQLはこのように、Schemaの存在と問い合わせ言語仕様がセットになっており、
+型システムに基づいたAPIの構築ができます。
+上記の例のように、ID型は一意性を保証します。
+また、Not Nullは!で示すそうです。
+次に、検索クエリです。
+こちらはSchemaの中にQuery型として定義するそうです。
+は以下のように示すそうです。
+schema { type shop{ id: ID! name: String! } type Query { shops: [Shop]! shop(name: String): Shop } }  このように引数付きのフィールドを定義することで、</description>
+    </item>
     
     <item>
       <title>てくてく勉強会1月24日</title>
