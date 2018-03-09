@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ハンズオン on PPT Developers&#39; Blog</title>
+    <link>https://persol-pt.github.io/tags/%E3%83%8F%E3%83%B3%E3%82%BA%E3%82%AA%E3%83%B3/</link>
+    <description>Recent content in ハンズオン on PPT Developers&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Fri, 09 Mar 2018 11:39:16 +0900</lastBuildDate>
+    
+	<atom:link href="https://persol-pt.github.io/tags/%E3%83%8F%E3%83%B3%E3%82%BA%E3%82%AA%E3%83%B3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>第1回 新卒勉強会「チャットボットハンズオン」</title>
+      <link>https://persol-pt.github.io/posts/young-worker-meetsup01/</link>
+      <pubDate>Fri, 09 Mar 2018 11:39:16 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/posts/young-worker-meetsup01/</guid>
+      <description>みなさんこんにちは、
+パーソルプロセスアンドテクノロジー株式会社のAS統括部、daitasuです。
+今回はいつもと変わり、パーソルプロセスアンドテクノロジーにおける
+2017年度入社の新卒で開催された新卒勉強会の様子を報告します！
+※技術的なブログについては現在Qiitaの方に移行致しました。
+テクテクチームのメンバーが各々に書き進めていますのでこちらもぜひご覧ください。
+Qiita - パーソルプロセス&amp;amp;テクノロジー
+  
+私が様々な外部の勉強会に参加させて頂く中で、
+感じていたことがありました。
+それは「発表しあうって面白い！」ということです。
+まだ恐れ多く、これといった登壇をしたわけではないのですが、
+外部の勉強会を見ていると、様々なメリットがあるように感じました。
+私が感じた勉強会に参加する面白さは以下の通りです。
+勉強会に参加する面白さ
+ 自分の知らない分野に触れることで技術幅が広がる 新しい分野に関心を持てる 発表側であれば、発信の機会として大きく成長できる まわりの人々がどんなことに関心を持っているか分かる 発信の機会や学びあう仲間がいることは学びのモチベーションになる  実は弊社では各部でおのおのに行っている勉強会は別途あります。
+しかし、部を横断しての個人的な取り組みや若手だけに絞った勉強会は
+あまりなかったため、
+今回、新卒から学びあって自学のモチベーションを上げていこう！
+と開催することが決まりました。
+
+身近な新卒同士で互いの技術を教えあえるって
+部活みたいで楽しいですからね。
+
+この新卒勉強会は2/24(土)に行われました。
+内容は、「チャットボットハンズオン」!
+せっかくのしっかり時間を取った勉強会なので、
+ハンズオン形式で「知らないことをできるようになろう！」
+という点が中心的なテーマになっています。
+第1回 17年度新卒勉強会「チャットボットハンズオン」   今回の勉強会では、SSOL新卒46名中14名が参加しました。
+ハンズオンの具体的な内容は、
+「Node.jsを用いたLINE Botの作成」です
+
+時間は3時間程度と短めで、
+ほとんどがNodeは初めてというメンバーだったので、
+今回はNode.jsやnpmの説明から始め、
+LINE Botのおうむ返しができるようになるまでを行いました。
+  実際につくったBotの一例   ほとんどLINE公式のNode.js SDKのサンプルコードそのままですが、
+こちらに実際に使ったコードを置いています。
+利用したサンプル
+
+Bot作成は作ったものが目に見えやすいことや
+使い勝手がいいこともあり、みんな楽しんで作成にあたっていました。
+結果、3時間という短い時間ではあったものの、
+半数以上がBotの作成に成功しました!</description>
+    </item>
+    
+  </channel>
+</rss>
