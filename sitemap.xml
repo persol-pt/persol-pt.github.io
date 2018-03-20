@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://persol-pt.github.io/posts/tech-workshop20180301/</loc>
+    <lastmod>2018-03-20T15:25:44+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://persol-pt.github.io/posts/young-worker-meetsup01/</loc>
     <lastmod>2018-03-09T11:39:16+09:00</lastmod>
   </url>
@@ -396,13 +401,13 @@
   
   <url>
     <loc>https://persol-pt.github.io/</loc>
-    <lastmod>2018-03-09T11:39:16+09:00</lastmod>
+    <lastmod>2018-03-20T15:25:44+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://persol-pt.github.io/posts/</loc>
-    <lastmod>2018-03-09T11:39:16+09:00</lastmod>
+    <lastmod>2018-03-20T15:25:44+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -539,6 +544,12 @@
   </url>
   
   <url>
+    <loc>https://persol-pt.github.io/tags/%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%82%B9%E3%83%94%E3%83%BC%E3%82%AB%E3%83%BC/</loc>
+    <lastmod>2018-03-20T15:25:44+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://persol-pt.github.io/tags/%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%83%9C%E3%83%83%E3%83%88/</loc>
     <lastmod>2017-12-14T00:19:21+09:00</lastmod>
     <priority>0</priority>
@@ -582,7 +593,7 @@
   
   <url>
     <loc>https://persol-pt.github.io/tags/%E4%BC%9A%E7%A4%BE%E7%B4%B9%E4%BB%8B/</loc>
-    <lastmod>2018-03-09T11:39:16+09:00</lastmod>
+    <lastmod>2018-03-20T15:25:44+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -600,7 +611,7 @@
   
   <url>
     <loc>https://persol-pt.github.io/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/</loc>
-    <lastmod>2018-03-09T11:39:16+09:00</lastmod>
+    <lastmod>2018-03-20T15:25:44+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -636,7 +647,7 @@
   
   <url>
     <loc>https://persol-pt.github.io/categories/%E8%97%A4%E4%BA%95-%E5%A4%A7%E7%A5%90daitasu/</loc>
-    <lastmod>2018-03-09T11:39:16+09:00</lastmod>
+    <lastmod>2018-03-20T15:25:44+09:00</lastmod>
     <priority>0</priority>
   </url>
   
