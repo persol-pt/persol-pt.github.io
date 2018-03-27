@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Elm on PPT Developers&#39; Blog</title>
-    <link>https://persol-pt.github.io/tags/elm/</link>
-    <description>Recent content in Elm on PPT Developers&#39; Blog</description>
+    <title>Js on PPT Developers&#39; Blog</title>
+    <link>https://persol-pt.github.io/tags/js/</link>
+    <description>Recent content in Js on PPT Developers&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Tue, 27 Mar 2018 17:21:16 +0900</lastBuildDate>
     
-	<atom:link href="https://persol-pt.github.io/tags/elm/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://persol-pt.github.io/tags/js/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -51,29 +51,6 @@ JSでのぼこぼこ続出する実行時例外達が「事実上、一切起こ
 非常にありがたいですね。
 この堅牢性は学習の価値あり！
 皆さんもスライドを読んで教務が湧いたら、ぜひぜひElmを使ってみてください。</description>
-    </item>
-    
-    <item>
-      <title>純粋な App Engine</title>
-      <link>https://persol-pt.github.io/posts/gae-zero-side-effect/</link>
-      <pubDate>Mon, 25 Dec 2017 00:36:45 +0900</pubDate>
-      
-      <guid>https://persol-pt.github.io/posts/gae-zero-side-effect/</guid>
-      <description>Google Cloud Platform Advent Calendar 2017 24 日目の記事です。
-
-先日弊社のシシドさんが書いたGCP Meets Kotlinを参考に、
-サンタクロースを信じる私の娘のように純粋な関数型言語で GAE(Google App Engine) アプリケーションを作ってみます。
-※私はガチ勢ではなく、Elm の簡単さが好きなだけの人ですので、内容超浅いです。
-
-今回のソースコード
-
-App Engine の準備 Google にログインしている状態で、GCP コンソールのプロジェクト作成画面を開き、プロジェクトを作成します。
- Google App Engine Admin APIを有効にします。
-
-Google Cloud SDKをインストールします。
-$ curl https://sdk.cloud.google.com | bash $ exec -l $SHELL $ gcloud init  先ほど作成したプロジェクトに切り替えます。
-$ gcloud config set project your-project  App Engine を作成します。
-$ gcloud app create  以上です。</description>
     </item>
     
   </channel>
