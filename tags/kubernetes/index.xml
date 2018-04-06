@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kubernetes on PPT Developers&#39; Blog</title>
+    <link>https://persol-pt.github.io/tags/kubernetes/</link>
+    <description>Recent content in Kubernetes on PPT Developers&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Tue, 03 Apr 2018 17:00:45 +0900</lastBuildDate>
+    
+	<atom:link href="https://persol-pt.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>勉強会[Kubernetesを使ってmicroserviceっぽいものを作ってみた]</title>
+      <link>https://persol-pt.github.io/posts/tech-workshop20180315/</link>
+      <pubDate>Tue, 03 Apr 2018 17:00:45 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/posts/tech-workshop20180315/</guid>
+      <description>みなさんこんにちは、
+パーソルプロセスアンドテクノロジー株式会社のAS統括部、daitasuです。
+今週も私たちの部の勉強会の様子をお送りいたします。
+※技術的なブログについてはQiitaでメンバーが各々に書き進めています。
+こちらもぜひご覧ください。
+Qiita - パーソルプロセス&amp;amp;テクノロジー
+さて、今週の発表者はKotlin愛好家の宍戸さん。
+テーマは「Kubernetesを使ってmicroserviceっぽいものを作ってみた」でした。
+2018年3月15日の勉強会　 テーマ「Kubernetesを使ってmicroserviceっぽいものを作ってみた」   
+宍戸さんはKotlinに魅了され、
+Kotlinで個人開発したり、業務でもKotlinを使ったりと
+Kotlinライフを送っています。
+そんな宍戸さんですが、
+今週はKubernetesでmicroserviceを作ったそうで、
+Kubernetesの概要と実際に作成したもののDEMOを発表して頂きました。
+Kubernetesとは 
+Kubernetesはクーバネティス、クーベネティス、クーバネイティス、クバネティスなどと呼ばれ、
+人によって読み方はまちまちです。
+略称としては「k8s」と呼ばれており、Goで作られています。
+元々はGoogleが開発していたそうな。
+では実際にどんなことができるものなのでしょうか？
+KubernetesはDockerコンテナ群のオーケストレーションツールで、
+Dockerコンテナをいい感じに管理してくれるツールだそうです。
+ アプリのデプロイ 稼働中にアプリをスケーリング 新機能をシームレスに追加 自動修復  などができ、コンテナ群の運用自動化を目的として設計されたものです。
+
+Kubernetesのアーキテクチャ   Kubernetesのアーキテクチャには、
+ マスタ・コンポーネント ノード・コンポーネント  というものがあるそうです。
+マスタ・コンポーネント スケジューリングやイベントの検知などクラスタ全体の制御や管理を受け持つもの。
+構成要素は以下のようになっています。
+ API Server
+クラスタ制御のフロント・エンド。RESTful APIを提供。
+ Scheduler
+Podの展開を制御。
+ Controller
+クラスタ内のタスクを処理するバックグラウンド
+ etcd
+クラスタデータの保存</description>
+    </item>
+    
+  </channel>
+</rss>

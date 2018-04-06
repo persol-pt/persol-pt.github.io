@@ -6,10 +6,53 @@
     <description>Recent content in 機械学習 on PPT Developers&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 14 Dec 2017 00:19:21 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 06 Apr 2018 14:11:16 +0900</lastBuildDate>
     
 	<atom:link href="https://persol-pt.github.io/tags/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>勉強会[Anacondaでのデータ前処理]</title>
+      <link>https://persol-pt.github.io/posts/tech-workshop20180329/</link>
+      <pubDate>Fri, 06 Apr 2018 14:11:16 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/posts/tech-workshop20180329/</guid>
+      <description>みなさんこんにちは、
+パーソルプロセスアンドテクノロジー株式会社のEP統括部、daitasuです。
+今週も私たちの部の勉強会の様子をお送りいたします。
+※技術的なブログについてはQiitaでメンバーが各々に書き進めています。
+こちらもぜひご覧ください。
+Qiita - パーソルプロセス&amp;amp;テクノロジー
+さて、今週の発表者はデータ分析案件に携わっている桑田さん。
+テーマは「Anacondaでのデータ前処理」でした。
+2018年3月15日の勉強会　 テーマ「Anacondaでのデータ前処理」   
+桑田さんは現在データ分析関連の業務に携わっており、
+大学時代から研究で機械学習を使ったテーマに関わっていたそうです。
+そんな桑田さんですが、今週は自身の現在の分析環境の紹介、
+特にAnacondaを用いた機械学習実行環境の準備からデータ前処理を行うまでをご説明頂きました。
+Anacondaとは 
+Anaconda はデータサイエンス向けに作成された Pythonパッケージで、
+科学技術計算などを中心とした数多くのモジュールやツールが独自の形式で同梱されているもの。
+機械学習屋さんが取り扱う基本的なものは一通り揃っているようです。
+  Anaconda全体像     よく出てくるデータ解析ライブラリ   
+Anacondaを用いることで、通常はPythonのインストール後に行う必要なライブラリの追加を省くことができます。
+一方で、従来のPython環境が隠ぺいされるために独自の環境を利用するためには、
+諸々の設定を行わないといけない点もあるため、メリット/デメリットを踏まえたうえで使う必要がありそうです。
+今回の話では、Anacondaを使ったデータ前処理の方法として、
+その中のライブラリ、PandasとJupyterLabを使ったやり方をご説明頂きました。
+Pandasとは 
+* 数値計算ライブラリ(NumPy) * 数値解析ライブラリ(SciPy) * グラフ描画ライブラリ(matplotlib)
+
+を含むデータ解析支援ライブラリ。 データフレームオブジェクトという物を使って、データ操作のための効率的な演算を提供しており、
+テーブルデータや時系列データ解析などを得意としているようです。
+Jupyterシリーズとは 
+Jupyterシリーズ(JupyterLabやJupyter Notebook)は、
+プログラムのコードを含んだドキュメントを作成できる、OSSのウェブアプリケーションです。
+スクリプトをファイル単位ではなくセル単位で記述することができ、
+一緒にマークダウンも書くことができるため、
+内容説明 + コード + 結果がまとめて書くことができるのが使い勝手が良いため、
+利用しているデータサイエンティストは多いんだとか。</description>
+    </item>
     
     <item>
       <title>Dialogflow &#43; VoiceTextで音声会話Botをさくっと作ろう</title>
