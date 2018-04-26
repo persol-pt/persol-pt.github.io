@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>アルゴリズム on PPT Developers&#39; Blog</title>
+    <link>https://persol-pt.github.io/tags/%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0/</link>
+    <description>Recent content in アルゴリズム on PPT Developers&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Thu, 26 Apr 2018 10:50:30 +0900</lastBuildDate>
+    
+	<atom:link href="https://persol-pt.github.io/tags/%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>勉強会[GOのパフォーマンスチューニング]</title>
+      <link>https://persol-pt.github.io/posts/tech-workshop20180406/</link>
+      <pubDate>Thu, 26 Apr 2018 10:50:30 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/posts/tech-workshop20180406/</guid>
+      <description>みなさんこんにちは、
+パーソルプロセスアンドテクノロジー株式会社のEP統括部、daitasuです。
+今週も私たちの部の勉強会の様子をお送りいたします。
+※技術的なブログについてはQiitaでメンバーが各々に書き進めています。
+こちらもぜひご覧ください。
+Qiita - パーソルプロセス&amp;amp;テクノロジー
+さて、今週の発表者はGoをこよなく愛するnissyさん。
+テーマは「GOのパフォーマンスチューニング」です。
+テーマ「GOのパフォーマンスチューニング」   
+今回はGOのオープンソースに定期的に貢献しているnissyさんが、
+「Goのイケてるコードを見せてくれ！」と言われて作成した
+Go言語がいかに素晴らしいかを語るGoのパフォーマンスチューニングの話でした。
+私はまだプログラミング歴2年目でGoもCも触ったことがないため、
+メモリ管理などはあまり詳しいことは分からないのですが、
+分かった範囲で調べて掘り下げてみました。
+slice/array 
+  slice/array   
+ここでは、Go言語のarrayとsliceの違い、それぞれの書き方での
+パフォーマンスの差を比較していました。
+Go言語のSliceはほかの言語のArrayに似ているけれど、少し違う部分があるようですね。
+Array型は配列の長さを作成時に指定しますが、Sliceでは要素の型のみを記載し、
+長さの記載はしません。
+そのため、上記のようにfor文で繰り返していくと、
+ slice ・・・ その都度新しくメモリを確保していく
+ array ・・・ 必要分のメモリを先に確保し、そこに文字を入れていく
+  
+といった動きになります。
+そのため、arrayの方が処理速度は速くなりますが、
+要素数を指定しないといけないので、使いどころが難しく、
+柔軟性ではsliceが長けている、といった感じですかね。
+このあたりにslice/arrayの違いは書かれていたので、そこからも学んでみました。
+参考サイト match 
+  match   
+こちらは正規表現の話です。
+Go言語の正規表現はThompson NFA と呼ばれる実装をしているそうです。
+NFA？とは？？と社会人2年目の私はまだまだ勉強不足のためこちらも調べました。
+NFAとは&amp;rdquo;非決定性有限オートマトン&amp;rdquo;とのことです。
+さらに難しくなりました。
+有限オートマトンというのは、あるインプットがあった際に、
+その真偽値を出す機会です。</description>
+    </item>
+    
+  </channel>
+</rss>
