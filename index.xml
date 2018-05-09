@@ -6,10 +6,55 @@
     <description>Recent content on PPT Developers&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 26 Apr 2018 10:50:30 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 09 May 2018 14:49:20 +0900</lastBuildDate>
     
 	<atom:link href="https://persol-pt.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>勉強会[物体検出アルゴリズム YOLO]</title>
+      <link>https://persol-pt.github.io/posts/tech-workshop20180420/</link>
+      <pubDate>Wed, 09 May 2018 14:49:20 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/posts/tech-workshop20180420/</guid>
+      <description>みなさんこんにちは、
+パーソルプロセスアンドテクノロジー株式会社のEP統括部、daitasuです。
+今週も私たちの部の勉強会の様子をお送りいたします。
+※技術的なブログについてはQiitaでメンバーが各々に書き進めています。
+こちらもぜひご覧ください。
+Qiita - パーソルプロセス&amp;amp;テクノロジー
+さて、今週の発表者は私の直属のMGRであります、川崎さんのプレゼンです。
+テーマは「YOLOってみた」です。
+テーマ「YOLOってみた」   
+みなさん、YOLOってご存知でしょうか？
+私は今回初めて知ったのですが、YOLOというのは、
+&amp;lsquo;You only look once&amp;rsquo;、
+リアルタイムに画像認識を行い、物体を検出するアルゴリズムを指します。
+川崎さんは、今回自宅の動画を撮影し、このYOLOを利用して、
+物体検出がどのくらいの制度か、どのくらいの変換速度なのかを検証したお話を
+してくださいました。
+そもそもYOLOってどんなもの？ 
+  
+上記のように、YOLOはDarknetというフレームワークを用いて
+画像/動画からオブジェクトを検出しています。
+そして、そのオブジェクトが何なのか(人なのか、車なのか、植物なのか等)を
+判断し、分類をリアルタイムに行っています。
+実際の画像を見てみましょう！
+  
+「Person」と「laptop」が検出されていますね。
+このように、画像/動画から物体検出し、分類した結果を枠で囲い伝えてくれます。
+川崎さんが撮影した自宅の動画では、人や植物、机、TVなど
+想像以上に細かに分類がなされていました。
+以下のサイトなどを見て頂けると、
+YOLOの面白さが伝わるのではないかと思います。
+YOLO動画 検証環境 
+  検証した環境     用意するもの   
+YOLOはCPU単体だと非常に動きが悪くなるようで、GPUを積んだマシンで行う必要があります
+今回の検証では、CPU単体での処理と、
+GPUを利用した場合の2種類のプログラムで検証しています。
+検証結果   検証結果   CPU単体だと速度が全く出ず、
+動画でもすごく遅いGIF画像を見ているような動きになっていました。</description>
+    </item>
     
     <item>
       <title>勉強会[GOのパフォーマンスチューニング]</title>
@@ -231,7 +276,7 @@ IoTの種類 IoTには、大きく分けて2種類の型があるそうです。
     </item>
     
     <item>
-      <title>てくてく勉強会3月1日</title>
+      <title>勉強会[スマートスピーカー]</title>
       <link>https://persol-pt.github.io/posts/tech-workshop20180301/</link>
       <pubDate>Tue, 20 Mar 2018 15:25:44 +0900</pubDate>
       
@@ -326,7 +371,7 @@ Bot作成は作ったものが目に見えやすいことや
     </item>
     
     <item>
-      <title>てくてく勉強会2月22日</title>
+      <title>勉強会[ReactとRedux]</title>
       <link>https://persol-pt.github.io/posts/tech-workshop20180222/</link>
       <pubDate>Thu, 08 Mar 2018 11:40:24 +0900</pubDate>
       
@@ -369,7 +414,7 @@ Flux参考
     </item>
     
     <item>
-      <title>てくてく勉強会2月15日</title>
+      <title>勉強会[コインチェック事件について]</title>
       <link>https://persol-pt.github.io/posts/tech-workshop20180215/</link>
       <pubDate>Tue, 27 Feb 2018 17:39:29 +0900</pubDate>
       
@@ -424,7 +469,7 @@ Qiita - パーソルプロセス&amp;amp;テクノロジー
     </item>
     
     <item>
-      <title>てくてく勉強会2月8日</title>
+      <title>勉強会[GraphQL入門]</title>
       <link>https://persol-pt.github.io/posts/tech-workshop20180208/</link>
       <pubDate>Sat, 10 Feb 2018 11:37:32 +0900</pubDate>
       
@@ -462,7 +507,7 @@ schema { type shop{ id: ID! name: String! } type Query { shops: [Shop]! shop(nam
     </item>
     
     <item>
-      <title>てくてく勉強会1月24日</title>
+      <title>勉強会[Web RTC コトハジメ]</title>
       <link>https://persol-pt.github.io/posts/tech-workshop20180131/</link>
       <pubDate>Wed, 31 Jan 2018 13:38:55 +0900</pubDate>
       
@@ -490,7 +535,7 @@ WebRTCの基本とP2P通信が成立するまでを学ぶ(Qiita)
     </item>
     
     <item>
-      <title>てくてく勉強会1月19日</title>
+      <title>勉強会[年末年始の購入品と個人開発したアプリ]</title>
       <link>https://persol-pt.github.io/posts/tech-workshop20180119/</link>
       <pubDate>Fri, 26 Jan 2018 12:06:17 +0900</pubDate>
       
@@ -530,7 +575,7 @@ KINDLE FIRE HD 10 タブレット
     </item>
     
     <item>
-      <title>てくてく勉強会1月10日年初め</title>
+      <title>勉強会[最近のJavascriptフレームワーク選定]</title>
       <link>https://persol-pt.github.io/posts/tech-workshop20180110/</link>
       <pubDate>Fri, 12 Jan 2018 17:38:09 +0900</pubDate>
       
@@ -547,7 +592,7 @@ Qiita - パーソルプロセス&amp;amp;テクノロジー
 
 今週の発表者は川崎さん。
 テーマは 「最近のJavascriptフレームワーク選定について」 でした。
-2018年1月22日の勉強会　テーマ「最近のJavascriptフレームワーク選定について」 
+2018年1月22日の勉強会　テーマ「最近のJavascriptフレームワーク選定」 
   
 Javascriptフレームワークといえば、その流行の移り変わりが早いことで有名ですが、
 今回はそんなフロントエンドのフレームワーク選定で何を選んだらよいのか、
@@ -604,7 +649,7 @@ CLIもあるのでそういった負担の差は最近だいぶ減ってきて�
     </item>
     
     <item>
-      <title>てくてく勉強会12月22日</title>
+      <title>勉強会[http request multiplexerと文字列マッチング]</title>
       <link>https://persol-pt.github.io/posts/tech-workshop1222/</link>
       <pubDate>Fri, 29 Dec 2017 23:58:18 +0900</pubDate>
       
@@ -669,7 +714,7 @@ $ gcloud app create  以上です。</description>
     </item>
     
     <item>
-      <title>てくてく勉強会12月15日</title>
+      <title>勉強会[YUBIKEYを用いた二要素認証]</title>
       <link>https://persol-pt.github.io/posts/tech-workshop1215/</link>
       <pubDate>Fri, 22 Dec 2017 02:48:09 +0900</pubDate>
       
@@ -1056,7 +1101,7 @@ openssl req -x509 -newkey rsa:2048 -nodes -sha256 -subj &#39;/CN=localhost&#39; 
     </item>
     
     <item>
-      <title>てくてく勉強会12月6日</title>
+      <title>勉強会[フロントエンドにおけるIaCとCI]</title>
       <link>https://persol-pt.github.io/posts/tech-workshop1206/</link>
       <pubDate>Fri, 08 Dec 2017 18:48:09 +0900</pubDate>
       

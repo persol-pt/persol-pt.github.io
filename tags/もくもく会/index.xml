@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>てくてく勉強会1月24日</title>
+      <title>勉強会[Web RTC コトハジメ]</title>
       <link>https://persol-pt.github.io/posts/tech-workshop20180131/</link>
       <pubDate>Wed, 31 Jan 2018 13:38:55 +0900</pubDate>
       
@@ -40,7 +40,7 @@ WebRTCの基本とP2P通信が成立するまでを学ぶ(Qiita)
     </item>
     
     <item>
-      <title>てくてく勉強会1月19日</title>
+      <title>勉強会[年末年始の購入品と個人開発したアプリ]</title>
       <link>https://persol-pt.github.io/posts/tech-workshop20180119/</link>
       <pubDate>Fri, 26 Jan 2018 12:06:17 +0900</pubDate>
       
@@ -80,7 +80,7 @@ KINDLE FIRE HD 10 タブレット
     </item>
     
     <item>
-      <title>てくてく勉強会1月10日年初め</title>
+      <title>勉強会[最近のJavascriptフレームワーク選定]</title>
       <link>https://persol-pt.github.io/posts/tech-workshop20180110/</link>
       <pubDate>Fri, 12 Jan 2018 17:38:09 +0900</pubDate>
       
@@ -97,7 +97,7 @@ Qiita - パーソルプロセス&amp;amp;テクノロジー
 
 今週の発表者は川崎さん。
 テーマは 「最近のJavascriptフレームワーク選定について」 でした。
-2018年1月22日の勉強会　テーマ「最近のJavascriptフレームワーク選定について」 
+2018年1月22日の勉強会　テーマ「最近のJavascriptフレームワーク選定」 
   
 Javascriptフレームワークといえば、その流行の移り変わりが早いことで有名ですが、
 今回はそんなフロントエンドのフレームワーク選定で何を選んだらよいのか、
@@ -136,7 +136,7 @@ CLIもあるのでそういった負担の差は最近だいぶ減ってきて�
     </item>
     
     <item>
-      <title>てくてく勉強会12月22日</title>
+      <title>勉強会[http request multiplexerと文字列マッチング]</title>
       <link>https://persol-pt.github.io/posts/tech-workshop1222/</link>
       <pubDate>Fri, 29 Dec 2017 23:58:18 +0900</pubDate>
       
@@ -178,7 +178,7 @@ Go言語で作成したルーティング手法のパッケージ「 Bon 」に�
     </item>
     
     <item>
-      <title>てくてく勉強会12月15日</title>
+      <title>勉強会[YUBIKEYを用いた二要素認証]</title>
       <link>https://persol-pt.github.io/posts/tech-workshop1215/</link>
       <pubDate>Fri, 22 Dec 2017 02:48:09 +0900</pubDate>
       
@@ -218,7 +218,7 @@ U2Fデバイスを登録し、チャレンジレスポンス認証を利用可�
     </item>
     
     <item>
-      <title>てくてく勉強会12月6日</title>
+      <title>勉強会[フロントエンドにおけるIaCとCI]</title>
       <link>https://persol-pt.github.io/posts/tech-workshop1206/</link>
       <pubDate>Fri, 08 Dec 2017 18:48:09 +0900</pubDate>
       
