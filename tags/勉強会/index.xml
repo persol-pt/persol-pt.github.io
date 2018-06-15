@@ -6,10 +6,53 @@
     <description>Recent content in 勉強会 on PPT Developers&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Wed, 09 May 2018 14:49:20 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 11 Jun 2018 13:53:08 +0900</lastBuildDate>
     
 	<atom:link href="https://persol-pt.github.io/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>勉強会[gRPC]</title>
+      <link>https://persol-pt.github.io/posts/tech-workshop_grcp/</link>
+      <pubDate>Mon, 11 Jun 2018 13:53:08 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/posts/tech-workshop_grcp/</guid>
+      <description>みなさんこんにちは、
+パーソルプロセスアンドテクノロジー株式会社のEP統括部、daitasuです。
+今回も私たちの部の勉強会の様子をお送りいたします。
+※技術的なブログについてはQiitaでメンバーが各々に書き進めています。
+こちらもぜひご覧ください。
+Qiita - パーソルプロセス&amp;amp;テクノロジー
+さて、今週の発表者はvitorさん。テーマは「gRPC」です。
+テーマ「gRPC」   
+本日の勉強会は、gRPCという2015年にGoogleが開発した
+RPCフレームワークについてのお話しでした。
+gRPCとは 
+gRPCというのは、RPC(リモートプロシージャコール)を実現するために開発されたプロトコルの一つです。
+リモートプロシージャコールというのは、ネットワークに接続された他のサーバからプログラムを呼び出し、
+実行させるための手法やプロトコルのことを言います。
+例えば、あるサーバから別サーバ(別PC)に存在するアプリ内のJavaコードを実行させる等 gRPCは、このRPCを実現するために2015年にGoogle社によって開発されました。
+gRPCを用いることで、以下のようなことが可能になるそうです。
+  
+gRPCはProtocol Buffersというフォーマットを用いてデータをシリアライズ化して書かれています。
+
+Protocol Buffers 
+プロトコルバッファーとは、IDL(インタフェース定義言語)で構造を定義し、
+データをシリアライズ化するフォーマットで、データ通信・永続化を目的としています。
+データをシリアライズ化することで、データサイズの縮小・高速送信に繋が流そうです。
+仕組み 
+gRPCでは、IDL(インターフェース定義言語)を用いてあらかじめAPI仕様を .protoファイルとして定義します。
+言語に依存しないIDLを利用して、先にインターフェースを定義することで、多種のプログラミング言語で書かれた
+サーバ間の通信を可能にしています。
+以下の図の例だとサーバサイドをC++で開発しており、クライアントをRubyやAndroid-Javaで書いてあります。
+参考サイト：What is gRPC?
+  
+protoファイルの定義 
+protoファイルでのgRPCの設定の例も取り上げていました。
+下記のようにリクエストやレスポンスの定義を行います。
+このように指定することでデータ構造をシリアル化し、様々な言語での取り出しを可能にしています。
+// The greeter service definition. service Greeter { // Sends a greeting rpc SayHello (HelloRequest) returns (HelloReply) {} } // The request message containing the user&#39;s name.</description>
+    </item>
     
     <item>
       <title>勉強会[物体検出アルゴリズム YOLO]</title>
