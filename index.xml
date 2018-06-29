@@ -6,10 +6,54 @@
     <description>Recent content on PPT Developers&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 11 Jun 2018 13:53:08 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 25 Jun 2018 18:20:44 +0900</lastBuildDate>
     
 	<atom:link href="https://persol-pt.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>勉強会[RPAを学ぶ]</title>
+      <link>https://persol-pt.github.io/posts/tech-workshop_rpa/</link>
+      <pubDate>Mon, 25 Jun 2018 18:20:44 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/posts/tech-workshop_rpa/</guid>
+      <description>みなさんこんにちは、
+パーソルプロセスアンドテクノロジー株式会社のEP統括部、daitasuです。
+今回も私たちの部の勉強会の様子をお送りいたします。
+※技術的なブログについてはQiitaでメンバーが各々に書き進めています。
+こちらもぜひご覧ください。
+Qiita - パーソルプロセス&amp;amp;テクノロジー
+さて、今週の発表者は
+私の同期であり、現在2年目、今年の3月よりテクテク部にジョインしたtodakenさん。 テーマは「RPAを学ぶ」でした。
+テーマ「RPAを学ぶ」   
+みなさん、RPAはご存知でしょうか？？
+AIを用いたサービス等が流行する一方で、
+最近AIと比較されながら業務生産性向上のためのバズワードにもなっています。
+今回はそんなRPAの話でした。
+RPAとは 
+RPAは一定のルールに従って、間接業務を自動化するテクノロジーのことをさします。
+構造化されたデータの収集やシステムへの入力など
+繰り返されるオフィス業務の自動化などを得意としています。
+今回、todakenさんはこのRPAについて調べ、
+ どういったメリット/デメリットがあるか AIと比較されているポイント RPAの利用シーン  などをご説明いただき、実際に RPA Expressというものを用いたDEMOも行われました。
+  
+詳しくは、以下に記載されております。
+ぜひご一読ください↓↓↓
+【初心者向け】RPAを学ぶ ～RPAExpress～ 感想 todakenさんは今回RPA Expressを用いてRPA実践してみた感想として、
+コーディング(いくつかあるアクションをドラッグし、組み立てていく)が楽な反面、
+一処理が重くて一定の実行時間が必要になることが課題だと述べられていました。
+RPAは導入のしやすさを考えると、
+今後もおそらく、流行は進むのかなと思います。
+ただRPA自体は人の操作をトレースして、現場のオペレーションをマクロ化する仕組みなので、
+ビジネス的な収益につなげにくいのも事実なようです。
+RPAは人が考えたプロセスを柔軟にマクロ化し実行していく。
+AIがビックデータから新しい解を見つけ提案を行なっていく。
+RPAで補えないものをシステム化していく。
+というように、それぞれ違う役割を明確に分離して
+どれが必要なのか、何を行うために使うのかを
+考えながら導入していく必要がありそうです。
+todakenさん、どうもありがとうございました。</description>
+    </item>
     
     <item>
       <title>勉強会[gRPC]</title>
