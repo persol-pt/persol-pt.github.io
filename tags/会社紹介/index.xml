@@ -6,10 +6,69 @@
     <description>Recent content in 会社紹介 on PPT Developers&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 25 Jun 2018 18:20:44 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 13 Jul 2018 18:30:57 +0900</lastBuildDate>
     
 	<atom:link href="https://persol-pt.github.io/tags/%E4%BC%9A%E7%A4%BE%E7%B4%B9%E4%BB%8B/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>勉強会[nissy&#39;s handy tools]</title>
+      <link>https://persol-pt.github.io/posts/tech-workshop_nissy_tools/</link>
+      <pubDate>Fri, 13 Jul 2018 18:30:57 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/posts/tech-workshop_nissy_tools/</guid>
+      <description>皆さんこんにちは、はじめまして。
+パーソルプロセス＆テクノロジー株式会社、EP統括部18年入社のyoshi-satoと申します。
+今週は藤井さんに代わり私がテクテク部の勉強会の様子をお送りいたします。
+よろしくお願いします。
+※技術的なブログについてはQiitaでメンバーが各々に書き進めています。
+こちらもぜひご覧ください。
+Qiita - パーソルプロセス&amp;amp;テクノロジー
+今週の発表者は同じテクテク部のnissyさんです。
+テーマは、nissyさんが作ったツール紹介でした。
+それぞれ簡単にご紹介したいと思います。 mackerel-plugin-timeline mackerel-plugin-timelineは、Mackerelのログ表示処理を高速化するプラグインです。
+ロジックとしては、ログファイルを最終行付近までシークし、
+下から読み込むようになっています。
+check-md5 check-md5は、Mackerel等でMD5のバイナリハッシュ値を監視するプラグインです。
+このプラグインを作った理由としては、バイナリハッシュ値を
+勝手に書き換える輩がいたので犯人を見つけるために作った。そうです。
+あまり治安が良くなかったようです。
+smtping smtpingは、SMTPサーバを監視、検証するためのツールです。
+ピュアなGo言語で書かれています。
+「一番がんばったのにもはや誰もテキストコンテンツに興味がない・・・」
+とは、nissyさん談です。
+toever toeverは、EverNoteにノートを作成、ファイルの転送を行うコマンドラインツールです。
+pythonで書かれています。
+GitHubでのStarの数は驚異の15。激バズです。
+やはりメジャーなサービスが絡むと人の目に留まりやすいようです。
+txtmsk txtmskは、標準入力に入力した文字列をaes256方式で暗号化するツールです。
+もちろん、同ツールで復号することもできます。
+MacOSのKeychainと連携させることもできます。
+作った理由としては、前の上司がslackにパスワードを貼りまくっていたので、
+注意喚起のために作ったそうです。
+phck phckは、Webサーバーのプロセスをチェックするツールです。
+プロセスがすべて起動していればHTTPコード200を返し、
+プロセスが1つでも落ちていればHTTPコード500を返します。
+taii taiiは、tailコマンドのようなコマンドです。
+というよりは、tailコマンドです。
+作った経緯としては、新人さんの一人がいつまでたってもtailをtaiiと
+タイプしてしまうのを見かね、それならばtaiiコマンドを作ってあげよう。
+という経緯だそうです。
+エイリアスを設定すればいいのではないか、という声も上がりましたが、
+イチから作るところにロマンがあります。
+nissyさんいわく欠点として、システムコールなのでめちゃめちゃに重い
+という点が挙げられるそうです。
+loggerkun loggerkunは、ロガーのフォーマットを自由に変更するツールです。
+仕組みとしては、テンプレートエンジンを利用して実装されています。
+awslogger awsloggerは、Amazon CloudWatch Logsにログを書き出すツールです。
+colle colleは、Go言語で書かれたRSSフィードリーダーです。
+このcolleのすごいところは、某DMMの女性陣の画像を3秒ほどですべて取ってくることができるところだそうです。
+仕組みとしては、非同期にガッと行ってガッと取ってくるロジックだそうですが、
+今現在も使えるかどうかは不明です。
+bon bonは、Goで書かれたWebフレームワークです。
+特徴として、軽量であること、サードパーティのパッケージを利用していないことが挙げられます。
+感想 今回nissyさんにご紹介いただいたツール群は、1つを除いてGoで書かれており、</description>
+    </item>
     
     <item>
       <title>勉強会[RPAを学ぶ]</title>

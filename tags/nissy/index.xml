@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Go on PPT Developers&#39; Blog</title>
-    <link>https://persol-pt.github.io/tags/go/</link>
-    <description>Recent content in Go on PPT Developers&#39; Blog</description>
+    <title>Nissy on PPT Developers&#39; Blog</title>
+    <link>https://persol-pt.github.io/tags/nissy/</link>
+    <description>Recent content in Nissy on PPT Developers&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Fri, 13 Jul 2018 18:30:57 +0900</lastBuildDate>
     
-	<atom:link href="https://persol-pt.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://persol-pt.github.io/tags/nissy/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -68,48 +68,6 @@ colle colleは、Go言語で書かれたRSSフィードリーダーです。
 bon bonは、Goで書かれたWebフレームワークです。
 特徴として、軽量であること、サードパーティのパッケージを利用していないことが挙げられます。
 感想 今回nissyさんにご紹介いただいたツール群は、1つを除いてGoで書かれており、</description>
-    </item>
-    
-    <item>
-      <title>勉強会[http request multiplexerと文字列マッチング]</title>
-      <link>https://persol-pt.github.io/posts/tech-workshop1222/</link>
-      <pubDate>Fri, 29 Dec 2017 23:58:18 +0900</pubDate>
-      
-      <guid>https://persol-pt.github.io/posts/tech-workshop1222/</guid>
-      <description>皆さんこんにちは、新卒の藤井大祐(daitasu)です。
-
-今週も私たちパーソルプロセスアンドテクノロジーのテクテクチームが
-行っている技術勉強会のレポートをしていきたいと思います。
-今年の勉強会ブログはこれで最後になります。
-今週の発表者は定期的に自身でパッケージを作成し、OSSに貢献しているnissyさん。
-テーマは 「http request multiplexer と文字列マッチング」 でした。
-12月22日の勉強会　テーマ「http request multiplexer と文字列マッチング」 
-  
-通常URLにリクエストする際、そのURL文字列にマッチするパターンを
-登録されているパターンの中から検索し、呼び出されるハンドラを決めようとします。
-このルーティング処理はその言語やフレームワークでの処理方法によって
-大きく処理速度が異なります。
-今回nissyさんは基数木(パトリシア木)という集合データ構造を用いて
-Go言語でルーティング処理を行うパッケージを作成しました。
-Bon(https://github.com/nissy/bon)
-
-今回のお話では、
-基本的なマッチングパターンのルールから
-トライ木(Trie)による複数パターンマッチング や KMP といった
-代表的な文字列パターンマッチングのアルゴリズム紹介
-に始まり、
-
-いくつかの代表的なアルゴリズムの速度比較を行いまいした。
-以下はパトリシア木(Patricia Trie)の構造紹介とその速度表です。
-
-Patricia Trie(https://github.com/nissy/mux/tree/patricia)
-
-  Patricia Trieの構造     Patricia Trie 速度   
-そしてその後、実際に自身がPatricia Trieをもとにチューニングし、
-Go言語で作成したルーティング手法のパッケージ「 Bon 」についての紹介を行い、
-他のGo言語フレームワークとの速度比較を行いました。
-
-  Bon 比較     BonとGo言語フレームワークの速度比較</description>
     </item>
     
   </channel>
