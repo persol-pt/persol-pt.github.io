@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>川崎 on PPT Developers&#39; Blog</title>
+    <link>https://persol-pt.github.io/tags/%E5%B7%9D%E5%B4%8E/</link>
+    <description>Recent content in 川崎 on PPT Developers&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Fri, 27 Jul 2018 18:30:57 +0900</lastBuildDate>
+    
+	<atom:link href="https://persol-pt.github.io/tags/%E5%B7%9D%E5%B4%8E/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>勉強会[RaspberryPiとBluetoothでスマホを検知してみた]</title>
+      <link>https://persol-pt.github.io/posts/tech-workshop_bluetooth/</link>
+      <pubDate>Fri, 27 Jul 2018 18:30:57 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/posts/tech-workshop_bluetooth/</guid>
+      <description>皆さんこんにちは。
+パーソルプロセス＆テクノロジー株式会社のyoshi-satoです。
+今週もテクテク部の勉強会の様子をお送りいたします。
+よろしくお願いします。
+※技術的なブログについてはQiitaでメンバーが各々に書き進めています。
+こちらもぜひご覧ください。
+Qiita - パーソルプロセス&amp;amp;テクノロジー
+今週の発表者はテクテクMGRの川崎さんです。
+発表テーマは、「RaspberryPiとBluetoothでスマホを検知してみた」でした。
+ 
+テーマ「RaspberryPiとBluetoothでスマホを検知してみた」 IoTの代名詞的な名声をほしいままにするRaspberryPi(以下ラズパイ)ですが、川崎さんはこのラズパイを使って
+毎日の勤怠時間の入力を自動化したいと考えました。
+弊社では毎日の勤務時間をTAManagerと呼ばれる勤怠システムに入力することになっているのですが、
+毎日のことということもあり若干微妙にほんの少しわずらわしく感じることもあります。
+怠慢・短気・傲慢を美徳とするエンジニアにとって、この煩わしさをそのままにして生きていくわけにはいきません。
+実現方法 川崎さんは、ラズパイをオフィスの自席に置いておき、
+Bluetoothで自分のスマホが接近したか離れたかを検知することで出勤・退勤時間の
+打刻を行うことを考えました。
+今回は勤怠入力の仕様（休み時間や一時離席はどうするか等）は後で考えるものとして、
+ラズパイでスマホを検知するところまでの発表でした。
+
+使うもの 今回Bluetoothでラズパイとスマホの距離を定期的にチェックするために使うものです。
+ hcitool  raspbianで利用できる、Bluetooth機器に接続するためのツール。 機器のスキャン、強度計測、ペアリングができる。  l2ping  ネットワークレイヤ2でpingするツール。 つまりMacアドレスに対してpingする。   
+仕組み Railsで定期的にペアリングされたスマホにpingを送り、接近、離脱をチェックする。
+勉強会中のデモでは、あらかじめペアリングしたスマホを川崎さんが持ち会議室から離れると、
+Slackにメッセージが送信されました。
+ 
+課題 簡単にペアリングする仕組みの構築 ペアリングを行わなくてもスマホが近くにあるかないか程度のpingはできるが、
+正確な距離を信号強度から測るにはペアリングが必要だそうです。
+現段階ではラズパイとスマホのペアリングは手動で行うため、より簡単にペアリングできる
+仕組みの構築が必要です。
+勤怠の自動入力の仕様設定 今回はラズパイでスマホの接近・離脱を検知することができましたが、
+勤怠システムへの自動入力となると、休み時間や一時離席などを考慮した仕組みを
+作らなければいけません。
+ほかに何ができそうか 最後に、川崎さんはオフィス以外でラズパイでスマホを検知して何ができそうかを
+発表してくださりました。
+ 家に置いて子供の帰宅を通知する。 電気のオン・オフを自動で行う。 店頭に置いて特定の人の来店を店員に通知し、来店回数や購入履歴などを同期して接客対応を行う。  
+以上、川崎さんの発表でした。
+ラズパイは発想次第でいろいろなことに使えるので、今回のような</description>
+    </item>
+    
+  </channel>
+</rss>
