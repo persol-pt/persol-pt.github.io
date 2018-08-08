@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://persol-pt.github.io/posts/tech-workshop_engineernoshigoto/</loc>
+    <lastmod>2018-08-03T18:30:57+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://persol-pt.github.io/posts/tech-workshop_bluetooth/</loc>
     <lastmod>2018-07-27T18:30:57+09:00</lastmod>
   </url>
@@ -505,13 +510,13 @@
   
   <url>
     <loc>https://persol-pt.github.io/</loc>
-    <lastmod>2018-07-27T18:30:57+09:00</lastmod>
+    <lastmod>2018-08-03T18:30:57+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://persol-pt.github.io/posts/</loc>
-    <lastmod>2018-07-27T18:30:57+09:00</lastmod>
+    <lastmod>2018-08-03T18:30:57+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -660,6 +665,12 @@
   </url>
   
   <url>
+    <loc>https://persol-pt.github.io/tags/%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2/</loc>
+    <lastmod>2018-08-03T18:30:57+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://persol-pt.github.io/tags/%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88/</loc>
     <lastmod>2018-01-26T12:06:17+09:00</lastmod>
     <priority>0</priority>
@@ -738,8 +749,14 @@
   </url>
   
   <url>
+    <loc>https://persol-pt.github.io/tags/%E4%BB%95%E4%BA%8B/</loc>
+    <lastmod>2018-08-03T18:30:57+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://persol-pt.github.io/tags/%E4%BC%9A%E7%A4%BE%E7%B4%B9%E4%BB%8B/</loc>
-    <lastmod>2018-07-27T18:30:57+09:00</lastmod>
+    <lastmod>2018-08-03T18:30:57+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -757,7 +774,7 @@
   
   <url>
     <loc>https://persol-pt.github.io/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/</loc>
-    <lastmod>2018-07-27T18:30:57+09:00</lastmod>
+    <lastmod>2018-08-03T18:30:57+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -817,7 +834,7 @@
   
   <url>
     <loc>https://persol-pt.github.io/categories/%E9%87%8C%E4%BA%95-%E5%98%89%E7%9C%9Fyoshi-sato/</loc>
-    <lastmod>2018-07-27T18:30:57+09:00</lastmod>
+    <lastmod>2018-08-03T18:30:57+09:00</lastmod>
     <priority>0</priority>
   </url>
   
