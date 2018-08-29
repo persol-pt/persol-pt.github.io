@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Iot on PPT Developers&#39; Blog</title>
-    <link>https://persol-pt.github.io/tags/iot/</link>
-    <description>Recent content in Iot on PPT Developers&#39; Blog</description>
+    <title>靴作り on PPT Developers&#39; Blog</title>
+    <link>https://persol-pt.github.io/tags/%E9%9D%B4%E4%BD%9C%E3%82%8A/</link>
+    <description>Recent content in 靴作り on PPT Developers&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Mon, 27 Aug 2018 11:25:08 +0900</lastBuildDate>
     
-	<atom:link href="https://persol-pt.github.io/tags/iot/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://persol-pt.github.io/tags/%E9%9D%B4%E4%BD%9C%E3%82%8A/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -39,47 +39,6 @@ ITを駆使しての効率化、ITの活用はもちろん、究極のOneToOne�
 「自身が担当している領域だけではなく、業界全体の知識やビジネスについて目をむけられるようになりたい」
 「先を見据えた行動を踏み出して行きたい」などなど。
 最後になりましたが、ご協力いただいたミリメーター社様に改めて御礼申し上げます。 </description>
-    </item>
-    
-    <item>
-      <title>勉強会[IoTビジネス]</title>
-      <link>https://persol-pt.github.io/posts/tech-workshop20180308/</link>
-      <pubDate>Tue, 27 Mar 2018 16:04:48 +0900</pubDate>
-      
-      <guid>https://persol-pt.github.io/posts/tech-workshop20180308/</guid>
-      <description>みなさんこんにちは、
-パーソルプロセスアンドテクノロジー株式会社のAS統括部、daitasuです。
-今週も私たちの部の勉強会の様子をお送りいたします。
-※技術的なブログについては現在Qiitaの方に移行致しました。
-テクテクチームのメンバーが各々に書き進めていますのでこちらもぜひご覧ください。
-Qiita - パーソルプロセス&amp;amp;テクノロジー
-さて、今週の発表者は志田さん。
-テーマは「IoTビジネス」でした。
-2018年3月8日の勉強会　 テーマ「IoTビジネス」 
-最近、玄関の鍵の遠隔ロック、エアコンや照明の自動コントロールや音声操作など
-家のスマート化などが話題になっています。
-こういったモノに搭載された内蔵センサーからデータを集積、
-アクションを自動で起こすモノたちのことをIoT(Internet of Things)と呼んでいます。
-今回はそんなIoTの現在と将来の市場規模について、
-どんなビジネス利用の可能性があるのかについて調べたことを伝えて頂きました。
-実現できること 
-「IoT(モノのインターネット)」で実現できることを簡単にまとめると、
-以下のようになります。
- 離れたモノの状態や位置を探る 環境を知る(環境モニタリング) モノの動きを知る(モーションモニター) モノの位置を知る(存在検知、近接検知、通過検知) 離れたモノを操作する  上記のような検知によって、人がいなくてもアクションを起こすことが可能になります。(自動化)
-
-仕組みは、以下のようになっています
-  市場規模 市場規模としては2016年時点で1.4兆ドル、デバイス数64億個であり、
-2020年には市場規模3兆ドル、デバイス数208億個が見込まれているそうです。
-注目が始まった背景 注目が始まった背景には、いくつかの理由があるそうです。
- 必要な機器/内蔵チップなどの性能が格段に向上、小型化された 既存の通信市場が成熟し、飽和したため、モノの数だけある新しい市場としてとして魅力的になった 社会インフラの老朽化や人の高齢化。センサーで点検や修繕を効率化し、人件費削減  
-IoT発展のカギ 今回のお話では、IoTが発展するにはいくつかのキーワードが重要になるとのことでした。
- 高速/大容量 低地円 多数同時接続 長距離通信 長寿命バッテリー  
-これらのことから、現在IoT時代に向けた通信規格として
-超高速、超多数同時接続の「5G」が着目されているそうです。
-当然ネットにつなげることが最低条件なので、「LPWA（Low Power, Wide Area）」
-も重要になりますね。
-
-IoTの種類 IoTには、大きく分けて2種類の型があるそうです。</description>
     </item>
     
   </channel>
