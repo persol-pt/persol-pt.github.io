@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>スマートスピーカー on PPT Developers&#39; Blog</title>
-    <link>https://persol-pt.github.io/tags/%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%82%B9%E3%83%94%E3%83%BC%E3%82%AB%E3%83%BC/</link>
-    <description>Recent content in スマートスピーカー on PPT Developers&#39; Blog</description>
+    <title>Storyline on PPT Developers&#39; Blog</title>
+    <link>https://persol-pt.github.io/tags/storyline/</link>
+    <description>Recent content in Storyline on PPT Developers&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Fri, 28 Sep 2018 11:44:42 +0900</lastBuildDate>
     
-	<atom:link href="https://persol-pt.github.io/tags/%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%82%B9%E3%83%94%E3%83%BC%E3%82%AB%E3%83%BC/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://persol-pt.github.io/tags/storyline/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -44,48 +44,6 @@ Echo sub 　Alexaと接続できるサブウーファーです。
 新機能の紹介 　あわせて新機能もご紹介いただきました。
 ただし、まだ新しい機能ということで、現状日本では※が付くものがほとんどのようです。
 コンテキストキャリーオーバー 　Alexaに質問を投げかけると、質問が完全なものでなくても自動的に補完して回答してくれる機能です。</description>
-    </item>
-    
-    <item>
-      <title>勉強会[スマートスピーカー]</title>
-      <link>https://persol-pt.github.io/posts/tech-workshop20180301/</link>
-      <pubDate>Tue, 20 Mar 2018 15:25:44 +0900</pubDate>
-      
-      <guid>https://persol-pt.github.io/posts/tech-workshop20180301/</guid>
-      <description>みなさんこんにちは、
-パーソルプロセスアンドテクノロジー株式会社のAS統括部、daitasuです。
-今週も私たちの部の勉強会の様子をお送りいたします。
-※技術的なブログについては現在Qiitaの方に移行致しました。
-テクテクチームのメンバーが各々に書き進めていますのでこちらもぜひご覧ください。
-Qiita - パーソルプロセス&amp;amp;テクノロジー
-さて、今週の発表者は最近届いたAmazon Alexaのピカチュウスキルで
-毎日ピカチュウと会話をしている千葉さん。
-テーマは 「スマートスピーカー」 でした。
-2018年3月1日の勉強会　 テーマ「スマートスピーカー」 
-スマートスピーカーと言えば、様々ありますね。
-Google HOME、Amazon Echo、LINE clovaなどなど。
-どれかしらお持ちの方もいらっしゃるのではないかと思います。
-今週はそんなスマートスピーカーの概要と
-実際にラズパイを使って作ってみたskillのお話でした。
-概要 
-  スマートスピーカー市場   
-スマートスピーカーは皆さんCM等で見られることも多いので、
-だいたいご存知かと思いますが、改めて見ていきましょう。
-スマートスピーカーとは、AIアシスタントを搭載した、
-対話型で音声操作を行えるスピーカーです。
-音楽環境や天気予報などのネット検索など、今までPCやスマホから検索を
-行っていたものをスピーカーに呼びかけるだけで「音声」で情報を返してくれる代物になります。
-使い方は人によって様々ですが、以下にいくつかの利用法を並べてみます。
- 目覚ましとしてアラームセット 天気予報の検索 他のIoT機器との連動で家電制御 ニュースの検索 リマインダー  
-やはり今までスマホやPCから行っていたことを
-「音声」でできるようになったのがポイント見たいですね。
-現在需要として一番多いのは、Amazon Alexaだそうです。
-ラズパイで作ってみた 
-千葉さんはスマートスピーカーのAmazon ehoを
-招待メール申請したそうなのですが、なかなか届かないため一度自分で簡易なものを
-作ってみることにしたそうです。
-必要なもの
- ラズパイ一式(無線LANのついているモデル) スピーカー マイク Alexa Voice Service(無償提供)</description>
     </item>
     
   </channel>
