@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://persol-pt.github.io/posts/tech-workshop_rpa2/</loc>
+    <lastmod>2018-10-19T10:46:23+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://persol-pt.github.io/posts/smartspeaker4/</loc>
     <lastmod>2018-09-28T11:44:42+09:00</lastmod>
   </url>
@@ -531,13 +536,13 @@
   
   <url>
     <loc>https://persol-pt.github.io/</loc>
-    <lastmod>2018-09-28T11:44:42+09:00</lastmod>
+    <lastmod>2018-10-19T10:46:23+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://persol-pt.github.io/posts/</loc>
-    <lastmod>2018-09-28T11:44:42+09:00</lastmod>
+    <lastmod>2018-10-19T10:46:23+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -573,7 +578,7 @@
   
   <url>
     <loc>https://persol-pt.github.io/tags/rpa/</loc>
-    <lastmod>2018-06-25T18:20:44+09:00</lastmod>
+    <lastmod>2018-10-19T10:46:23+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -640,6 +645,18 @@
   <url>
     <loc>https://persol-pt.github.io/tags/terraform/</loc>
     <lastmod>2017-12-18T00:56:09+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://persol-pt.github.io/tags/todaken/</loc>
+    <lastmod>2018-10-19T10:46:23+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://persol-pt.github.io/tags/uipath/</loc>
+    <lastmod>2018-10-19T10:46:23+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -795,7 +812,7 @@
   
   <url>
     <loc>https://persol-pt.github.io/tags/%E4%BC%9A%E7%A4%BE%E7%B4%B9%E4%BB%8B/</loc>
-    <lastmod>2018-09-28T11:44:42+09:00</lastmod>
+    <lastmod>2018-10-19T10:46:23+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -813,7 +830,7 @@
   
   <url>
     <loc>https://persol-pt.github.io/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/</loc>
-    <lastmod>2018-09-28T11:44:42+09:00</lastmod>
+    <lastmod>2018-10-19T10:46:23+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -867,7 +884,7 @@
   
   <url>
     <loc>https://persol-pt.github.io/tags/%E8%87%AA%E5%8B%95%E5%8C%96/</loc>
-    <lastmod>2018-06-25T18:20:44+09:00</lastmod>
+    <lastmod>2018-10-19T10:46:23+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -885,7 +902,7 @@
   
   <url>
     <loc>https://persol-pt.github.io/categories/%E9%87%8C%E4%BA%95-%E5%98%89%E7%9C%9Fyoshi-sato/</loc>
-    <lastmod>2018-09-28T11:44:42+09:00</lastmod>
+    <lastmod>2018-10-19T10:46:23+09:00</lastmod>
     <priority>0</priority>
   </url>
   

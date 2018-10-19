@@ -6,10 +6,52 @@
     <description>Recent content on PPT Developers&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Fri, 28 Sep 2018 11:44:42 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 19 Oct 2018 10:46:23 +0900</lastBuildDate>
     
 	<atom:link href="https://persol-pt.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>勉強会[RPAを学ぶ　～UiPath～]</title>
+      <link>https://persol-pt.github.io/posts/tech-workshop_rpa2/</link>
+      <pubDate>Fri, 19 Oct 2018 10:46:23 +0900</pubDate>
+      
+      <guid>https://persol-pt.github.io/posts/tech-workshop_rpa2/</guid>
+      <description>皆さんこんにちは。
+パーソルプロセス＆テクノロジー株式会社のyoshi-satoです。
+今週もテクテクの勉強会の様子をお送りいたします。
+よろしくお願いします。
+※技術的なブログについてはQiitaでメンバーが各々に書き進めています。
+こちらもぜひご覧ください。
+Qiita - パーソルプロセス&amp;amp;テクノロジー
+今週の発表者はtodakenさんです。テーマは「RPAを学ぶ ～UiPath～」でした。
+
+テーマ「RPAを学ぶ ～UiPath～」 RPA(Robotic Process Automation)といえば、人間の代わりにロボットを使って業務を行うものですが、
+定型業務とか自動化できるものはガンガン自動化しちゃおうぜ！ってことで昨今バズワードになっています。
+todakenさんは前回もRPAについての発表をしていますが、
+今回は主にUiPathと呼ばれるものについてのお話でした。
+ RPAとは そもそもRPAとは？
+Robotic Process Automation、直訳してしまうと「ロボットによるプロセスの自動化」
+ですが、ホワイトカラー労働者の間接業務を自動化するためのテクノロジーで、
+同じ作業の繰り返しや単純なフロント/バックオフィス業務を自動化することが出来ます。
+UiPathでできること RPAを実現するためのツールはたくさんの種類がありますが、その中でも今回はUiPathを取り上げます。
+UiPathで実現できることは多岐に渡りますが、
+ Excel、Word、Access等のデスクトップ上で行うアプリケーション操作 クラウドサービスを含むWebアプリケーションの操作 Webブラウザからのデータ取得（スクレイピング）  などが可能です。
+Community Editionであれば、多少の制限はありますが無料で利用できます。
+UiPathの構成 UiPathは以下の3つの要素で構成されています。
+順番に見ていきましょう。
+1. UiPath Studio もっともRPAといえば！というようなツールが、UiPath Studioです。
+UiPath Studioでは、アクティビティと呼ばれるロボットの動作をドラッグ＆ドロップで指定し、ワークフローを作成します。
+直感的な操作でワークフローを組み立てることが出来るため、プログラミングコードは使用せずに進められます。
+実際に人間の操作を記録して、ロボットを作成することも可能です。
+2. UiPath Orchestrator UiPath Orchestratorは、作成したロボットの稼働状況の管理や、
+ジョブのスケジューリングやキューインが出来る、運用ツールです。
+Webベースで利用でき、リリース管理やログ管理もできます。
+また、APIを用いて外部のアプリケーションと連携をとることも出来ます。
+3. UiPath Robot こちらはUiPath Studioで作成した作業シナリオを実際に実行するツールです。
+業務で利用している個々端末で実行されるFront Office Robot(FOR)と、
+操作不要でサーバー上で動作するため常に稼動し続けられるBack Office Robot(BOR)の2種類があります。</description>
+    </item>
     
     <item>
       <title>勉強会[スマートスピーカーその4]</title>
