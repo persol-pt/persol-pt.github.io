@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://persol-pt.github.io/posts/tech-workshop_shortcut/</loc>
+    <lastmod>2018-11-16T15:19:20+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://persol-pt.github.io/posts/tech-workshop_gan/</loc>
     <lastmod>2018-11-02T11:21:51+09:00</lastmod>
   </url>
@@ -469,7 +474,7 @@
   
   <url>
     <loc>https://persol-pt.github.io/tags/ios/</loc>
-    <lastmod>2017-12-21T17:43:55+09:00</lastmod>
+    <lastmod>2018-11-16T15:19:20+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -547,13 +552,13 @@
   
   <url>
     <loc>https://persol-pt.github.io/</loc>
-    <lastmod>2018-11-02T11:21:51+09:00</lastmod>
+    <lastmod>2018-11-16T15:19:20+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://persol-pt.github.io/posts/</loc>
-    <lastmod>2018-11-02T11:21:51+09:00</lastmod>
+    <lastmod>2018-11-16T15:19:20+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -750,6 +755,12 @@
   </url>
   
   <url>
+    <loc>https://persol-pt.github.io/tags/%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88/</loc>
+    <lastmod>2018-11-16T15:19:20+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://persol-pt.github.io/tags/%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%82%B9%E3%83%94%E3%83%BC%E3%82%AB%E3%83%BC/</loc>
     <lastmod>2018-09-28T11:44:42+09:00</lastmod>
     <priority>0</priority>
@@ -829,7 +840,7 @@
   
   <url>
     <loc>https://persol-pt.github.io/tags/%E4%BC%9A%E7%A4%BE%E7%B4%B9%E4%BB%8B/</loc>
-    <lastmod>2018-11-02T11:21:51+09:00</lastmod>
+    <lastmod>2018-11-16T15:19:20+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -847,7 +858,7 @@
   
   <url>
     <loc>https://persol-pt.github.io/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/</loc>
-    <lastmod>2018-11-02T11:21:51+09:00</lastmod>
+    <lastmod>2018-11-16T15:19:20+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -919,7 +930,7 @@
   
   <url>
     <loc>https://persol-pt.github.io/categories/%E9%87%8C%E4%BA%95-%E5%98%89%E7%9C%9Fyoshi-sato/</loc>
-    <lastmod>2018-10-19T10:46:23+09:00</lastmod>
+    <lastmod>2018-11-16T15:19:20+09:00</lastmod>
     <priority>0</priority>
   </url>
   
